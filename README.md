@@ -17,11 +17,11 @@ GitHub Pages. No hay servidor, base de datos ni build: los datos viven en
 | Sección | Qué resuelve |
 |---|---|
 | **Inicio** | Búsqueda global y accesos por tipo de programa |
-| **Becas** | 59 convocatorias con cobertura, requisitos y fecha de cierre |
-| **Maestrías / Doctorados / Diplomados** | +1 000 programas filtrables |
+| **Becas** | 86 convocatorias con cobertura, requisitos y fecha de cierre |
+| **Maestrías / Doctorados / Diplomados** | +2 900 programas filtrables |
 | **Comparador** | Hasta 4 programas lado a lado, con recomendación automática |
 | **Favoritos** | Guardado local en el navegador (`localStorage`) |
-| **Instituciones** | 96 universidades con su estado de licenciamiento |
+| **Instituciones** | 152 universidades con su estado de licenciamiento |
 
 ### Filtros disponibles
 
@@ -36,20 +36,22 @@ Los filtros son enlazables: `#/maestrias?pais=Perú&sunedu=licenciada`.
 
 ## De dónde salen los datos
 
-Hay **dos fuentes distintas**, y conviene no confundirlas:
+Hay **tres piezas**, y conviene no confundirlas:
 
 ### 1. `data/becas.json` — rastreo real
 
-Convocatorias de becas obtenidas por `scraper/scrape.py`, que visita las páginas
-oficiales (PRONABEC, Chevening, DAAD, Fulbright, OEA, MEXT…) y extrae requisitos
-y fechas. Corre solo, cada lunes, en GitHub Actions.
+86 convocatorias obtenidas por `scraper/scrape.py`, que visita las páginas
+oficiales (PRONABEC, Chevening, DAAD, Fulbright, OEA, MEXT, la Caixa, Clarendon,
+Knight-Hennessy…) y extrae requisitos y fechas. Corre solo, cada lunes, en
+GitHub Actions. El semillero vive en `scraper/seed.py` y `scraper/becas_extra.py`.
 
 ### 2. `data/{maestrias,doctorados,diplomados,instituciones}.json` — catálogo curado
 
-Generados por `scraper/generar_catalogo.py` a partir de la tabla semilla
-`scraper/instituciones.py`: 96 instituciones verificadas a mano (nombre, país,
-dominio oficial, URL de su escuela de posgrado, estado de licenciamiento) que se
-expanden con plantillas de programas por área académica.
+Generados por `scraper/generar_catalogo.py` a partir de las tablas semilla
+`scraper/instituciones.py` y `scraper/instituciones_extra.py`: 152 instituciones
+verificadas a mano —60 peruanas, 22 españolas y el resto de Latinoamérica,
+Europa, Norteamérica, Asia y Oceanía— que se expanden con plantillas de
+programas por área académica.
 
 > **Importante.** Los costos son **rangos referenciales de mercado**, no precios
 > oficiales, y las duraciones y modalidades son valores típicos del nivel. Cada
@@ -62,6 +64,35 @@ El generador es **determinista**: dos ejecuciones producen exactamente el mismo
 JSON, así que el diff en git siempre es limpio y CI puede comprobar que el
 catálogo publicado corresponde a la semilla.
 
+### 3. `data/enlaces.json` — verificación de enlaces
+
+Producido por `scraper/validar_enlaces.py`. Comprueba que **cada destino
+publicado abra de verdad** y lo repara cuando no:
+
+1. prueba la ruta de posgrado declarada en la semilla (con y sin `www`);
+2. si falla, **abre la portada del dominio y lee el HTML**, puntúa los enlaces
+   cuyo texto o URL hablen de posgrado, maestría, doctorado, *graduate* o
+   *master*, y comprueba los mejores. Así descubrió, por ejemplo,
+   `posgrado.pucp.edu.pe`, `admision.uc.cl/postgrado/` o `posgrado.upeu.edu.pe`;
+3. si tampoco, se queda con la portada oficial;
+4. `scraper/enlaces_manuales.py` permite fijar a mano cualquier enlace: tiene
+   prioridad sobre todo lo anterior.
+
+Muchas universidades responden 403 o 418 a clientes automatizados aunque la
+página abra bien en un navegador. Esos casos se marcan como *activo, protegido*
+y el enlace se conserva. **Nunca se publica un enlace de buscador como “sitio
+oficial”**: la búsqueda restringida al dominio existe solo como botón secundario
+*Buscar el programa*, disponible siempre.
+
+Estado actual: 136 enlaces comprobados automáticamente, 15 fijados a mano, 1
+protegido, 0 sin resolver, sobre 152 instituciones.
+
+```bash
+python scraper/validar_enlaces.py                    # todo
+python scraper/validar_enlaces.py --solo-becas
+python scraper/validar_enlaces.py --solo-instituciones
+```
+
 ---
 
 ## Estructura
@@ -70,15 +101,21 @@ catálogo publicado corresponde a la semilla.
 index.html                  cáscara de la SPA
 assets/css/estilos.css      sistema de diseño (terracota / oliva / arena)
 assets/js/ruta.js           router, filtros, comparador, favoritos, fichas
-data/becas.json             convocatorias rastreadas
-data/maestrias.json         473 programas
-data/doctorados.json        288 programas
-data/diplomados.json        271 programas
-data/instituciones.json      96 instituciones
-data/meta*.json             facetas y fecha de actualización
-scraper/instituciones.py    tabla semilla curada
-scraper/generar_catalogo.py expansión determinista -> data/*.json
-scraper/scrape.py           rastreo de convocatorias de becas
+data/becas.json                 86 convocatorias rastreadas
+data/maestrias.json           1 322 programas
+data/doctorados.json            832 programas
+data/diplomados.json            753 programas
+data/instituciones.json         152 instituciones
+data/enlaces.json               informe de verificación de enlaces
+data/meta*.json                 facetas y fecha de actualización
+scraper/instituciones*.py       tabla semilla curada de instituciones
+scraper/seed.py                 semillero de becas
+scraper/becas_extra.py          ampliación del semillero de becas
+scraper/generar_catalogo.py     expansión determinista -> data/*.json
+scraper/validar_enlaces.py      comprobación y reparación de enlaces
+scraper/enlaces_manuales.py     correcciones de enlaces fijadas a mano
+scraper/generar_favicon.py      favicon e iconos PWA desde imagenes/logo.png
+scraper/scrape.py               rastreo de convocatorias de becas
 imagenes/                   marca original y mockups de referencia
 ```
 
@@ -118,8 +155,10 @@ y súbelo.
 `.github/workflows/pages.yml` valida los JSON, comprueba que el catálogo esté al
 día respecto de la semilla y publica en GitHub Pages en cada push a `main`.
 
-`.github/workflows/actualizar-becas.yml` rastrea convocatorias y regenera el
-catálogo cada lunes, y solo hace commit si algo cambió.
+`.github/workflows/actualizar-becas.yml` rastrea convocatorias, regenera el
+catálogo y **revalida todos los enlaces** cada lunes, y solo hace commit si algo
+cambió. Los runners de GitHub alcanzan sitios que bloquean otras redes, así que
+la verificación semanal suele resolver enlaces que fallan en local.
 
 ---
 

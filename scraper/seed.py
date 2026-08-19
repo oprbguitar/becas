@@ -711,6 +711,10 @@ b("Becas de la Universidad de São Paulo - PEC-PG", "Gobierno de Brasil (CAPES/C
 
 
 def main() -> None:
+    # Ampliacion del catalogo (ver scraper/becas_extra.py)
+    from becas_extra import registrar
+    registrar(b, inc)
+
     OUT.parent.mkdir(parents=True, exist_ok=True)
     OUT.write_text(json.dumps(BECAS, ensure_ascii=False, indent=1), encoding="utf-8")
     print(f"{len(BECAS)} becas escritas en {OUT}")

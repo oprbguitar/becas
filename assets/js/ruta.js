@@ -50,6 +50,12 @@ const diasPara = (iso) => {
   return Math.ceil((d - new Date()) / 86400000);
 };
 
+// Búsqueda restringida al dominio oficial: salida garantizada cuando el
+// enlace directo no se pudo comprobar.
+const busquedaEn = (dominio, texto) => dominio
+  ? 'https://www.google.com/search?q=' + encodeURIComponent(`site:${dominio} "${texto}"`)
+  : 'https://www.google.com/search?q=' + encodeURIComponent(texto);
+
 const dominioDe = (url) => {
   try { return new URL(url).hostname.replace(/^www\./, ''); } catch { return ''; }
 };
@@ -145,7 +151,7 @@ function normalizarBeca(b) {
     financiamiento: b.cobertura === 'Completa' ? 'Beca completa' : 'Beca parcial',
     admision: b.fecha_cierre ? 'Cierre ' + fecha(b.fecha_cierre) : 'Consultar convocatoria',
     descripcion: b.descripcion, requisitos: b.requisitos || [],
-    url: b.url, url_requisitos: b.url_requisitos, url_busqueda: b.url_requisitos || b.url,
+    url: b.url, url_requisitos: b.url_requisitos,
     dominio: dom, logo: dom ? `https://icons.duckduckgo.com/ip3/${dom}.ico` : '',
     destacado: !!b.destacada, tipo_institucion: 'Organización',
   };
@@ -160,23 +166,48 @@ async function cargar() {
     } catch { return respaldo; }
   };
 
-  const [becas, maestrias, doctorados, diplomados, instituciones, meta] = await Promise.all([
-    pedir('data/becas.json', []),
-    pedir('data/maestrias.json', []),
-    pedir('data/doctorados.json', []),
-    pedir('data/diplomados.json', []),
-    pedir('data/instituciones.json', []),
-    pedir('data/meta_catalogo.json', null),
-  ]);
+  const [becas, maestrias, doctorados, diplomados, instituciones, meta, enlaces] =
+    await Promise.all([
+      pedir('data/becas.json', []),
+      pedir('data/maestrias.json', []),
+      pedir('data/doctorados.json', []),
+      pedir('data/diplomados.json', []),
+      pedir('data/instituciones.json', []),
+      pedir('data/meta_catalogo.json', null),
+      pedir('data/enlaces.json', null),
+    ]);
 
   DATOS.items = [
     ...becas.map(normalizarBeca),
     ...maestrias, ...doctorados, ...diplomados,
   ];
+
+  // scraper/validar_enlaces.py comprueba cada destino y, si la ruta declarada
+  // no abre, descubre la sección real de posgrado leyendo la portada. Aquí se
+  // aplica ese informe, de modo que el sitio nunca publique un enlace roto.
+  const porInst = (enlaces && enlaces.instituciones) || {};
+  const porBeca = (enlaces && enlaces.becas) || {};
+  DATOS.enlaces = enlaces;
+
+  const aplicar = (it, info) => {
+    if (!info) return;
+    if (info.url) it.url = info.url;
+    it.enlace_estado = info.estado;
+    it.enlace_nivel = info.nivel;
+    if (info.alternativa) it.url_alternativa = info.alternativa;
+  };
+
   DATOS.items.forEach(it => {
+    aplicar(it, it.tipo === 'beca' ? porBeca[it.id] : porInst[it.institucion_id]);
+    it.url_busqueda = it.url_alternativa || busquedaEn(it.dominio, it.nombre);
     it.buscable = normalizar([it.nombre, it.institucion, it.sigla, it.pais,
                               it.ciudad, it.area, (it.areas || []).join(' ')].join(' '));
     DATOS.porId.set(it.id, it);
+  });
+
+  instituciones.forEach(u => {
+    const info = porInst[u.id];
+    if (info && info.url) { u.url_posgrado = info.url; u.enlace_estado = info.estado; }
   });
   DATOS.instituciones = instituciones;
   DATOS.meta = meta;
@@ -206,6 +237,20 @@ function marcaLogo(item, tam = 52) {
             onerror="if(this.dataset.respaldo){this.src=this.dataset.respaldo;this.dataset.respaldo='';}else{this.style.display='none';}">`
     : '';
   return `<div class="logo" style="width:${tam}px;height:${tam}px" title="${escapar(item.institucion)}">${escapar(iniciales(item.sigla || item.institucion))}${img}</div>`;
+}
+
+// Estado de comprobación del enlace, según data/enlaces.json.
+const ETIQUETA_ENLACE = {
+  ok: { texto: 'Enlace comprobado', clase: 'ok' },
+  manual: { texto: 'Enlace verificado a mano', clase: 'ok' },
+  protegido: { texto: 'Enlace activo (el sitio bloquea robots)', clase: 'ext' },
+  sin_respuesta: { texto: 'Enlace sin comprobar', clase: 'proceso' },
+};
+
+function selloEnlace(item) {
+  const e = ETIQUETA_ENLACE[item.enlace_estado];
+  if (!e) return '';
+  return `<span class="sello ${e.clase}">${ico('enlace', 13)} ${escapar(e.texto)}</span>`;
 }
 
 function selloSunedu(item) {
@@ -837,6 +882,14 @@ function vistaInstituciones() {
 
 /* ---------------------------------------------------------- ficha (modal) */
 
+// El texto del botón dice a dónde lleva realmente el enlace comprobado.
+function etiquetaEnlace(it) {
+  if (it.tipo === 'beca') return 'Ir a la convocatoria oficial';
+  if (['declarada', 'descubierta', 'manual'].includes(it.enlace_nivel))
+    return 'Ir a la escuela de posgrado';
+  return 'Ir al sitio oficial';
+}
+
 function abrirFicha(id) {
   const it = DATOS.porId.get(id);
   if (!it) return;
@@ -871,7 +924,9 @@ function abrirFicha(id) {
             <span class="insignia ${it.tipo}">${nombreTipo}</span>
             <h2>${escapar(it.nombre)}</h2>
             <p style="margin:0;color:var(--suave);font-size:14px">${escapar(it.institucion)}</p>
-            <div style="margin-top:9px">${selloSunedu(it)}</div>
+            <div style="margin-top:9px;display:flex;gap:8px;flex-wrap:wrap">
+              ${selloSunedu(it)}${selloEnlace(it)}
+            </div>
           </div>
         </div>
       </div>
@@ -887,15 +942,21 @@ function abrirFicha(id) {
             ${it.requisitos.map(r => `<li>${escapar(r)}</li>`).join('')}</ul>` : ''}
         <div class="modal-acciones">
           <a class="btn btn-primario" href="${escapar(it.url)}" target="_blank" rel="noopener">
-            ${ico('enlace', 16)} Ir al sitio oficial</a>
-          ${it.url_busqueda && it.url_busqueda !== it.url
-            ? `<a class="btn btn-linea" href="${escapar(it.url_busqueda)}" target="_blank" rel="noopener">
-                 ${ico('lupa', 16)} Buscar el programa</a>` : ''}
+            ${ico('enlace', 16)} ${etiquetaEnlace(it)}</a>
+          <a class="btn btn-linea" href="${escapar(it.url_busqueda)}" target="_blank" rel="noopener">
+            ${ico('lupa', 16)} Buscar el programa</a>
           <button class="btn btn-linea" data-accion="favorito" data-id="${escapar(it.id)}">
             ${ico('marcador', 16, fav ? 'fill="currentColor"' : '')} ${fav ? 'Guardado' : 'Guardar'}</button>
           <button class="btn ${enComp ? 'btn-oliva' : 'btn-linea'}" data-accion="comparar" data-id="${escapar(it.id)}">
             ${ico('balanza', 16)} ${enComp ? 'En el comparador' : 'Comparar'}</button>
         </div>
+        ${it.enlace_estado === 'sin_respuesta' ? `
+          <div class="aviso" style="background:var(--ambar-suave);color:#7A5A22">
+            ${ico('info', 15)}
+            <span>No pudimos comprobar este enlace automáticamente (el sitio no
+            respondió a nuestra verificación). Te llevamos a la portada oficial;
+            si no encuentras el programa, usa <b>Buscar el programa</b>.</span>
+          </div>` : ''}
         <div class="aviso">${ico('info', 15)}
           <span>Ruta Amauta es un directorio independiente. Los costos, fechas y requisitos mostrados
           son referenciales: confirma siempre la información en la web oficial de la institución

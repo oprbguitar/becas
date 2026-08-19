@@ -170,3 +170,13 @@ IDIOMA_POR_PAIS = {
  "Suiza": "Inglés", "Japón": "Inglés", "China": "Inglés", "Corea del Sur": "Inglés",
  "Brasil": "Portugués", "Francia": "Francés / Inglés", "Italia": "Inglés",
 }
+
+# --- Ampliacion (ver scraper/instituciones_extra.py) ---------------------
+from instituciones_extra import (  # noqa: E402
+    EXTRA, IDIOMA_EXTRA, MONEDA_EXTRA, REGION_EXTRA,
+)
+
+INSTITUCIONES = INSTITUCIONES + EXTRA
+REGION_POR_PAIS.update(REGION_EXTRA)
+MONEDA_POR_PAIS.update(MONEDA_EXTRA)
+IDIOMA_POR_PAIS.update(IDIOMA_EXTRA)

@@ -1,17 +1,19 @@
 {
  "actualizado": "2026-08-19",
- "generado_en": "2026-08-19T18:40:50Z",
+ "generado_en": "2026-08-19T19:17:37Z",
  "totales": {
-  "maestria": 473,
-  "doctorado": 288,
-  "diplomado": 271
+  "maestria": 1322,
+  "doctorado": 832,
+  "diplomado": 753
  },
- "instituciones": 96,
+ "instituciones": 152,
  "paises": [
+  "Alemania",
   "Argentina",
   "Australia",
   "Bolivia",
   "Brasil",
+  "Bélgica",
   "Canadá",
   "Chile",
   "China",
@@ -22,11 +24,13 @@
   "España",
   "Estados Unidos",
   "Francia",
+  "Irlanda",
   "Italia",
   "Japón",
   "México",
   "Países Bajos",
   "Perú",
+  "Portugal",
   "Reino Unido",
   "Singapur",
   "Suiza",

@@ -36,6 +36,12 @@ jobs:
               total += len(datos)
           for nombre in ["meta", "meta_catalogo"]:
               json.load(open(f"data/{nombre}.json", encoding="utf-8"))
+
+          enlaces = json.load(open("data/enlaces.json", encoding="utf-8"))
+          print("enlaces:", json.dumps(enlaces["resumen"], ensure_ascii=False))
+          for grupo in ("instituciones", "becas"):
+              for clave, info in enlaces[grupo].items():
+                  assert info["url"].startswith("http"), (grupo, clave)
           print("total:", total)
           FIN
 

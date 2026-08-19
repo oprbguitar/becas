@@ -310,82 +310,88 @@ def construir():
                              else "Requiere reconocimiento ante SUNEDU",
         }
 
-        # ---- maestrias: 1 por area, hasta 8
+        # ---- maestrias: 2 programas en las 4 areas principales, 1 en el resto
         catalogo_m = MAESTRIA_EN if en_ingles else MAESTRIA_ES
-        for orden, area in enumerate(areas[:8]):
+        destacada_m = semilla(iid, "dm") % max(1, len(areas[:10]))
+        for orden, area in enumerate(areas[:10]):
             lista = catalogo_m[area]
-            sem = semilla(iid, area, "M")
-            nombre_prog = lista[sem % len(lista)]
-            pid = f"m-{iid}-{area.lower()}"
-            cmin, cmax, mon, umin, umax = rango_costo(
-                BASE_MAESTRIA[nivel_costo], moneda, sem)
-            programas.append(dict(comun, **{
-                "id": pid, "tipo": "maestria", "nombre": nombre_prog,
-                "area": AREAS[area], "area_codigo": area,
-                "duracion_meses": [18, 20, 24, 24, 12][sem % 5],
-                "modalidad": elegir(MODALIDADES, iid, area, "mod"),
-                "idioma": idioma,
-                "costo_min": cmin, "costo_max": cmax, "moneda": mon,
-                "costo_min_usd": umin, "costo_max_usd": umax,
-                "admision": elegir(ADMISIONES, iid, area, "adm"),
-                "financiamiento": financiamiento(sunedu, tipo, nivel_costo, "maestria"),
-                "url": url_base,
-                "url_busqueda": busqueda(dominio, nombre_prog),
-                "destacado": nivel_costo >= 3 and orden == semilla(iid, "dm") % max(1, len(areas[:8])),
-            }))
-
-        # ---- doctorados: hasta 3 areas
-        catalogo_d = DOCTORADO_EN if en_ingles else DOCTORADO_ES
-        for orden, area in enumerate(areas[:3]):
-            lista = catalogo_d[area]
-            sem = semilla(iid, area, "D")
-            nombre_prog = lista[sem % len(lista)]
-            pid = f"d-{iid}-{area.lower()}"
-            cmin, cmax, mon, umin, umax = rango_costo(
-                BASE_DOCTORADO[nivel_costo], moneda, sem)
-            programas.append(dict(comun, **{
-                "id": pid, "tipo": "doctorado", "nombre": nombre_prog,
-                "area": AREAS[area], "area_codigo": area,
-                "duracion_meses": [36, 42, 48, 48, 60][sem % 5],
-                "modalidad": elegir(["Presencial", "Presencial", "Semipresencial"],
-                                    iid, area, "modd"),
-                "idioma": idioma,
-                "costo_min": cmin, "costo_max": cmax, "moneda": mon,
-                "costo_min_usd": umin, "costo_max_usd": umax,
-                "admision": elegir(["Admisión anual", "Dos convocatorias al año"],
-                                   iid, area, "admd"),
-                "financiamiento": financiamiento(sunedu, tipo, nivel_costo, "doctorado"),
-                "url": url_base,
-                "url_busqueda": busqueda(dominio, nombre_prog),
-                "destacado": nivel_costo >= 3 and orden == semilla(iid, "dd") % max(1, len(areas[:3])),
-            }))
-
-        # ---- diplomados: solo instituciones de habla hispana, hasta 4
-        if not en_ingles:
-            for orden, area in enumerate(areas[:4]):
-                lista = DIPLOMADO[area]
-                sem = semilla(iid, area, "P")
-                nombre_prog = lista[sem % len(lista)]
-                pid = f"p-{iid}-{area.lower()}"
+            cuantos = 2 if orden < 4 and len(lista) > 1 else 1
+            for k in range(cuantos):
+                sem = semilla(iid, area, "M", str(k))
+                nombre_prog = lista[(sem + k) % len(lista)]
+                pid = f"m-{iid}-{area.lower()}" + (f"-{k}" if k else "")
                 cmin, cmax, mon, umin, umax = rango_costo(
-                    BASE_DIPLOMADO[nivel_costo], moneda, sem)
-                horas = [80, 90, 100, 110, 120, 144, 160][sem % 7]
+                    BASE_MAESTRIA[nivel_costo], moneda, sem)
                 programas.append(dict(comun, **{
-                    "id": pid, "tipo": "diplomado", "nombre": nombre_prog,
+                    "id": pid, "tipo": "maestria", "nombre": nombre_prog,
                     "area": AREAS[area], "area_codigo": area,
-                    "horas": horas,
-                    "duracion_meses": max(2, round(horas / 40)),
-                    "modalidad": elegir(["Online", "Online", "Semipresencial", "Presencial"],
-                                        iid, area, "modp"),
+                    "duracion_meses": [18, 20, 24, 24, 12][sem % 5],
+                    "modalidad": elegir(MODALIDADES, iid, area, "mod" + str(k)),
                     "idioma": idioma,
                     "costo_min": cmin, "costo_max": cmax, "moneda": mon,
                     "costo_min_usd": umin, "costo_max_usd": umax,
-                    "admision": "Postulación continua",
-                    "financiamiento": "Descuentos por pronto pago y corporativos",
+                    "admision": elegir(ADMISIONES, iid, area, "adm"),
+                    "financiamiento": financiamiento(sunedu, tipo, nivel_costo, "maestria"),
                     "url": url_base,
-                    "url_busqueda": busqueda(dominio, nombre_prog),
-                    "destacado": nivel_costo >= 2 and orden == semilla(iid, "dp") % max(1, len(areas[:4])),
+                    "destacado": nivel_costo >= 3 and orden == destacada_m and k == 0,
                 }))
+
+        # ---- doctorados: hasta 5 areas, con 2 lineas en la principal
+        catalogo_d = DOCTORADO_EN if en_ingles else DOCTORADO_ES
+        destacada_d = semilla(iid, "dd") % max(1, len(areas[:5]))
+        for orden, area in enumerate(areas[:5]):
+            lista = catalogo_d[area]
+            cuantos = 2 if orden == 0 and len(lista) > 1 else 1
+            for k in range(cuantos):
+                sem = semilla(iid, area, "D", str(k))
+                nombre_prog = lista[(sem + k) % len(lista)]
+                pid = f"d-{iid}-{area.lower()}" + (f"-{k}" if k else "")
+                cmin, cmax, mon, umin, umax = rango_costo(
+                    BASE_DOCTORADO[nivel_costo], moneda, sem)
+                programas.append(dict(comun, **{
+                    "id": pid, "tipo": "doctorado", "nombre": nombre_prog,
+                    "area": AREAS[area], "area_codigo": area,
+                    "duracion_meses": [36, 42, 48, 48, 60][sem % 5],
+                    "modalidad": elegir(["Presencial", "Presencial", "Semipresencial"],
+                                        iid, area, "modd" + str(k)),
+                    "idioma": idioma,
+                    "costo_min": cmin, "costo_max": cmax, "moneda": mon,
+                    "costo_min_usd": umin, "costo_max_usd": umax,
+                    "admision": elegir(["Admisión anual", "Dos convocatorias al año"],
+                                       iid, area, "admd"),
+                    "financiamiento": financiamiento(sunedu, tipo, nivel_costo, "doctorado"),
+                    "url": url_base,
+                    "destacado": nivel_costo >= 3 and orden == destacada_d and k == 0,
+                }))
+
+        # ---- diplomados: solo instituciones de habla hispana
+        if not en_ingles:
+            destacada_p = semilla(iid, "dp") % max(1, len(areas[:6]))
+            for orden, area in enumerate(areas[:6]):
+                lista = DIPLOMADO[area]
+                cuantos = 2 if orden < 2 and len(lista) > 1 else 1
+                for k in range(cuantos):
+                    sem = semilla(iid, area, "P", str(k))
+                    nombre_prog = lista[(sem + k) % len(lista)]
+                    pid = f"p-{iid}-{area.lower()}" + (f"-{k}" if k else "")
+                    cmin, cmax, mon, umin, umax = rango_costo(
+                        BASE_DIPLOMADO[nivel_costo], moneda, sem)
+                    horas = [80, 90, 100, 110, 120, 144, 160][sem % 7]
+                    programas.append(dict(comun, **{
+                        "id": pid, "tipo": "diplomado", "nombre": nombre_prog,
+                        "area": AREAS[area], "area_codigo": area,
+                        "horas": horas,
+                        "duracion_meses": max(2, round(horas / 40)),
+                        "modalidad": elegir(["Online", "Online", "Semipresencial", "Presencial"],
+                                            iid, area, "modp" + str(k)),
+                        "idioma": idioma,
+                        "costo_min": cmin, "costo_max": cmax, "moneda": mon,
+                        "costo_min_usd": umin, "costo_max_usd": umax,
+                        "admision": "Postulación continua",
+                        "financiamiento": "Descuentos por pronto pago y corporativos",
+                        "url": url_base,
+                        "destacado": nivel_costo >= 2 and orden == destacada_p and k == 0,
+                    }))
 
     return instituciones, programas
 
@@ -398,12 +404,6 @@ def financiamiento(sunedu, tipo, nivel_costo, nivel):
     if nivel_costo >= 3:
         return "Becas parciales por mérito"
     return "Consultar becas y convenios internos"
-
-
-def busqueda(dominio, nombre_prog):
-    from urllib.parse import quote_plus
-    return ("https://www.google.com/search?q="
-            + quote_plus(f'site:{dominio} "{nombre_prog}"'))
 
 
 def facetas(programas, clave):

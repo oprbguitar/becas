@@ -1,0 +1,1458 @@
+{
+ "becas": {
+  "aga-khan-foundation-international-scholarship-programme-aga-khan-foundation": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://the.akdn/en/home"
+  },
+  "asian-development-bank-japan-scholarship-program-banco-asiatico-de-desarrollo": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.adb.org/work-with-us/careers/japan-scholarship-program"
+  },
+  "australia-awards-scholarships-gobierno-de-australia": {
+   "alternativa": "https://www.google.com/search?q=site%3Awww.dfat.gov.au+Australia+Awards+Scholarships",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://www.dfat.gov.au/people-to-people/australia-awards"
+  },
+  "beca-18-pronabec": {
+   "codigo": 404,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.gob.pe/beca18"
+  },
+  "beca-continuidad-de-estudios-superiores-pronabec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gob.pe/pronabec"
+  },
+  "beca-del-gobierno-de-india-iccr-indian-council-for-cultural-relations": {
+   "alternativa": "https://www.google.com/search?q=site%3Awww.iccr.gov.in+Beca+del+Gobierno+de+India+-+ICCR",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://www.iccr.gov.in/"
+  },
+  "beca-doble-oportunidad-pronabec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gob.pe/pronabec"
+  },
+  "beca-eiffel-ministerio-de-europa-y-asuntos-exteriores-de-francia": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.campusfrance.org/fr"
+  },
+  "beca-excelencia-centrum-pucp-centrum-pucp-business-school": {
+   "alternativa": "https://www.google.com/search?q=site%3Acentrum.pucp.edu.pe+Beca+Excelencia+CENTRUM+PUCP",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://centrum.pucp.edu.pe/"
+  },
+  "beca-generacion-del-bicentenario-pronabec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gob.pe/pronabec"
+  },
+  "beca-hijos-de-docentes-pronabec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gob.pe/pronabec"
+  },
+  "beca-maec-aecid-agencia-espanola-de-cooperacion-internacional": {
+   "alternativa": "https://www.google.com/search?q=site%3Awww.aecid.gob.es+Beca+MAEC-AECID",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://www.aecid.gob.es/es/becas-y-lectorados"
+  },
+  "beca-permanencia-pronabec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gob.pe/pronabec"
+  },
+  "beca-peru-pronabec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gob.pe/pronabec"
+  },
+  "beca-presidente-de-la-republica-pronabec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gob.pe/pronabec"
+  },
+  "beca-vocacion-de-maestro-pronabec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gob.pe/pronabec"
+  },
+  "becas-anid-chile-agencia-nacional-de-investigacion-y-desarrollo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://anid.cl:443/"
+  },
+  "becas-auip-de-movilidad-academica-asociacion-universitaria-iberoamericana-de-posgrado": {
+   "alternativa": "https://www.google.com/search?q=site%3Awww.auip.org+Becas+AUIP+de+Movilidad+Acad%C3%A9mica",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://www.auip.org/"
+  },
+  "becas-bid-programa-de-pasantias-y-estudios-banco-interamericano-de-desarrollo": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.iadb.org/es/quienes-somos/oportunidades-de-carrera"
+  },
+  "becas-daad-para-posgrado-servicio-aleman-de-intercambio-academico": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.daad.de/en/"
+  },
+  "becas-de-doctorado-prociencia-concytec-prociencia": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://prociencia.gob.pe/"
+  },
+  "becas-de-excelencia-del-gobierno-de-rusia-rossotrudnichestvo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://education-in-russia.com/"
+  },
+  "becas-de-la-universidad-de-buenos-aires-movilidad-universidad-de-buenos-aires": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.uba.ar/"
+  },
+  "becas-de-la-universidad-de-sao-paulo-pec-pg-gobierno-de-brasil-capes-cnpq": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gov.br/capes/pt-br"
+  },
+  "becas-de-posgrado-conahcyt-conahcyt-mexico": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://conahcyt.mx/"
+  },
+  "becas-de-posgrado-fundacion-la-caixa-fundacion-la-caixa": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://fundacionlacaixa.org/es/"
+  },
+  "becas-de-posgrado-prociencia-concytec-prociencia": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://prociencia.gob.pe/"
+  },
+  "becas-de-posgrado-pucp-pontificia-universidad-catolica-del-peru": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://posgrado.pucp.edu.pe/"
+  },
+  "becas-de-posgrado-universidad-del-pacifico-universidad-del-pacifico": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.up.edu.pe/"
+  },
+  "becas-del-banco-mundial-joint-japan-world-bank-banco-mundial": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.worldbank.org/en/programs/scholarships"
+  },
+  "becas-del-gobierno-de-italia-ministero-degli-affari-esteri-de-italia": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://studyinitaly.esteri.it/"
+  },
+  "becas-del-gobierno-de-polonia-nawa-agencia-nacional-de-intercambio-academico": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://nawa.gov.pl/en/"
+  },
+  "becas-del-gobierno-de-turquia-turkiye-burslar-gobierno-de-turquia": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://turkiyeburslari.gov.tr/"
+  },
+  "becas-erasmus-ka171-movilidad-internacional-comision-europea": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://erasmus-plus.ec.europa.eu/"
+  },
+  "becas-fundacion-botin-fundacion-botin": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://fundacionbotin.org/"
+  },
+  "becas-fundacion-carolina-fundacion-carolina": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.fundacioncarolina.es/"
+  },
+  "becas-fundacion-ramon-areces-fundacion-ramon-areces": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.fundacionareces.es/"
+  },
+  "becas-heinrich-boll-stiftung-heinrich-boll-stiftung": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.boell.de/de"
+  },
+  "becas-iberoamerica-santander-investigacion-banco-santander": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.santanderopenacademy.com/es/index.html"
+  },
+  "becas-ie-foundation-ie-university": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ie.edu/"
+  },
+  "becas-konrad-adenauer-stiftung-konrad-adenauer-stiftung": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.kas.de/"
+  },
+  "becas-oea-programa-de-alianzas-organizacion-de-estados-americanos": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.oas.org/es/becas/"
+  },
+  "becas-roberto-rocca-fundacion-roberto-rocca-tenaris-ternium": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.robertorocca.org/es"
+  },
+  "becas-santander-banco-santander-santander-open-academy": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.santanderopenacademy.com/es/index.html"
+  },
+  "becas-tecnologico-de-monterrey-lideres-del-manana-tecnologico-de-monterrey": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://tec.mx/es"
+  },
+  "becas-unir-para-latinoamerica-universidad-internacional-de-la-rioja": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.unir.net/"
+  },
+  "beijing-government-scholarship-municipalidad-de-pekin": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.beijing.gov.cn/"
+  },
+  "chevening-scholarships-gobierno-del-reino-unido": {
+   "alternativa": "https://www.google.com/search?q=site%3Awww.chevening.org+Chevening+Scholarships",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://www.chevening.org/"
+  },
+  "chinese-government-scholarship-csc-china-scholarship-council": {
+   "alternativa": "https://www.google.com/search?q=site%3Awww.campuschina.org+Chinese+Government+Scholarship+%2F+CSC",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://www.campuschina.org/"
+  },
+  "clarendon-fund-scholarships-university-of-oxford": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.ox.ac.uk/clarendon"
+  },
+  "colfuturo-programa-credito-beca-colfuturo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.colfuturo.org/"
+  },
+  "commonwealth-scholarships-commonwealth-scholarship-commission": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://cscuk.fcdo.gov.uk/"
+  },
+  "confucius-institute-scholarship-centro-clec-instituto-confucio": {
+   "alternativa": "https://www.google.com/search?q=site%3Acis.chinese.cn+Confucius+Institute+Scholarship",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://cis.chinese.cn/"
+  },
+  "coursera-edx-financial-aid-coursera-y-edx": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.coursera.org/"
+  },
+  "emerging-leaders-in-the-americas-program-elap-gobierno-de-canada": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.educanada.ca/menu.aspx?lang=eng"
+  },
+  "emile-boutmy-scholarship-sciences-po": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.sciencespo.fr/students/en/404/"
+  },
+  "erasmus-mundus-joint-masters-comision-europea": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.eacea.ec.europa.eu/scholarships/erasmus-mundus-catalogue_en"
+  },
+  "fondo-de-becas-esan-universidad-esan": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.esan.edu.pe/"
+  },
+  "fulbright-foreign-student-program-departamento-de-estado-de-ee-uu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://foreign.fulbrightonline.org/"
+  },
+  "gates-cambridge-scholarship-universidad-de-cambridge": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.gatescambridge.org/"
+  },
+  "global-korea-scholarship-gks-niied-gobierno-de-corea": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=OcyQm-q-k_bDprno7M83UXhB2pitGwxNWTb92srn.studyinkorea10"
+  },
+  "google-developer-scholarship-google": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://grow.google/"
+  },
+  "green-talents-award-ministerio-federal-de-educacion-e-investigacion-de-alemania": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.greentalents.de/"
+  },
+  "holland-scholarship-gobierno-de-los-paises-bajos": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.studyinnl.org/finances/nl-scholarship"
+  },
+  "hong-kong-phd-fellowship-scheme-research-grants-council-de-hong-kong": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://cerg1.ugc.edu.hk/hkpfs/index.html"
+  },
+  "kaust-fellowship-king-abdullah-university-of-science-and-technology": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.kaust.edu.sa/en/error/404?404;https://www.kaust.edu.sa:443/en/study/fellowships"
+  },
+  "knight-hennessy-scholars-stanford-university": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://knight-hennessy.stanford.edu/"
+  },
+  "knight-hennessy-scholars-universidad-de-stanford": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://knight-hennessy.stanford.edu/"
+  },
+  "manaaki-new-zealand-scholarships-gobierno-de-nueva-zelanda": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.nzscholarships.govt.nz/"
+  },
+  "mastercard-foundation-scholars-program-mastercard-foundation": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://mastercardfdn.org/en/what-we-do/our-programs/mastercard-foundation-scholars-program/"
+  },
+  "mext-becas-del-gobierno-de-japon-ministerio-de-educacion-de-japon": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.studyinjapan.go.jp/en/"
+  },
+  "orange-knowledge-programme-okp-nuffic-paises-bajos": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.nuffic.nl/en/international/international-programmes"
+  },
+  "plataforma-de-movilidad-estudiantil-alianza-del-pacifico-alianza-del-pacifico": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://alianzapacifico.net/becas/"
+  },
+  "programa-de-maestria-fulbright-peru-comision-fulbright-del-peru": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.fulbright.pe/"
+  },
+  "rhodes-scholarship-rhodes-trust-universidad-de-oxford": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.rhodeshouse.ox.ac.uk/"
+  },
+  "rotary-peace-fellowship-fundacion-rotaria": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.rotary.org/get-involved/our-programs/peace-fellowships"
+  },
+  "rotary-peace-fellowships-the-rotary-foundation": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.rotary.org/es-mx"
+  },
+  "schwarzman-scholars-tsinghua-university": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.schwarzmanscholars.org/"
+  },
+  "shanghai-government-scholarship-municipalidad-de-shanghai": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.shanghai.gov.cn/"
+  },
+  "singapore-international-graduate-award-singa-a-star-singapur": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.a-star.edu.sg/"
+  },
+  "stipendium-hungaricum-gobierno-de-hungria": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://stipendiumhungaricum.hu/"
+  },
+  "swiss-government-excellence-scholarships-confederacion-suiza": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.sbfi.admin.ch/en/swiss-government-excellence-scholarships"
+  },
+  "taiwan-icdf-scholarship-international-cooperation-and-development-fund": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.icdf.org.tw/wSite/mp?mp=2"
+  },
+  "unesco-fellowships-programme-unesco": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unesco.org/en/fellowships"
+  },
+  "vanier-canada-graduate-scholarships-gobierno-de-canada": {
+   "alternativa": "https://www.google.com/search?q=site%3Avanier.gc.ca+Vanier+Canada+Graduate+Scholarships",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://vanier.gc.ca/"
+  },
+  "yenching-academy-scholarship-peking-university": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://yenchingacademy.pku.edu.cn/"
+  }
+ },
+ "generado_en": "2026-08-19T19:16:29Z",
+ "instituciones": {
+  "anu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://study.anu.edu.au/study-options"
+  },
+  "austral": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.austral.edu.ar/posgrados-2025-como-las-escuelas-de-negocios-estan-adaptando-sus-maestrias-y-especializaciones/"
+  },
+  "bocconi": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unibocconi.it/en/programs"
+  },
+  "cambridge": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.postgraduate.study.cam.ac.uk/?ucam-ref=home-menu"
+  },
+  "centrum": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://centrum.pucp.edu.pe/maestrias/"
+  },
+  "columbia": {
+   "codigo": 403,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.columbia.edu/content/academics"
+  },
+  "comillas": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.comillas.edu/"
+  },
+  "continental": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://continentalinternationaleducation.com/"
+  },
+  "eafit": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.eafit.edu.co/posgrados"
+  },
+  "edinburgh": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://study.ed.ac.uk/postgraduate"
+  },
+  "ehu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ehu.eus/es/web/masterrak-eta-graduondokoak"
+  },
+  "esade": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.esade.edu/es/programas"
+  },
+  "esan": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "manual",
+   "url": "https://www.esan.edu.pe/maestrias"
+  },
+  "eth": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://ethz.ch/en/studies/master.html"
+  },
+  "fgv": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://portal.fgv.br/"
+  },
+  "flacso-ec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.flacso.edu.ec/posgrados"
+  },
+  "georgetown": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.georgetown.edu/academics/"
+  },
+  "harvard": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.harvard.edu/programs/"
+  },
+  "heidelberg": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uni-heidelberg.de/en/study"
+  },
+  "ie": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ie.edu/es/programas/"
+  },
+  "incae": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://incae.edu/nuestras-maestrias/"
+  },
+  "ipn": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ipn.mx/oferta-educativa/posgrado.html"
+  },
+  "itam": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.itam.mx/posgrados"
+  },
+  "javeriana": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.javeriana.edu.co/inicio"
+  },
+  "kaist": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.kaist.ac.kr/"
+  },
+  "kcl": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.kcl.ac.uk/study/postgraduate-taught"
+  },
+  "kuleuven": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.kuleuven.be/kuleuven/"
+  },
+  "lse": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.lse.ac.uk/programmes/search-courses"
+  },
+  "manchester": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.manchester.ac.uk/study/masters/courses/"
+  },
+  "mcgill": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.mcgill.ca/undergraduate-admissions/"
+  },
+  "melbourne": {
+   "codigo": 403,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://study.unimelb.edu.au/find/?collection=find-a-course"
+  },
+  "mit": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.mit.edu/"
+  },
+  "nova-pt": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.unl.pt/en"
+  },
+  "nus": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.nus.edu.sg/education/graduate-programmes"
+  },
+  "ort-uy": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ort.edu.uy/carreras-y-postgrados"
+  },
+  "oxford": {
+   "codigo": 403,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.ox.ac.uk/admissions/graduate/courses"
+  },
+  "palermo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.palermo.edu/derecho/programas_posgrado/maestria/tecnologia-inteligencia-artificial/"
+  },
+  "polimi": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.polimi.it/en/education"
+  },
+  "puc-chile": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://admision.uc.cl/postgrado/"
+  },
+  "puc-rio": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.puc-rio.br/ensinopesq/ccpg/"
+  },
+  "pucp": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "manual",
+   "url": "https://posgrado.pucp.edu.pe/"
+  },
+  "sciencespo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.sciencespo.fr/en/404/"
+  },
+  "stanford": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.stanford.edu/academics"
+  },
+  "sydney": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.sydney.edu.au/courses/search.html#f-courses_search_type=Courses"
+  },
+  "tcd": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.tcd.ie/courses/postgraduate/"
+  },
+  "tec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://maestriasydiplomados.tec.mx/programas/posgrados"
+  },
+  "tec-cr": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.tec.ac.cr/posgrados"
+  },
+  "tokyo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.u-tokyo.ac.jp/ja/admissions/graduate/e02_02.html"
+  },
+  "toronto": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.utoronto.ca/academics/undergraduate-programs"
+  },
+  "tsinghua": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.tsinghua.edu.cn/en/Admissions.htm"
+  },
+  "tudelft": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.tudelft.nl/en/education/programmes/masters"
+  },
+  "tum": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.tum.de/en/studies/degree-programs"
+  },
+  "uab": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uab.cat/masters-i-postgraus/"
+  },
+  "uac": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://uandina.edu.pe/blog/actualidad"
+  },
+  "uach-cl": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.postgradociencias.uach.cl/facultad-de-ciencias-uach-abre-postulaciones-para-magisteres-y-doctorados-2027/"
+  },
+  "uah": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://posgrado.uah.es/es/"
+  },
+  "uai": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uai.cl/postgrados"
+  },
+  "uam": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uam.es/uam/posgrado/escuela-doctorado-uam"
+  },
+  "uandes-co": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uniandes.edu.co/es/oferta-academica/posgrados"
+  },
+  "uarm": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uarm.edu.pe/posgrado/"
+  },
+  "ub": {
+   "codigo": 403,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.ub.edu/portal/web/economia-empresa/masteres-universitarios"
+  },
+  "uba": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uba.ar/ubaposgrado"
+  },
+  "ubc": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ubc.ca/undergraduate-students/"
+  },
+  "uc3m": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uc3m.es/postgraduate/home"
+  },
+  "uchile": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://uchile.cl/postgrados"
+  },
+  "ucl": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ucl.ac.uk/study/prospective-students/graduate"
+  },
+  "ucm": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ucm.es/estudios/masteres"
+  },
+  "ucr": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ucr.ac.cr/actividades/sep/2026/04/06/maestria-academica-en-ciencias-agricolas-y-recursos-naturales-con-enfasis-en-suelos.html"
+  },
+  "ucsm": {
+   "codigo": 403,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://ucsm.edu.pe/escuela-de-postgrado/"
+  },
+  "ucsp": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://postgrado.ucsp.edu.pe/programa-cat/maestrias/"
+  },
+  "ucss": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://postgrado.ucss.edu.pe/maestrias?ban=ucss"
+  },
+  "ucsur": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://programas-posgrado.cientifica.edu.pe/"
+  },
+  "ucv": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ucv.edu.pe/moyobamba"
+  },
+  "udea": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.udea.edu.co/wps/portal/udea/web/inicio/estudiar-udea/quiero-estudiar-udea/posgrado"
+  },
+  "udec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.udec.cl/"
+  },
+  "udelar": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.posgrados.udelar.edu.uy/portada.php"
+  },
+  "udep": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.udep.edu.pe/posgrado/"
+  },
+  "udlap": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.udlap.mx/posgrados/"
+  },
+  "uem": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://universidadeuropea.com"
+  },
+  "ufrj": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://ufrj.br/ingresso/pos-graduacao/"
+  },
+  "ugr": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ugr.es/estudiantes/master-doctorados"
+  },
+  "uladech": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uladech.edu.pe/programas-academicos/posgrado/"
+  },
+  "ulima": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ulima.edu.pe/posgrado"
+  },
+  "umch": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://umch.edu.pe"
+  },
+  "unac": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://unac.edu.pe/posgrado/"
+  },
+  "unal": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "manual",
+   "url": "https://unal.edu.co/"
+  },
+  "unalm": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.unalm.edu.pe/"
+  },
+  "unam": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.posgrado.unam.mx/"
+  },
+  "unamba": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.unamba.edu.pe/la-universidad/himno-a-la-unamba.html"
+  },
+  "unap-puno": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://unap.edu.pe/"
+  },
+  "unapiquitos": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.unapiquitos.edu.pe/posgrado"
+  },
+  "unas": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://epg.unas.edu.pe/admision"
+  },
+  "unasam": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://postgrado.unasam.edu.pe/"
+  },
+  "unav": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unav.edu/estudios/masteres"
+  },
+  "unc": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unc.edu.pe/2022/04/18/posgrado-matricula-2022-i/"
+  },
+  "unc-ar": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unc.edu.ar/posgrados"
+  },
+  "uncp": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://uncp.edu.pe/posgrado/"
+  },
+  "undac": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.undac.edu.pe/posgrado"
+  },
+  "uned": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uned.es/universidad/inicio/estudios/masteres.html"
+  },
+  "unfv": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.unfv.edu.pe/eupg/"
+  },
+  "unh": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unh.edu.pe/posgrado-de-fen/"
+  },
+  "unheval": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://posgrado.unheval.edu.pe/"
+  },
+  "uni": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://portal.uni.edu.pe/index.php/posgrado-uni/maestrias"
+  },
+  "unia": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://posgrado.unia.edu.pe/"
+  },
+  "unica": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unica.edu.pe/posgrado/"
+  },
+  "unicamp": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unicamp.br/pos-graduacao/"
+  },
+  "unife": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://unife.edu.pe/posgrado/"
+  },
+  "uninorte": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://validate.perfdrive.com/?ssa=a81369a5-a4e3-48a5-9951-dec510ebb067&ssb=68592270328&ssc=https%3A%2F%2Fwww.uninorte.edu.co%2Fweb%2Fposgrados&ssi=82e541f4-e2vu-4948-b1d4-71f421875d8c&ssk=botmanager_support@radware.com&ssm=47619123088155696108553445378671&ssn=439062ce70446be9b3911787ff2091c9d662ea02f8c9-8656-41a6-a55702&sso=d484a2b8-c9e84c5754c802a7e65326ee15d99427f323fa49fda446b6&ssp=24031630341787155917178717486467491&ssq=84738746687632795932566876276341248243706&ssr=MTkwLjIzNi4xODQuMTM=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBlYTAyZjhjOS04NjU2LTQxYTYtYTJiOC1jOWU4NGM1NzU0YzgxLTE3ODcxNjY4NzYzMjEwLTAwMDEwZTc3OWVhNDM4ZjhiYmExMCIsInJkIjoidW5pbm9ydGUuZWR1LmNvIiwidXpteCI6IjdmYzAwMDM4NjJlOWYwLWVlNWUtNDg5OS1iNzU5LTgxM2IyNWVkNTkzYjEtMTc4NzE2Njg3NjMyMTAtMDAxMTc1MTZlNDU0NGJhOWI5ZjEwIn0="
+  },
+  "unir": {
+   "codigo": 403,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.unir.net/educacion/masteres/"
+  },
+  "unizar": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://estudios.unizar.es/estudio/lista-ramas?tipo_id=6&amp;anyo_academico=2026"
+  },
+  "unjbg": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unjbg.edu.pe/"
+  },
+  "unjfsc": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://unjfsc.edu.pe/posgrado/"
+  },
+  "unmsm": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://unmsm.edu.pe/"
+  },
+  "unp": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.gob.pe/unp"
+  },
+  "unprg": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.unprg.edu.pe/univ/portal/"
+  },
+  "unsa": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://posgrado.unsa.edu.pe/"
+  },
+  "unsaac": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://postgrado.unsaac.edu.pe/"
+  },
+  "unsch": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://unsch.edu.pe/"
+  },
+  "unsm": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://unsm.edu.pe/posgrado/"
+  },
+  "unt": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.epgunitru.edu.pe/maestrias-epg/"
+  },
+  "untrm": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://untrm.edu.pe/escuela-de-posgrado/"
+  },
+  "untumbes": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://posgradountumbes.edu.pe/"
+  },
+  "unu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unu.edu.pe/posgrado/"
+  },
+  "uoc": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uoc.edu/es/estudios/masters"
+  },
+  "up": {
+   "codigo": 403,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.up.edu.pe/programas/posgrado"
+  },
+  "upao": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://posgrado.upao.edu.pe"
+  },
+  "upb-bo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.upb.edu/"
+  },
+  "upc": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.upc.edu.pe/"
+  },
+  "upch": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://upch.edu.pe/"
+  },
+  "upeu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://posgrado.upeu.edu.pe/"
+  },
+  "upm": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.upm.es/"
+  },
+  "upn": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.upn.edu.pe/posgrado"
+  },
+  "uporto": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.up.pt/portal/en/study/bachelors-and-integrated-masters-degrees/why-uporto/"
+  },
+  "upsjb": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.upsjb.edu.pe/posgrado/"
+  },
+  "upt": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://postgrado.upt.edu.pe/web/"
+  },
+  "upv": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.upv.es/estudios/master/index-es.html"
+  },
+  "urosario": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://urosario.edu.co/escuela-de-ciencias-e-ingenieria/posgrados/maestrias"
+  },
+  "urp": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.urp.edu.pe/posgrado/"
+  },
+  "us-sevilla": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.us.es/estudiar/que-estudiar/oferta-de-masteres"
+  },
+  "usach": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.usach.cl/programas/postgrado"
+  },
+  "usal": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://usal.es/masteres"
+  },
+  "usfq": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.usfq.edu.ec/es/posgrados"
+  },
+  "usil": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://usil.edu.pe/"
+  },
+  "usmp": {
+   "codigo": 403,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.usmp.edu.pe/"
+  },
+  "usp": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www5.usp.br"
+  },
+  "uss": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "http://www.uss.edu.pe"
+  },
+  "utdt": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.utdt.edu/posgrados"
+  },
+  "utec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://posgrado.utec.edu.pe/"
+  },
+  "utp": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.postgradoutp.edu.pe/"
+  },
+  "uv": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uv.es/uvmasters"
+  },
+  "uwiener": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uwiener.edu.pe/posgrado/"
+  },
+  "wur": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.wur.nl/en/education/master"
+  }
+ },
+ "resumen": {
+  "becas": {
+   "manual": 1,
+   "ok": 68,
+   "protegido": 8,
+   "sin_respuesta": 9
+  },
+  "instituciones": {
+   "manual": 15,
+   "ok": 136,
+   "protegido": 1,
+   "sin_respuesta": 0
+  }
+ }
+}
