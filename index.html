@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>BecaRadar · Buscador avanzado de becas en el mundo</title>
+<meta name="description" content="Buscador avanzado de becas de Perú, Latinoamérica, Europa, Asia, China y el mundo. Filtra por especialidad, fechas, país, distancia, edad, costo y cobertura. Guarda tus becas favoritas en tu navegador.">
+<meta name="theme-color" content="#4f46e5" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0b1020" media="(prefers-color-scheme: dark)">
+<meta property="og:title" content="BecaRadar · Buscador avanzado de becas">
+<meta property="og:description" content="Encuentra y guarda becas de todo el mundo con filtros avanzados.">
+<meta property="og:type" content="website">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/logo.svg">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="preload" href="data/becas.json" as="fetch" crossorigin="anonymous">
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+<a class="skip-link" href="#resultados">Saltar al listado de becas</a>
+
+<!-- ============================== ENCABEZADO ============================== -->
+<header class="topbar" id="topbar">
+  <div class="topbar__inner">
+    <a class="brand" href="./" aria-label="BecaRadar, inicio">
+      <img class="brand__logo" src="assets/img/logo.svg" alt="" width="38" height="38">
+      <span class="brand__text">Beca<strong>Radar</strong></span>
+    </a>
+
+    <form class="search" role="search" id="form-busqueda" autocomplete="off">
+      <svg class="search__icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M21 21l-4.35-4.35M11 19a8 8 0 1 1 0-16 8 8 0 0 1 0 16z"/></svg>
+      <input class="search__input" id="q" type="search" name="q"
+             placeholder="Busca por nombre, país, universidad o carrera…"
+             aria-label="Buscar becas" enterkeyhint="search">
+      <button class="search__clear" type="button" id="btn-limpiar-q" aria-label="Limpiar búsqueda" hidden>&times;</button>
+    </form>
+
+    <div class="topbar__actions">
+      <button class="btn btn--ghost btn--icon js-ripple" id="btn-tema" aria-label="Cambiar tema" title="Cambiar tema claro / oscuro">
+        <svg class="ico ico--sol" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+        <svg class="ico ico--luna" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 1 1 9.5 4a7 7 0 0 0 10.5 10.5z"/></svg>
+      </button>
+      <button class="btn btn--ghost btn--icon only-mobile js-ripple" id="btn-abrir-filtros" aria-label="Abrir filtros" aria-expanded="false">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+      </button>
+      <button class="btn btn--primary js-ripple" id="btn-abrir-guardadas" aria-expanded="false">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+        <span class="only-desktop">Mis becas</span>
+        <span class="badge" id="contador-guardadas">0</span>
+      </button>
+    </div>
+  </div>
+  <div class="topbar__progress" id="barra-progreso" aria-hidden="true"></div>
+</header>
+
+<!-- =============================== PORTADA =============================== -->
+<section class="hero" id="hero">
+  <div class="hero__glow" aria-hidden="true"></div>
+  <div class="hero__inner">
+    <p class="hero__eyebrow">Perú · Latinoamérica · Europa · Asia · China · Mundo</p>
+    <h1 class="hero__title">Encuentra la beca que <span class="grad">sí</span> encaja contigo</h1>
+    <p class="hero__sub">Filtra entre <strong id="hero-total">0</strong> convocatorias por especialidad, fechas, país, distancia, edad, cobertura y costo. Guarda tus favoritas en tu navegador — sin cuentas ni contraseñas.</p>
+    <div class="hero__stats" id="hero-stats">
+      <div class="stat"><span class="stat__num" data-contador="0">0</span><span class="stat__lbl">Becas</span></div>
+      <div class="stat"><span class="stat__num" data-contador="0">0</span><span class="stat__lbl">Países</span></div>
+      <div class="stat"><span class="stat__num" data-contador="0">0</span><span class="stat__lbl">Abiertas hoy</span></div>
+      <div class="stat"><span class="stat__num" data-contador="0">0</span><span class="stat__lbl">Cobertura total</span></div>
+    </div>
+    <div class="hero__chips" id="atajos" role="group" aria-label="Búsquedas rápidas"></div>
+  </div>
+</section>
+
+<!-- ============================== APLICACIÓN ============================== -->
+<main class="layout">
+
+  <!-- ---------- PANEL IZQUIERDO: BECAS GUARDADAS (localStorage) ---------- -->
+  <aside class="panel panel--guardadas" id="panel-guardadas" aria-label="Mis becas guardadas">
+    <div class="panel__head">
+      <h2 class="panel__title">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+        Mis becas
+      </h2>
+      <button class="btn btn--ghost btn--icon only-mobile" id="btn-cerrar-guardadas" aria-label="Cerrar panel">&times;</button>
+    </div>
+
+    <p class="panel__hint">Se guardan en <strong>este navegador</strong>. Nada viaja a un servidor.</p>
+
+    <div class="guardadas__resumen" id="guardadas-resumen" hidden>
+      <span class="pill pill--sm" id="resumen-abiertas">0 abiertas</span>
+      <span class="pill pill--sm" id="resumen-proxima">—</span>
+    </div>
+
+    <ul class="guardadas" id="lista-guardadas"></ul>
+
+    <div class="vacio vacio--sm" id="guardadas-vacio">
+      <svg viewBox="0 0 24 24" aria-hidden="true" class="vacio__ico"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+      <p>Aún no guardas ninguna beca.</p>
+      <p class="vacio__sub">Pulsa el marcador <span class="inline-ico">🔖</span> de cualquier tarjeta para tenerla siempre a mano.</p>
+    </div>
+
+    <div class="panel__foot">
+      <button class="btn btn--soft btn--sm js-ripple" id="btn-exportar">Exportar</button>
+      <label class="btn btn--soft btn--sm" for="input-importar">Importar
+        <input type="file" id="input-importar" accept="application/json" hidden>
+      </label>
+      <button class="btn btn--soft btn--sm btn--peligro js-ripple" id="btn-vaciar">Vaciar</button>
+    </div>
+  </aside>
+
+  <!-- ------------------ CENTRO: RESULTADOS DE LA BÚSQUEDA ------------------ -->
+  <section class="resultados" id="resultados" aria-live="polite">
+    <div class="resultados__barra">
+      <div class="resultados__conteo">
+        <strong id="conteo">0</strong> becas encontradas
+        <span class="resultados__de" id="conteo-total"></span>
+      </div>
+      <div class="resultados__orden">
+        <label class="sr-only" for="orden">Ordenar por</label>
+        <select id="orden" class="select select--sm">
+          <option value="cierre">Cierra pronto</option>
+          <option value="apertura">Recién abiertas</option>
+          <option value="nombre">Nombre (A-Z)</option>
+          <option value="cobertura">Mayor cobertura</option>
+          <option value="distancia">Más cerca de mí</option>
+          <option value="duracion">Mayor duración</option>
+        </select>
+        <button class="btn btn--ghost btn--icon only-mobile js-ripple" id="btn-filtros-flotante" aria-label="Filtros">
+          <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+        </button>
+      </div>
+    </div>
+
+    <div class="chips-activos" id="chips-activos" aria-label="Filtros aplicados"></div>
+
+    <div class="grid" id="grid-becas"></div>
+
+    <div class="vacio" id="resultados-vacio" hidden>
+      <div class="vacio__ico vacio__ico--grande" aria-hidden="true">🔍</div>
+      <h3>Ninguna beca coincide con esos filtros</h3>
+      <p class="vacio__sub">Prueba ampliando el rango de fechas, la región o quitando algún filtro.</p>
+      <button class="btn btn--primary js-ripple" id="btn-reset-vacio">Limpiar todos los filtros</button>
+    </div>
+
+    <div class="cargar-mas" id="cargar-mas" hidden>
+      <button class="btn btn--soft js-ripple" id="btn-cargar-mas">Ver más becas</button>
+    </div>
+  </section>
+
+  <!-- ------------------------ DERECHA: FILTROS ------------------------ -->
+  <aside class="panel panel--filtros" id="panel-filtros" aria-label="Filtros de búsqueda">
+    <div class="panel__head">
+      <h2 class="panel__title">
+        <svg class="ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h18M6 12h12M10 18h4"/></svg>
+        Filtros
+      </h2>
+      <button class="btn btn--ghost btn--sm" id="btn-reset">Limpiar</button>
+      <button class="btn btn--ghost btn--icon only-mobile" id="btn-cerrar-filtros" aria-label="Cerrar filtros">&times;</button>
+    </div>
+
+    <div class="filtros" id="filtros">
+      <!-- Los grupos de filtros se generan desde assets/js/filtros.js -->
+    </div>
+
+    <div class="panel__foot panel__foot--sticky only-mobile">
+      <button class="btn btn--primary btn--bloque js-ripple" id="btn-aplicar-movil">Ver <span id="conteo-movil">0</span> becas</button>
+    </div>
+  </aside>
+</main>
+
+<!-- ============================== PIE ============================== -->
+<footer class="pie">
+  <div class="pie__inner">
+    <div>
+      <p class="pie__marca"><img src="assets/img/logo.svg" alt="" width="24" height="24"> Beca<strong>Radar</strong></p>
+      <p class="pie__nota">Proyecto abierto. Los datos se actualizan automáticamente desde las webs oficiales de cada convocatoria.</p>
+    </div>
+    <div class="pie__meta">
+      <p>Última actualización del catálogo: <strong id="pie-actualizado">—</strong></p>
+      <p><strong id="pie-total">0</strong> becas en el catálogo</p>
+      <p class="pie__aviso">Las fechas son referenciales: <strong>verifica siempre la convocatoria oficial</strong> en el enlace de cada beca.</p>
+    </div>
+  </div>
+</footer>
+
+<div class="overlay" id="overlay" hidden></div>
+
+<!-- Plantilla de tarjeta de beca -->
+<template id="tpl-beca">
+  <article class="card" tabindex="-1">
+    <header class="card__head">
+      <div class="card__region"><span class="card__bandera" aria-hidden="true"></span><span class="card__pais"></span></div>
+      <button class="card__guardar js-ripple" type="button" aria-pressed="false" aria-label="Guardar beca">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3h12a1 1 0 0 1 1 1v17l-7-4-7 4V4a1 1 0 0 1 1-1z"/></svg>
+      </button>
+    </header>
+    <h3 class="card__titulo"></h3>
+    <p class="card__org"></p>
+    <p class="card__desc"></p>
+    <ul class="card__tags"></ul>
+    <dl class="card__datos"></dl>
+    <div class="card__estado"></div>
+    <details class="card__req">
+      <summary>Ver requisitos <span class="card__req-n"></span></summary>
+      <ul class="card__req-lista"></ul>
+      <p class="card__req-fuente"></p>
+    </details>
+    <footer class="card__foot">
+      <a class="btn btn--primary btn--sm js-ripple card__postular" target="_blank" rel="noopener noreferrer">
+        Postular ahora
+        <svg class="ico ico--xs" viewBox="0 0 24 24" aria-hidden="true"><path d="M7 17L17 7M9 7h8v8"/></svg>
+      </a>
+      <a class="btn btn--soft btn--sm js-ripple card__requisitos" target="_blank" rel="noopener noreferrer">Bases oficiales</a>
+    </footer>
+  </article>
+</template>
+
+<script type="module" src="assets/js/app.js"></script>
+</body>
+</html>
