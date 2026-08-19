@@ -1,15 +1,15 @@
 {
-  "name": "BecaRadar — buscador de becas",
-  "short_name": "BecaRadar",
-  "description": "Buscador avanzado de becas de Perú, Latinoamérica, Europa, Asia, China y el mundo.",
+  "name": "Ruta Amauta — becas, maestrías, doctorados y diplomados",
+  "short_name": "Ruta Amauta",
+  "description": "Buscador avanzado y comparador de becas y programas de posgrado en Perú, Latinoamérica y el mundo.",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#4f46e5",
+  "background_color": "#FBF5EC",
+  "theme_color": "#C4552E",
   "lang": "es",
   "icons": [
-    { "src": "assets/img/logo.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/img/logo.png", "sizes": "1248x1248", "type": "image/png", "purpose": "any" },
     { "src": "assets/img/favicon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "maskable" }
   ]
 }

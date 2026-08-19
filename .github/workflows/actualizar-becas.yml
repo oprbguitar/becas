@@ -1,4 +1,4 @@
-name: Actualizar catálogo de becas
+name: Actualizar catálogo
 
 # El rastreo corre en los servidores de GitHub: no consume nada del equipo
 # del usuario ni requiere intervención manual.
@@ -40,6 +40,9 @@ jobs:
 
       - name: Rastrear convocatorias oficiales
         run: python scraper/scrape.py --limite ${{ github.event.inputs.limite || 0 }}
+
+      - name: Regenerar catálogo de posgrados
+        run: python scraper/generar_catalogo.py
 
       - name: Publicar cambios del catálogo
         run: |

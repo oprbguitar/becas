@@ -1,0 +1,77 @@
+{
+ "actualizado": "2026-08-19",
+ "generado_en": "2026-08-19T18:40:50Z",
+ "totales": {
+  "maestria": 473,
+  "doctorado": 288,
+  "diplomado": 271
+ },
+ "instituciones": 96,
+ "paises": [
+  "Argentina",
+  "Australia",
+  "Bolivia",
+  "Brasil",
+  "Canadá",
+  "Chile",
+  "China",
+  "Colombia",
+  "Corea del Sur",
+  "Costa Rica",
+  "Ecuador",
+  "España",
+  "Estados Unidos",
+  "Francia",
+  "Italia",
+  "Japón",
+  "México",
+  "Países Bajos",
+  "Perú",
+  "Reino Unido",
+  "Singapur",
+  "Suiza",
+  "Uruguay"
+ ],
+ "regiones": [
+  "Asia",
+  "Europa",
+  "Latinoamérica",
+  "Norteamérica",
+  "Oceanía",
+  "Perú"
+ ],
+ "areas": [
+  "Agronomía y Alimentos",
+  "Ciencias Sociales y Humanidades",
+  "Ciencias de la Salud",
+  "Comunicación y Marketing",
+  "Datos e Inteligencia Artificial",
+  "Derecho",
+  "Economía y Finanzas",
+  "Educación",
+  "Gestión y Negocios",
+  "Ingeniería y Tecnología",
+  "Medio Ambiente y Sostenibilidad",
+  "Políticas Públicas y Gobierno"
+ ],
+ "modalidades": [
+  "Presencial",
+  "Semipresencial",
+  "Online"
+ ],
+ "monedas": [
+  "AUD",
+  "BRL",
+  "CAD",
+  "CHF",
+  "CLP",
+  "COP",
+  "EUR",
+  "GBP",
+  "MXN",
+  "PEN",
+  "SGD",
+  "USD"
+ ],
+ "nota": "Los costos son rangos referenciales de mercado, no precios oficiales. Verifica siempre precios, fechas y requisitos en la web oficial de cada institución."
+}

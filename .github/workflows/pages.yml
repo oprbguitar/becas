@@ -25,8 +25,24 @@ jobs:
 
       - name: Validar que el catálogo sea JSON correcto
         run: |
-          python -c "import json;d=json.load(open('data/becas.json'));print(len(d),'becas válidas')"
-          python -c "import json;json.load(open('data/meta.json'));print('meta.json ok')"
+          python - <<'FIN'
+          import json
+          total = 0
+          for nombre in ["becas", "maestrias", "doctorados", "diplomados", "instituciones"]:
+              datos = json.load(open(f"data/{nombre}.json", encoding="utf-8"))
+              assert isinstance(datos, list) and datos, nombre
+              assert all(d.get("id") and d.get("nombre") for d in datos), nombre
+              print(f"{nombre}: {len(datos)} registros")
+              total += len(datos)
+          for nombre in ["meta", "meta_catalogo"]:
+              json.load(open(f"data/{nombre}.json", encoding="utf-8"))
+          print("total:", total)
+          FIN
+
+      - name: Verificar que el catálogo generado esté al día
+        run: |
+          python scraper/generar_catalogo.py
+          git diff --exit-code data/maestrias.json data/doctorados.json                                data/diplomados.json data/instituciones.json
 
       - name: Probar el extractor de requisitos
         run: |
