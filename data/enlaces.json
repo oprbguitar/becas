@@ -526,13 +526,43 @@
    "url": "https://yenchingacademy.pku.edu.cn/"
   }
  },
- "generado_en": "2026-08-19T19:16:29Z",
+ "generado_en": "2026-08-19T19:34:30Z",
  "instituciones": {
+  "aalto": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.aalto.fi/fi"
+  },
+  "agh": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.agh.edu.pl/en/education"
+  },
   "anu": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://study.anu.edu.au/study-options"
+  },
+  "auc": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.aucegypt.edu/admissions/graduate"
+  },
+  "auckland": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://response.auckland.ac.nz/pgregisterinterest"
+  },
+  "aui": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://aui.ma/fr/programmes-master"
   },
   "austral": {
    "codigo": 200,
@@ -540,11 +570,23 @@
    "nivel": "declarada",
    "url": "https://www.austral.edu.ar/posgrados-2025-como-las-escuelas-de-negocios-estan-adaptando-sus-maestrias-y-especializaciones/"
   },
+  "berkeley": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.berkeley.edu/map/graduate-services/"
+  },
   "bocconi": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.unibocconi.it/en/programs"
+  },
+  "cairo": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://cu.edu.eg/Home"
   },
   "cambridge": {
    "codigo": 200,
@@ -557,6 +599,18 @@
    "estado": "manual",
    "nivel": "manual",
    "url": "https://centrum.pucp.edu.pe/maestrias/"
+  },
+  "ceu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.ceu.edu/"
+  },
+  "chula": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.chula.ac.th/academics/admissions/graduate-admission/"
   },
   "columbia": {
    "codigo": 403,
@@ -576,6 +630,24 @@
    "nivel": "declarada",
    "url": "https://continentalinternationaleducation.com/"
   },
+  "cuni": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://cuni.cz/UKEN-1.html"
+  },
+  "dtu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.dtu.dk/english/education/graduate"
+  },
+  "du-in": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.du.ac.in/index.php?page=post-graduate"
+  },
   "eafit": {
    "codigo": 200,
    "estado": "ok",
@@ -593,6 +665,18 @@
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://www.ehu.eus/es/web/masterrak-eta-graduondokoak"
+  },
+  "elte": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.elte.hu/en/programmes"
+  },
+  "epfl": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.epfl.ch/education/master/"
   },
   "esade": {
    "codigo": 200,
@@ -612,6 +696,12 @@
    "nivel": "declarada",
    "url": "https://ethz.ch/en/studies/master.html"
   },
+  "eur": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.eur.nl/en/education/practical-matters/registration/first-registration/master"
+  },
   "fgv": {
    "codigo": 0,
    "estado": "manual",
@@ -623,6 +713,18 @@
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.flacso.edu.ec/posgrados"
+  },
+  "fu-berlin": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.fu-berlin.de/en/studium/studienangebot"
+  },
+  "fudan": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.fudan.edu.cn/en/admissions/main.psp"
   },
   "georgetown": {
    "codigo": 200,
@@ -636,11 +738,41 @@
    "nivel": "declarada",
    "url": "https://www.harvard.edu/programs/"
   },
+  "hec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.hec.edu/en/master-s-programs"
+  },
   "heidelberg": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.uni-heidelberg.de/en/study"
+  },
+  "helsinki": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.helsinki.fi/en"
+  },
+  "hku": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://portal.hku.hk/tpg-admissions/"
+  },
+  "hkust": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://hkust.edu.hk/"
+  },
+  "huji": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.huji.ac.il/"
   },
   "ie": {
    "codigo": 200,
@@ -648,11 +780,29 @@
    "nivel": "declarada",
    "url": "https://www.ie.edu/es/programas/"
   },
+  "iisc": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.iisc.ac.in/admissions/"
+  },
+  "iitb": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://acad.iitb.ac.in/"
+  },
   "incae": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://incae.edu/nuestras-maestrias/"
+  },
+  "intec": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.intec.edu.do/admisiones/solicitud-en-linea-postgrado"
   },
   "ipn": {
    "codigo": 200,
@@ -672,11 +822,23 @@
    "nivel": "declarada",
    "url": "https://www.javeriana.edu.co/inicio"
   },
+  "jhu": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.jhu.edu/admissions/graduate/"
+  },
   "kaist": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "portada",
    "url": "https://www.kaist.ac.kr/"
+  },
+  "kaust": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.kaust.edu.sa/en/error/404?404;https://www.kaust.edu.sa:443/en/study/graduate-programs"
   },
   "kcl": {
    "codigo": 200,
@@ -684,17 +846,53 @@
    "nivel": "declarada",
    "url": "https://www.kcl.ac.uk/study/postgraduate-taught"
   },
+  "kth": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.kth.se/en/studies/master"
+  },
+  "ku-ae": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ku.ac.ae/postgraduate-admissions"
+  },
+  "ku-dk": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ku.dk/studies/masters"
+  },
   "kuleuven": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "portada",
    "url": "https://www.kuleuven.be/kuleuven/"
   },
+  "kyoto": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.kyoto-u.ac.jp/ja/faculties-and-graduate"
+  },
+  "leiden": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.universiteitleiden.nl/en/education/study-programmes"
+  },
   "lse": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.lse.ac.uk/programmes/search-courses"
+  },
+  "lund": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.lu.se/"
   },
   "manchester": {
    "codigo": 200,
@@ -720,11 +918,35 @@
    "nivel": "portada",
    "url": "https://www.mit.edu/"
   },
+  "monash": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.monash.edu/study/courses"
+  },
   "nova-pt": {
    "codigo": 0,
    "estado": "manual",
    "nivel": "manual",
    "url": "https://www.unl.pt/en"
+  },
+  "ntnu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ntnu.edu/studies/international/master"
+  },
+  "ntu-sg": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ntu.edu.sg/about-us/sustainability/sustainability-education/postgraduate-programmes"
+  },
+  "ntu-tw": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.ntu.edu.tw/"
   },
   "nus": {
    "codigo": 200,
@@ -732,11 +954,23 @@
    "nivel": "declarada",
    "url": "https://www.nus.edu.sg/education/graduate-programmes"
   },
+  "nyu": {
+   "codigo": 202,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.nyu.edu/academics/graduate.html?challenge=d06e90d7-4d8f-4b88-9d8c-10b73beb60f1"
+  },
   "ort-uy": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://www.ort.edu.uy/carreras-y-postgrados"
+  },
+  "otago": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.otago.ac.nz/study/postgraduate"
   },
   "oxford": {
    "codigo": 403,
@@ -750,11 +984,23 @@
    "nivel": "descubierta",
    "url": "https://www.palermo.edu/derecho/programas_posgrado/maestria/tecnologia-inteligencia-artificial/"
   },
+  "pku": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.pku.edu.cn/"
+  },
   "polimi": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.polimi.it/en/education"
+  },
+  "psl": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.psl.eu/en/education"
   },
   "puc-chile": {
    "codigo": 200,
@@ -768,11 +1014,35 @@
    "nivel": "declarada",
    "url": "https://www.puc-rio.br/ensinopesq/ccpg/"
   },
+  "pucmm": {
+   "codigo": 429,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.pucmm.edu.do/posgrado"
+  },
   "pucp": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "manual",
    "url": "https://posgrado.pucp.edu.pe/"
+  },
+  "qu-qa": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.qu.edu.qa/ar/Research/graduate-studies/Pages/default.aspx"
+  },
+  "rwth": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.rwth-aachen.de/go/id/a/?lidx=1"
+  },
+  "sapienza": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uniroma1.it/it/pagina/elenco-dei-master"
   },
   "sciencespo": {
    "codigo": 200,
@@ -780,11 +1050,29 @@
    "nivel": "declarada",
    "url": "https://www.sciencespo.fr/en/404/"
   },
+  "snu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://admission.snu.ac.kr/undergraduate/notice"
+  },
+  "sorbonne": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.sorbonne-universite.fr/en/education"
+  },
   "stanford": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.stanford.edu/academics"
+  },
+  "stellenbosch": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.sun.ac.za/english/faculty/postgraduate"
   },
   "sydney": {
    "codigo": 200,
@@ -809,6 +1097,12 @@
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.tec.ac.cr/posgrados"
+  },
+  "technion": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.technion.ac.il/"
   },
   "tokyo": {
    "codigo": 200,
@@ -840,6 +1134,12 @@
    "nivel": "declarada",
    "url": "https://www.tum.de/en/studies/degree-programs"
   },
+  "tuwien": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.tuwien.at/"
+  },
   "uab": {
    "codigo": 200,
    "estado": "ok",
@@ -870,6 +1170,12 @@
    "nivel": "declarada",
    "url": "https://www.uai.cl/postgrados"
   },
+  "ualberta": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ualberta.ca/en/graduate-studies/index.html"
+  },
   "uam": {
    "codigo": 200,
    "estado": "ok",
@@ -881,6 +1187,12 @@
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://www.uniandes.edu.co/es/oferta-academica/posgrados"
+  },
+  "uanl": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uanl.mx/noticias/posgrado-en-mercadotecnia-deportiva-de-la-uanl-se-internacionaliza/"
   },
   "uarm": {
    "codigo": 200,
@@ -906,11 +1218,35 @@
    "nivel": "descubierta",
    "url": "https://www.ubc.ca/undergraduate-students/"
   },
+  "uc-pt": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.uc.pt/"
+  },
   "uc3m": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.uc3m.es/postgraduate/home"
+  },
+  "uca-py": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://uc.com.py/nivel/posgrado/"
+  },
+  "uca-sv": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://uca.edu.sv/oferta-academica/posgrados/"
+  },
+  "ucd": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ucd.ie/graduatestudies/"
   },
   "uchile": {
    "codigo": 200,
@@ -923,6 +1259,12 @@
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.ucl.ac.uk/study/prospective-students/graduate"
+  },
+  "ucla": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://admission.ucla.edu/"
   },
   "ucm": {
    "codigo": 200,
@@ -960,11 +1302,23 @@
    "nivel": "declarada",
    "url": "https://programas-posgrado.cientifica.edu.pe/"
   },
+  "uct": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://uct.ac.za/research-innovation-publications/postgraduate-guide"
+  },
   "ucv": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://www.ucv.edu.pe/moyobamba"
+  },
+  "ucv-ve": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://www.ucv.ve/organizacion/estudios-de-postgrado/"
   },
   "udea": {
    "codigo": 200,
@@ -990,6 +1344,12 @@
    "nivel": "declarada",
    "url": "https://www.udep.edu.pe/posgrado/"
   },
+  "udg": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.udg.mx/aspirantes/documentacion"
+  },
   "udlap": {
    "codigo": 200,
    "estado": "ok",
@@ -1002,17 +1362,53 @@
    "nivel": "declarada",
    "url": "https://universidadeuropea.com"
   },
+  "ues": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ues.edu.sv/posgrados-de-la-ues-una-respuesta-a-los-retos-del-pais-en-las-diferentes-areas-del-conocimiento/"
+  },
   "ufrj": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://ufrj.br/ingresso/pos-graduacao/"
   },
+  "ug-gh": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://admissions.ug.edu.gh/undergraduate/overview"
+  },
+  "ugent": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.ugent.be/nl/opleidingen/masteropleidingen"
+  },
   "ugr": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://www.ugr.es/estudiantes/master-doctorados"
+  },
+  "uh-cu": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uh.cu/estudios/postgrado/"
+  },
+  "ui-id": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ui.ac.id/en/education-and-health-services-for-construction-workers-and-students-in-the-ikn-area/"
+  },
+  "uio": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.uio.no/"
   },
   "uladech": {
    "codigo": 200,
@@ -1026,17 +1422,59 @@
    "nivel": "declarada",
    "url": "https://www.ulima.edu.pe/posgrado"
   },
+  "ulisboa": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://epg.ulisboa.pt/"
+  },
+  "um-my": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://aasd.um.edu.my/financial-aid-for-postgraduate"
+  },
+  "um5": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.um5.ac.ma/"
+  },
   "umch": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://umch.edu.pe"
   },
+  "umich": {
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.umich.edu/academics/"
+  },
+  "umsa": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://dipgis.umsa.bo/?page_id=5405"
+  },
+  "una-py": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.una.py/postgrado"
+  },
   "unac": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://unac.edu.pe/posgrado/"
+  },
+  "unah": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unah.edu.hn"
   },
   "unal": {
    "codigo": 200,
@@ -1061,6 +1499,12 @@
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://www.unamba.edu.pe/la-universidad/himno-a-la-unamba.html"
+  },
+  "unan": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.unan.edu.ni/index.php/carreras-de-posgrado"
   },
   "unap-puno": {
    "codigo": 0,
@@ -1152,6 +1596,18 @@
    "nivel": "descubierta",
    "url": "https://posgrado.unia.edu.pe/"
   },
+  "unibo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unibo.it/en/study/second-cycle-degree"
+  },
+  "unibuc": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://unibuc.ro/record-de-candidati-la-cele-20-de-facultati-ale-ub-in-sesiunea-iulie-2026-o-medie-de-61-candidaturi-pe-loc-la-buget-la-licenta-si-3-candidaturi-pe-loc-la-masterat-slider/"
+  },
   "unica": {
    "codigo": 200,
    "estado": "ok",
@@ -1170,17 +1626,29 @@
    "nivel": "declarada",
    "url": "https://unife.edu.pe/posgrado/"
   },
+  "unilag": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://unilag.edu.ng/postgraduate-education-key-to-nigerias-transformation-says-former-head-of-service-at-unilag-annual-lecture/"
+  },
   "uninorte": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://validate.perfdrive.com/?ssa=a81369a5-a4e3-48a5-9951-dec510ebb067&ssb=68592270328&ssc=https%3A%2F%2Fwww.uninorte.edu.co%2Fweb%2Fposgrados&ssi=82e541f4-e2vu-4948-b1d4-71f421875d8c&ssk=botmanager_support@radware.com&ssm=47619123088155696108553445378671&ssn=439062ce70446be9b3911787ff2091c9d662ea02f8c9-8656-41a6-a55702&sso=d484a2b8-c9e84c5754c802a7e65326ee15d99427f323fa49fda446b6&ssp=24031630341787155917178717486467491&ssq=84738746687632795932566876276341248243706&ssr=MTkwLjIzNi4xODQuMTM=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBlYTAyZjhjOS04NjU2LTQxYTYtYTJiOC1jOWU4NGM1NzU0YzgxLTE3ODcxNjY4NzYzMjEwLTAwMDEwZTc3OWVhNDM4ZjhiYmExMCIsInJkIjoidW5pbm9ydGUuZWR1LmNvIiwidXpteCI6IjdmYzAwMDM4NjJlOWYwLWVlNWUtNDg5OS1iNzU5LTgxM2IyNWVkNTkzYjEtMTc4NzE2Njg3NjMyMTAtMDAxMTc1MTZlNDU0NGJhOWI5ZjEwIn0="
+   "url": "https://validate.perfdrive.com/?ssa=d2e8c86d-51b6-40fe-b38f-94813aef3bd8&ssb=51631270991&ssc=https%3A%2F%2Fwww.uninorte.edu.co%2Fweb%2Fposgrados&ssi=d88cdf18-e2vu-4432-95cb-14fd329332d2&ssk=botmanager_support@radware.com&ssm=42323056276250201108265535911076&ssn=79efc390a380bdb6462c87df58d8ea7e1d782740682e-6684-455c-a0b5d0&sso=e3e6a1dd-a40b35e90efda9c89c1c06bed1369fc0b37cb548fe8590e1&ssp=26889339661787180960178717334952925&ssq=66993606802596849459468025007916996171506&ssr=MTkwLjIzNi4xODQuMTM=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJyZCI6InVuaW5vcnRlLmVkdS5jbyIsInV6bXgiOiI3ZmMwMDA4YzM3NTdjOC1kODdmLTRjZTgtODI1YS1mNDM2MDc2YWMzMjAxLTE3ODcxNjgwMjU1MjQwLTAwMTY2Y2U3MzJkODI2NTUzYjIxMCIsIl9fdXptZiI6IjdmOTAwMDI3NDA2ODJlLTY2ODQtNDU1Yy1hMWRkLWE0MGIzNWU5MGVmZDEtMTc4NzE2ODAyNTUyNDAtMDAwNzMwZDgyYjA5ZmY2MWQ3YTEwIn0="
   },
   "unir": {
    "codigo": 403,
    "estado": "manual",
    "nivel": "manual",
    "url": "https://www.unir.net/educacion/masteres/"
+  },
+  "univie": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.univie.ac.at/"
   },
   "unizar": {
    "codigo": 200,
@@ -1242,6 +1710,12 @@
    "nivel": "declarada",
    "url": "https://unsm.edu.pe/posgrado/"
   },
+  "unsw": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unsw.edu.au/study/postgraduate"
+  },
   "unt": {
    "codigo": 200,
    "estado": "ok",
@@ -1266,17 +1740,41 @@
    "nivel": "declarada",
    "url": "https://www.unu.edu.pe/posgrado/"
   },
+  "uoa": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://mpharmnkua.uoa.gr/"
+  },
   "uoc": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.uoc.edu/es/estudios/masters"
   },
+  "uonbi": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uonbi.ac.ke/content/postgraduate-education"
+  },
   "up": {
    "codigo": 403,
    "estado": "manual",
    "nivel": "manual",
    "url": "https://www.up.edu.pe/programas/posgrado"
+  },
+  "up-pa": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://vicinvestigacion.up.ac.pa/"
+  },
+  "up-ph": {
+   "codigo": 429,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://up.edu.ph/index.php/academics/"
   },
   "upao": {
    "codigo": 200,
@@ -1326,6 +1824,18 @@
    "nivel": "descubierta",
    "url": "https://www.up.pt/portal/en/study/bachelors-and-integrated-masters-degrees/why-uporto/"
   },
+  "uppsala": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.uu.se/"
+  },
+  "upr": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.upr.edu/"
+  },
   "upsjb": {
    "codigo": 200,
    "estado": "ok",
@@ -1343,6 +1853,18 @@
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://www.upv.es/estudios/master/index-es.html"
+  },
+  "uq": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://research.uq.edu.au/graduate-research"
+  },
+  "url-gt": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.url.edu.gt/posgrados/"
   },
   "urosario": {
    "codigo": 200,
@@ -1362,6 +1884,12 @@
    "nivel": "descubierta",
    "url": "https://www.us.es/estudiar/que-estudiar/oferta-de-masteres"
   },
+  "usac": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://cgsep.usac.edu.gt/"
+  },
   "usach": {
    "codigo": 200,
    "estado": "ok",
@@ -1373,6 +1901,12 @@
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://usal.es/masteres"
+  },
+  "usb-ve": {
+   "codigo": 0,
+   "estado": "manual",
+   "nivel": "manual",
+   "url": "https://usb.ve/"
   },
   "usfq": {
    "codigo": 200,
@@ -1422,17 +1956,59 @@
    "nivel": "descubierta",
    "url": "https://www.postgradoutp.edu.pe/"
   },
+  "utp-pa": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://utp.ac.pa/introduccion-0"
+  },
   "uv": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
    "url": "https://www.uv.es/uvmasters"
   },
+  "uva-nl": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uva.nl/onderwijs/master/master.html"
+  },
+  "uvg": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uvg.edu.gt/uvgmaster/posgrado-en-docencia-superior-e-innovacion/"
+  },
+  "uw-pl": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.uw.edu.pl/"
+  },
+  "uwaterloo": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://uwaterloo.ca"
+  },
   "uwiener": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.uwiener.edu.pe/posgrado/"
+  },
+  "uzh": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.uzh.ch/en/studies/programs/master.html"
+  },
+  "wits": {
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.wits.ac.za/postgraduate/"
   },
   "wur": {
    "codigo": 200,
@@ -1449,9 +2025,9 @@
    "sin_respuesta": 9
   },
   "instituciones": {
-   "manual": 15,
-   "ok": 136,
-   "protegido": 1,
+   "manual": 18,
+   "ok": 222,
+   "protegido": 8,
    "sin_respuesta": 0
   }
  }

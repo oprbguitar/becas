@@ -1,0 +1,7 @@
+# Ruta Amauta — https://ruta.amauta.online
+User-agent: *
+Allow: /
+Disallow: /scraper/
+Disallow: /imagenes/mockup design/
+
+Sitemap: https://ruta.amauta.online/sitemap.xml

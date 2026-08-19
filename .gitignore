@@ -2,3 +2,12 @@ __pycache__/
 *.pyc
 .DS_Store
 node_modules/
+
+# Páginas estáticas generadas por scraper/generar_paginas.py.
+# Se construyen en cada despliegue; no se versionan para no ensuciar el diff.
+/u/
+/pais/
+/area/
+/beca/
+/explorar/
+/sitemap.xml

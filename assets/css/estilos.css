@@ -468,3 +468,68 @@ img { max-width: 100%; }
 @media (max-width: 980px) {
   .rejilla-comparador { grid-template-columns: 1fr !important; }
 }
+
+/* ==========================================================================
+   Páginas estáticas indexables (scraper/generar_paginas.py)
+   ========================================================================== */
+
+.miga { display: flex; align-items: center; flex-wrap: wrap; gap: 7px; font-size: 13px; color: var(--suave); }
+.miga a { color: var(--terracota); font-weight: 500; }
+.miga a:hover { text-decoration: underline; }
+.miga span { color: var(--tenue); }
+
+.titulo-pagina {
+  font-family: var(--display); font-weight: 700; letter-spacing: -.02em;
+  font-size: clamp(28px, 4vw, 44px); line-height: 1.1; margin: 14px 0 10px; color: var(--oliva);
+}
+.titulo-seccion { font-family: var(--display); font-size: 21px; color: var(--oliva); margin: 30px 0 12px; }
+.parrafo { font-size: 16px; line-height: 1.7; color: var(--oliva-2); max-width: 72ch; margin: 0 0 22px; }
+.tenue { color: var(--tenue); font-size: 13px; }
+
+.ficha-cabecera {
+  display: flex; align-items: flex-end; justify-content: space-between;
+  gap: 24px; flex-wrap: wrap; margin-bottom: 22px;
+}
+.ficha-acciones { display: flex; gap: 10px; flex-wrap: wrap; }
+
+.tabla-datos { width: 100%; border-collapse: collapse; background: var(--blanco); font-size: 14px; }
+.tabla-datos th, .tabla-datos td { padding: 12px 14px; text-align: left; border-bottom: 1px solid var(--borde); }
+.tabla-datos th {
+  background: var(--crema-2); font-size: 12px; font-weight: 700; color: var(--suave);
+  text-transform: uppercase; letter-spacing: .04em; white-space: nowrap;
+}
+.tabla-datos tr:last-child td { border-bottom: 0; }
+.tabla-datos tbody tr:hover { background: var(--crema-2); }
+.tabla-datos .precio-celda { color: var(--terracota); font-weight: 600; white-space: nowrap; }
+.envoltura-tabla {
+  overflow-x: auto; -webkit-overflow-scrolling: touch;
+  border: 1px solid var(--borde); border-radius: var(--r-lg); background: var(--blanco);
+}
+.envoltura-tabla .tabla-datos { min-width: 620px; }
+
+.enlace-tarjeta { display: block; }
+.enlace-tarjeta h3 { margin: 0 0 4px; font-family: var(--display); font-size: 16.5px; color: var(--oliva); line-height: 1.3; }
+.enlace-tarjeta .institucion { margin: 0 0 10px; }
+.meta-linea { margin: 0; font-size: 12.5px; color: var(--suave); }
+
+.lista-enlaces { list-style: none; padding: 0; margin: 0; display: grid; gap: 9px; }
+.lista-enlaces.dos-columnas { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px 28px; }
+.lista-enlaces a { color: var(--terracota); font-weight: 500; }
+.lista-enlaces a:hover { text-decoration: underline; }
+
+.lista-requisitos { margin: 0 0 22px; padding-left: 22px; color: var(--oliva-2); line-height: 1.75; max-width: 72ch; }
+.fila-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.pastilla.estatica { pointer-events: none; text-transform: capitalize; }
+
+.nota-legal {
+  margin: 26px 0; padding: 14px 16px; background: var(--arena-suave);
+  border-radius: var(--r); font-size: 13px; color: #7A5A22; line-height: 1.6; max-width: 78ch;
+}
+
+.miga + * { margin-top: 0; }
+main > .contenedor:last-child { padding-bottom: 40px; }
+
+@media (max-width: 720px) {
+  .lista-enlaces.dos-columnas { grid-template-columns: 1fr; }
+  .ficha-cabecera { align-items: flex-start; }
+}

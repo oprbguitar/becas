@@ -11,8 +11,18 @@
 <meta property="og:description" content="Becas, maestrías, doctorados y diplomados en un solo buscador. Compara programas y verifica el licenciamiento SUNEDU.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://ruta.amauta.online/">
-<meta property="og:image" content="https://ruta.amauta.online/assets/img/marca.png">
+<meta property="og:site_name" content="Ruta Amauta">
+<meta property="og:locale" content="es_PE">
+<meta property="og:image" content="https://ruta.amauta.online/assets/img/compartir.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ruta Amauta — tu ruta al conocimiento">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Ruta Amauta — Tu ruta al conocimiento">
+<meta name="twitter:description" content="Becas, maestrías, doctorados y diplomados en un solo buscador. Compara programas y verifica el licenciamiento SUNEDU.">
+<meta name="twitter:image" content="https://ruta.amauta.online/assets/img/compartir.png">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="sitemap" type="application/xml" href="/sitemap.xml">
 
 <link rel="icon" href="assets/img/favicon.ico" sizes="16x16 32x32 48x48">
 <link rel="icon" href="assets/img/icono-32.png" type="image/png" sizes="32x32">
@@ -23,6 +33,36 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/estilos.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebSite",
+      "@id": "https://ruta.amauta.online/#sitio",
+      "url": "https://ruta.amauta.online/",
+      "name": "Ruta Amauta",
+      "inLanguage": "es",
+      "description": "Buscador y comparador de becas, maestrías, doctorados y diplomados en Perú, Latinoamérica y el mundo.",
+      "publisher": { "@id": "https://ruta.amauta.online/#organizacion" },
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": { "@type": "EntryPoint", "urlTemplate": "https://ruta.amauta.online/#/maestrias?q={search_term_string}" },
+        "query-input": "required name=search_term_string"
+      }
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://ruta.amauta.online/#organizacion",
+      "name": "Ruta Amauta",
+      "url": "https://ruta.amauta.online/",
+      "logo": "https://ruta.amauta.online/assets/img/icono-512.png",
+      "description": "Directorio independiente de oportunidades académicas. No gestiona admisiones ni cobra por postular."
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -40,6 +80,7 @@
       <a href="#/diplomados" data-ruta="diplomados">Diplomados</a>
       <a href="#/favoritos" data-ruta="favoritos">Favoritos</a>
       <a href="#/comparador" data-ruta="comparador">Comparador</a>
+      <a href="explorar/">Explorar</a>
     </nav>
 
     <div class="acciones-cabecera">
@@ -67,6 +108,16 @@
   </div>
 </main>
 
+<noscript>
+  <div class="contenedor seccion">
+    <h1 class="titulo">Ruta Amauta</h1>
+    <p class="bajada">Becas, maestrías, doctorados y diplomados en Perú,
+    Latinoamérica y el mundo. El buscador necesita JavaScript, pero todo el
+    catálogo está disponible en páginas navegables:</p>
+    <p><a class="btn btn-primario" href="explorar/">Explorar el catálogo completo</a></p>
+  </div>
+</noscript>
+
 <footer class="pie">
   <div class="contenedor">
     <div class="pie-rejilla">
@@ -90,6 +141,7 @@
           <li><a href="#/comparador">Comparador</a></li>
           <li><a href="#/favoritos">Favoritos</a></li>
           <li><a href="#/instituciones">Instituciones</a></li>
+          <li><a href="explorar/">Mapa del sitio</a></li>
         </ul>
       </div>
       <div>

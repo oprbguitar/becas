@@ -37,6 +37,10 @@ INSTITUCIONES = {
     "columbia": "https://www.columbia.edu/content/academics",
     "melbourne": "https://study.unimelb.edu.au/find/?collection=find-a-course",
     "ub": "https://www.ub.edu/portal/web/economia-empresa/masteres-universitarios",
+    # Dominios que no responden a la verificacion automatica.
+    "cairo": "https://cu.edu.eg/Home",
+    "ucv-ve": "https://www.ucv.ve/organizacion/estudios-de-postgrado/",
+    "usb-ve": "https://usb.ve/",
 }
 
 BECAS = {

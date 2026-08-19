@@ -55,6 +55,11 @@ jobs:
           pip install -r scraper/requirements.txt
           python scraper/test_extraccion.py
 
+      # Genera las páginas indexables y el sitemap a partir de los datos.
+      # No se versionan: se construyen aquí para que siempre estén al día.
+      - name: Generar páginas estáticas y sitemap
+        run: python scraper/generar_paginas.py
+
       - uses: actions/configure-pages@v5
 
       - uses: actions/upload-pages-artifact@v3

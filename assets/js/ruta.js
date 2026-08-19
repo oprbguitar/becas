@@ -996,6 +996,39 @@ function leerRuta() {
            params: new URLSearchParams(consulta || '') };
 }
 
+const META_VISTA = {
+  inicio: ['Ruta Amauta — Buscador de becas, maestrías, doctorados y diplomados',
+    'Busca y compara becas, maestrías, doctorados y diplomados en Perú, Latinoamérica y el mundo. Filtra por país, área, modalidad, costo y licenciamiento SUNEDU.'],
+  becas: ['Becas para estudiar en Perú y el mundo | Ruta Amauta',
+    'Convocatorias de becas completas y parciales para pregrado y posgrado, con cobertura, requisitos y fecha de cierre. Enlace directo a la convocatoria oficial.'],
+  maestrias: ['Maestrías en Perú, Latinoamérica y el mundo | Ruta Amauta',
+    'Compara maestrías por país, área, modalidad y costo. Verifica el licenciamiento SUNEDU y accede a la escuela de posgrado oficial de cada universidad.'],
+  doctorados: ['Doctorados y programas de investigación | Ruta Amauta',
+    'Doctorados en Perú y el extranjero: duración, líneas de investigación, financiamiento y enlace oficial a cada programa.'],
+  diplomados: ['Diplomados y cursos de especialización | Ruta Amauta',
+    'Diplomados presenciales, semipresenciales y online para actualizar tus competencias, con horas, costo referencial e institución.'],
+  favoritos: ['Tus programas guardados | Ruta Amauta',
+    'Revisa y organiza las oportunidades académicas que guardaste antes de decidir.'],
+  comparador: ['Comparador de programas de posgrado | Ruta Amauta',
+    'Compara hasta cuatro programas lado a lado: costo, duración, modalidad, financiamiento y licenciamiento.'],
+  instituciones: ['Universidades e instituciones verificadas | Ruta Amauta',
+    'Universidades de Perú y el mundo con su estado de licenciamiento SUNEDU y enlace comprobado a su escuela de posgrado.'],
+};
+
+function actualizarMetadatos(vista, item) {
+  let [titulo, descripcion] = META_VISTA[vista] || META_VISTA.inicio;
+  if (item) {
+    titulo = `${item.nombre} — ${item.institucion} | Ruta Amauta`;
+    descripcion = item.descripcion
+      || `${item.area} en ${item.institucion} (${item.pais}). ${duracion(item)}, modalidad ${item.modalidad.toLowerCase()}.`;
+  }
+  document.title = titulo;
+  const meta = $('meta[name="description"]');
+  if (meta) meta.setAttribute('content', descripcion.slice(0, 300));
+  const canon = $('link[rel="canonical"]');
+  if (canon) canon.setAttribute('href', 'https://ruta.amauta.online/' + location.hash);
+}
+
 function pintar() {
   const { vista, param, params } = leerRuta();
 
@@ -1003,6 +1036,7 @@ function pintar() {
     // la ficha se muestra sobre la última vista renderizada
     if (!$('#vista').dataset.pintado) { $('#vista').innerHTML = vistaInicio(); $('#vista').dataset.pintado = '1'; }
     if (!$('.velo')) abrirFicha(param);
+    actualizarMetadatos('inicio', DATOS.porId.get(param));
     return;
   }
   cerrarModalSilencioso();
@@ -1010,15 +1044,18 @@ function pintar() {
   const render = VISTAS[vista] || VISTAS.inicio;
   const nombreVista = VISTAS[vista] ? vista : 'inicio';
 
-  // parámetros de URL -> filtros (enlaces de rutas destacadas)
+  // Parámetros de URL -> filtros. Se parte de cero para que un enlace
+  // compartido muestre exactamente lo que anuncia y no arrastre los filtros
+  // que el visitante tuviera puestos antes.
   if ([...params.keys()].length && CONFIG_VISTA[nombreVista]) {
-    const f = filtrosDe(nombreVista);
+    FILTROS[nombreVista] = { q: '', pagina: 1, orden: 'relevancia' };
+    const f = FILTROS[nombreVista];
     params.forEach((v, k) => { f[k] = v; });
-    f.pagina = 1;
   }
 
   $('#vista').innerHTML = render();
   $('#vista').dataset.pintado = '1';
+  actualizarMetadatos(nombreVista);
   $$('.nav a').forEach(a => a.classList.toggle('activo', a.dataset.ruta === nombreVista));
   $('#nav').classList.remove('abierto');
   pintarGlobos();
