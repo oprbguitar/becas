@@ -50,7 +50,9 @@
    "No contar con estudios superiores culminados"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "beca-permanencia-pronabec",
@@ -97,7 +99,9 @@
    "Clasificación socioeconómica de pobreza"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "beca-generacion-del-bicentenario-pronabec",
@@ -151,7 +155,9 @@
    "Compromiso de retorno al Perú por 2 años"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-de-posgrado-prociencia-concytec-prociencia",
@@ -201,7 +207,9 @@
    "Plan de tesis alineado a prioridades nacionales"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "beca-hijos-de-docentes-pronabec",
@@ -247,7 +255,9 @@
    "Ingresar a universidad o instituto elegible"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-oea-programa-de-alianzas-organizacion-de-estados-americanos",
@@ -297,7 +307,9 @@
    "Formulario OEA en línea"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-fundacion-carolina-fundacion-carolina",
@@ -346,7 +358,9 @@
    "Curriculum y carta de motivación"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-auip-de-movilidad-academica-asociacion-universitaria-iberoamericana-de-posgrado",
@@ -394,7 +408,9 @@
    "Plan de trabajo académico"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-santander-banco-santander-santander-open-academy",
@@ -447,7 +463,9 @@
    "No es necesario ser cliente del banco"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "plataforma-de-movilidad-estudiantil-alianza-del-pacifico-alianza-del-pacifico",
@@ -495,7 +513,9 @@
    "Promedio mínimo equivalente a 80/100"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-de-posgrado-conahcyt-conahcyt-mexico",
@@ -540,12 +560,15 @@
   "url_requisitos": "Https://conahcyt.mx/becas_posgrados/becas-nacionales/",
   "descripcion": "Becas nacionales y al extranjero del sistema mexicano de ciencia para programas del Sistema Nacional de Posgrados.",
   "requisitos": [
-   "Admisión a un programa del Sistema Nacional de Posgrados",
-   "Dedicación exclusiva al programa",
-   "Promedio mínimo de 8.0"
+   "En el Reglamento de Becas y las Convocatorias correspondientes se define la organización y funcionamiento, los rubros y montos que cubre la beca y apoyo complementario, así como los criterios de elegibilidad.",
+   "Convocatoria Apoyos para Academias y Sociedades Científicas y promoción de Olimpiadas Nacionales del Conocimiento 2025",
+   "Términos de Referencia Academias, Sociedades y promoción de Olimpiadas 2025"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-08-24"
  },
  {
   "id": "becas-anid-chile-agencia-nacional-de-investigacion-y-desarrollo",
@@ -595,7 +618,9 @@
    "Curriculum y cartas de recomendación"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-fundacion-botin-fundacion-botin",
@@ -644,7 +669,9 @@
    "Experiencia demostrable en gestión pública"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "chevening-scholarships-gobierno-del-reino-unido",
@@ -685,14 +712,20 @@
   "url_requisitos": "Https://www.chevening.org/scholarships/who-can-apply/eligibility/",
   "descripcion": "Beca del gobierno británico para lideres emergentes: cubre un master de un año en cualquier universidad del Reino Unido.",
   "requisitos": [
-   "Ciudadania de un país elegible para Chevening",
-   "Título universitario de grado",
-   "Mínimo 2 años (2800 horas) de experiencia laboral",
-   "Tres ofertas de admisión en universidades del Reino Unido",
-   "Compromiso de retornar al país de origen por 2 años"
+   "You must meet our eligibility criteria to apply for a Chevening Scholarship. Ineligible applications will be rejected.",
+   "If applying for an award from an ODA-eligible country, be resident in an ODA-eligible country. This does not have to be the country of citizenship, but all applicants must show a clear intention to support their country of award.",
+   "If you live in a European overseas territory, you may apply through the relevant Chevening award scheme for the European country of which you are a citizen.",
+   "Commit to returning to your home country (country of award) for at least two years after your scholarship ends.",
+   "Have at least two years’ work experience , acquired after completing your undergraduate degree, equivalent to 2,800 hours.",
+   "Apply to three different and eligible UK university courses . You must have received an unconditional offer from at least one of these course choices by the deadline listed on the application timeline .",
+   "Hold British or dual British citizenship (unless you are a citizen of a British Overseas Territory or hold BN(O) and are applying from Hong Kong).",
+   "Hold refugee status in a country not eligible for Chevening. However, if you are a citizen of an eligible country and hold refugee status in another eligible country, you are eligible for a scholarship."
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-08-24"
  },
  {
   "id": "erasmus-mundus-joint-masters-comision-europea",
@@ -733,13 +766,20 @@
   "url_requisitos": "Https://erasmus-plus.ec.europa.eu/opportunities/opportunities-for-individuals/students/erasmus-mundus-joint-masters-scholarships",
   "descripcion": "Maestrías conjuntas impartidas por consorcios de universidades europeas: se estudia en 2 o 3 países con beca integral.",
   "requisitos": [
-   "Título de grado (o estar por obtenerlo)",
-   "Dominio del inglés acreditado",
-   "Postular directamente al consorcio del master elegido",
-   "Se puede postular a un máximo de 3 programas por convocatoria"
+   "They involve at least 3 institutions from at least 3 different countries, and multiple associated partners from the academic and non-academic world.",
+   "a joint degree (i.e. one single degree certificate issued on behalf of at least two higher education institutions) or",
+   "multiple degrees (i.e. at least two degree certificates issued by two higher education institutions of the consortium)",
+   "Each master's website has all the details about the course of study, the list of the participating universities, the entry requirements and all the steps of the application process (with and without scholarship).",
+   "have a bachelor’s degree (first degree), or be in your last year of bachelor studies",
+   "You may also apply if you demonstrate a bachelor’s equivalent level of learning. This must be officially recognised, according to national legislation and practices, in the degree awarding country.",
+   "The Erasmus Mundus Association has resources to help you apply, including course contacts, events with national volunteer representatives, and stories from successful applicants.",
+   "Find advice and inspiration for applicants"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-08-24"
  },
  {
   "id": "becas-daad-para-posgrado-servicio-aleman-de-intercambio-academico",
@@ -789,7 +829,9 @@
    "Carta de motivación y plan de estudios"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "beca-eiffel-ministerio-de-europa-y-asuntos-exteriores-de-francia",
@@ -842,7 +884,9 @@
    "Expediente académico sobresaliente"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "swiss-government-excellence-scholarships-confederacion-suiza",
@@ -887,13 +931,15 @@
   "url_requisitos": "Https://www.sbfi.admin.ch/sbfi/en/home/education/scholarships-and-grants/swiss-government-excellence-scholarships.html",
   "descripcion": "Becas de investigación y doctorado en universidades públicas suizas, con estipendio mensual y seguro de salud.",
   "requisitos": [
-   "Carta de aceptacion de un profesor supervisor en Suiza",
-   "Título de maestría para doctorado",
-   "Menos de 35 años",
-   "Postular a traves de la embajada suiza del país de origen"
+   "Swiss Government Excellence Scholarships are mainly intended for talented early career researchers (ECRs) from abroad who have already completed their Master's degree. The scholarship programme is currently open to applicants from 183 countries.",
+   "Art scholarships are open to students wishing to pursue an initial Master’s degree in an artistic field in Switzerland. This scholarship is available to students from a limited number of countries only.",
+   "Here you will find answers to the most frequently asked questions from interested applicants and academic supervisors."
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-08-24"
  },
  {
   "id": "stipendium-hungaricum-gobierno-de-hungria",
@@ -942,7 +988,9 @@
    "Postulación doble: portal Tempus y entidad nacional"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "beca-maec-aecid-agencia-espanola-de-cooperacion-internacional",
@@ -993,7 +1041,9 @@
    "Certificado de español si corresponde"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "gates-cambridge-scholarship-universidad-de-cambridge",
@@ -1035,13 +1085,20 @@
   "url_requisitos": "Https://www.gatescambridge.org/apply/eligibility/",
   "descripcion": "Una de las becas más competitivas del mundo: posgrado completo en Cambridge para lideres con vocación de impacto social.",
   "requisitos": [
-   "No tener nacionalidad britanica",
-   "Postular a un posgrado de tiempo completo en Cambridge",
-   "Excelencia académica sobresaliente",
-   "Compromiso con la mejora de la vida de otros"
+   "You can apply for a Gates Cambridge Scholarship if you are:",
+   "a citizen of any country outside the United Kingdom",
+   "applying to pursue one of the following courses at the University of Cambridge: PhD (full-time or part-time*) MLitt (full-time) one-year postgraduate course (full-time), with some exceptions – see below.",
+   "PhD (full-time or part-time*)",
+   "one-year postgraduate course (full-time), with some exceptions – see below.",
+   "Gates Cambridge is continuing to pilot a scheme which allows applicants to apply for funding for a part-time doctoral degree (PhD).",
+   "Apply Eligibility Criteria Timeline How to apply How we select Frequently Asked Questions",
+   "Current Gates Cambridge Scholars may also apply for a second scholarship if they are applying for a new degree."
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-08-24"
  },
  {
   "id": "rhodes-scholarship-rhodes-trust-universidad-de-oxford",
@@ -1083,12 +1140,16 @@
   "url_requisitos": "Https://www.rhodeshouse.ox.ac.uk/scholarships/the-rhodes-scholarship/",
   "descripcion": "Beca histórica para posgrado en Oxford, con circunscripciones por país o región.",
   "requisitos": [
-   "Edad entre 18 y 28 años según circunscripción",
-   "Grado universitario con excelencia académica",
-   "Liderazgo, servicio y caracter demostrados"
+   "3. Check Your Eligibility and Apply Find out if you are eligible to apply for the Rhodes Scholarship, which constituency you should apply through, and start your application!",
+   "Find out if you are eligible to apply for the Rhodes Scholarship, which constituency you should apply through, and start your application!",
+   "Frequently Asked Questions Consult our comprehensive list of FAQs about the Scholarship, funding, eligibility criteria, application process and more.",
+   "Consult our comprehensive list of FAQs about the Scholarship, funding, eligibility criteria, application process and more."
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-08-24"
  },
  {
   "id": "holland-scholarship-gobierno-de-los-paises-bajos",
@@ -1135,7 +1196,9 @@
    "Postular en la universidad holandesa participante"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "orange-knowledge-programme-okp-nuffic-paises-bajos",
@@ -1187,7 +1250,9 @@
    "Nivel de inglés acreditado"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-del-gobierno-de-italia-ministero-degli-affari-esteri-de-italia",
@@ -1239,7 +1304,9 @@
    "Postulación en el portal Study in Italy"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-del-gobierno-de-turquia-turkiye-burslar-gobierno-de-turquia",
@@ -1288,7 +1355,9 @@
    "No estar matriculado actualmente en una universidad turca"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-del-gobierno-de-polonia-nawa-agencia-nacional-de-intercambio-academico",
@@ -1339,7 +1408,9 @@
    "Carta de aceptacion de la universidad polaca"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "chinese-government-scholarship-csc-china-scholarship-council",
@@ -1389,7 +1460,9 @@
    "Postular por embajada, universidad china o institución designada"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "confucius-institute-scholarship-centro-clec-instituto-confucio",
@@ -1438,7 +1511,9 @@
    "Recomendación de un Instituto Confucio o entidad autorizada"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "beijing-government-scholarship-municipalidad-de-pekin",
@@ -1487,7 +1562,9 @@
    "Postular a traves de la universidad"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "shanghai-government-scholarship-municipalidad-de-shanghai",
@@ -1536,7 +1613,9 @@
    "Certificado de idioma según el programa"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "hong-kong-phd-fellowship-scheme-research-grants-council-de-hong-kong",
@@ -1580,12 +1659,20 @@
   "url_requisitos": "Https://cerg1.ugc.edu.hk/hkpfs/",
   "descripcion": "Estipendio anual y apoyo a conferencias para doctorados en las universidades públicas de Hong Kong.",
   "requisitos": [
-   "Excelencia académica y capacidad de investigación",
-   "Postular en paralelo al programa de doctorado de la universidad",
-   "Obtener un número de referencia HKPFS antes de postular"
+   "Candidates who are seeking admission as new full time PhD students in the following eight universities, irrespective of their country of origin, prior work experience and ethnic background, should be eligible to apply.",
+   "City University of Hong Kong",
+   "Hong Kong Baptist University",
+   "The Chinese University of Hong Kong",
+   "The Education University of Hong Kong",
+   "The Hong Kong Polytechnic University",
+   "The Hong Kong University of Science and Technology",
+   "The University of Hong Kong"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-08-24"
  },
  {
   "id": "mext-becas-del-gobierno-de-japon-ministerio-de-educacion-de-japon",
@@ -1636,7 +1723,9 @@
    "Examen escrito y entrevista"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "global-korea-scholarship-gks-niied-gobierno-de-corea",
@@ -1686,7 +1775,9 @@
    "Buen estado de salud certificado"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "taiwan-icdf-scholarship-international-cooperation-and-development-fund",
@@ -1740,7 +1831,9 @@
    "Postulación en línea y por embajada"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "singapore-international-graduate-award-singa-a-star-singapur",
@@ -1789,7 +1882,9 @@
    "Dos cartas de referencia académica"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "kaust-fellowship-king-abdullah-university-of-science-and-technology",
@@ -1840,7 +1935,9 @@
    "Cartas de recomendación"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "beca-del-gobierno-de-india-iccr-indian-council-for-cultural-relations",
@@ -1892,7 +1989,9 @@
    "Postulación en el portal A2A Scholarships"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "asian-development-bank-japan-scholarship-program-banco-asiatico-de-desarrollo",
@@ -1942,7 +2041,9 @@
    "Admisión en una institución participante"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "fulbright-foreign-student-program-departamento-de-estado-de-ee-uu",
@@ -1991,7 +2092,9 @@
    "Compromiso de retorno al país de origen"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "knight-hennessy-scholars-universidad-de-stanford",
@@ -2033,12 +2136,20 @@
   "url_requisitos": "Https://knight-hennessy.stanford.edu/admission/eligibility",
   "descripcion": "Financia hasta tres años de cualquier posgrado en Stanford, con un programa de liderazgo propio.",
   "requisitos": [
-   "Título de grado obtenido en los últimos años según politica vigente",
-   "Postular en paralelo a un programa de posgrado de Stanford",
-   "Liderazgo civico e independencia de pensamiento"
+   "You are applying separately but concurrently to KHS and a full-time Stanford graduate degree program such that you will start both in the same year.",
+   "You have already been offered and deferred admission to a full-time Stanford graduate degree program, and will apply to KHS such that you will start both in the same year.",
+   "You are a current Stanford graduate student who will apply to add a new full-time Stanford graduate degree program, such that you will start both KHS and the new program in the same year.",
+   "You are a current Stanford PhD student in your first year of enrollment, and will apply to KHS such that you will start KHS in your second year of PhD enrollment.",
+   "Please note that the following Stanford graduate degree programs are not eligible for Knight-Hennessy Scholars:",
+   "Honors Cooperative Program",
+   "Doctor of Science of Law (JSD ) and the Master of Legal Studies (MLS)",
+   "Current Stanford PhD students adding an MA or MS degree in their PhD discipline"
   ],
   "destacada": true,
-  "fuente": "semilla"
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-08-24"
  },
  {
   "id": "vanier-canada-graduate-scholarships-gobierno-de-canada",
@@ -2088,7 +2199,9 @@
    "Máximo 3 años de estudios doctorales completados"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "australia-awards-scholarships-gobierno-de-australia",
@@ -2136,7 +2249,9 @@
    "Compromiso de retornar por al menos 2 años"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "manaaki-new-zealand-scholarships-gobierno-de-nueva-zelanda",
@@ -2188,7 +2303,9 @@
    "Inglés acreditado"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "mastercard-foundation-scholars-program-mastercard-foundation",
@@ -2236,7 +2353,9 @@
    "Postular en una universidad socia del programa"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "rotary-peace-fellowship-fundacion-rotaria",
@@ -2286,7 +2405,9 @@
    "Endoso de un club o distrito rotario"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-del-banco-mundial-joint-japan-world-bank-banco-mundial",
@@ -2336,7 +2457,9 @@
    "No tener doble nacionalidad de país desarrollado"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "green-talents-award-ministerio-federal-de-educacion-e-investigacion-de-alemania",
@@ -2386,7 +2509,9 @@
    "Inglés fluido"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "unesco-fellowships-programme-unesco",
@@ -2438,7 +2563,9 @@
    "Dominio del idioma de instrucción"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-bid-programa-de-pasantias-y-estudios-banco-interamericano-de-desarrollo",
@@ -2490,7 +2617,9 @@
    "Dominio de al menos dos idiomas oficiales del banco"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "coursera-edx-financial-aid-coursera-y-edx",
@@ -2541,7 +2670,9 @@
    "Respuesta en aproximadamente 15 dias"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "google-developer-scholarship-google",
@@ -2590,7 +2721,9 @@
    "Postulación en la plataforma del partner"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-erasmus-ka171-movilidad-internacional-comision-europea",
@@ -2640,7 +2773,9 @@
    "Nivel de idioma B1 o B2 según destino"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "emile-boutmy-scholarship-sciences-po",
@@ -2691,7 +2826,9 @@
    "Solicitud dentro del formulario de admisión"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-de-la-universidad-de-buenos-aires-movilidad-universidad-de-buenos-aires",
@@ -2739,7 +2876,9 @@
    "Postulación via oficina de relaciones internacionales"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-roberto-rocca-fundacion-roberto-rocca-tenaris-ternium",
@@ -2790,7 +2929,9 @@
    "Residir en un país donde opera el programa"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-tecnologico-de-monterrey-lideres-del-manana-tecnologico-de-monterrey",
@@ -2836,7 +2977,9 @@
    "Proceso de selección con entrevistas y examen de admisión"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": false
  },
  {
   "id": "becas-de-excelencia-del-gobierno-de-rusia-rossotrudnichestvo",
@@ -2888,7 +3031,9 @@
    "Examen de selección en la representacion rusa"
   ],
   "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  },
  {
   "id": "becas-de-la-universidad-de-sao-paulo-pec-pg-gobierno-de-brasil-capes-cnpq",
@@ -2935,1315 +3080,8 @@
    "Carta de aceptacion del programa de posgrado"
   ],
   "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "beca-presidente-de-la-republica-pronabec",
-  "nombre": "Beca Presidente de la República",
-  "organizacion": "PRONABEC",
-  "region": "Perú",
-  "pais": "Global",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Ingeniería",
-   "Ciencias",
-   "Tecnología",
-   "Salud",
-   "Educación",
-   "Negocios"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": true,
-   "pasajes": true,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 22,
-  "edad_max": 45,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-03-02",
-  "fecha_cierre": "2026-05-29",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español",
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.gob.pe/pronabec",
-  "url_requisitos": "https://www.gob.pe/institucion/pronabec/campa%C3%B1as/1249-beca-presidente-de-la-republica",
-  "descripcion": "Financia maestrías y doctorados en universidades del top mundial para profesionales peruanos, con compromiso de retorno y servicio al país.",
-  "requisitos": [
-   "Nacionalidad peruana",
-   "Carta de admisión a universidad del ranking exigido",
-   "Grado de bachiller o título profesional",
-   "Compromiso de retorno al Perú al terminar los estudios"
-  ],
-  "destacada": true,
-  "fuente": "semilla"
- },
- {
-  "id": "beca-continuidad-de-estudios-superiores-pronabec",
-  "nombre": "Beca Continuidad de Estudios Superiores",
-  "organizacion": "PRONABEC",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Pregrado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 16,
-  "edad_max": 35,
-  "duracion_meses": 48,
-  "fecha_apertura": "2026-04-06",
-  "fecha_cierre": "2026-06-19",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.gob.pe/pronabec",
-  "url_requisitos": "https://www.gob.pe/institucion/pronabec/campa%C3%B1as/1250-beca-continuidad-de-estudios",
-  "descripcion": "Permite retomar y culminar estudios superiores interrumpidos por razones económicas en universidades e institutos elegibles del país.",
-  "requisitos": [
-   "Haber interrumpido los estudios superiores",
-   "Clasificación socioeconómica de pobreza o pobreza extrema",
-   "Vacante vigente en institución elegible"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "beca-vocacion-de-maestro-pronabec",
-  "nombre": "Beca Vocación de Maestro",
-  "organizacion": "PRONABEC",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Pregrado"
-  ],
-  "areas": [
-   "Educación"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": true,
-   "pasajes": false,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 16,
-  "edad_max": 30,
-  "duracion_meses": 60,
-  "fecha_apertura": "2026-02-09",
-  "fecha_cierre": "2026-04-17",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.gob.pe/pronabec",
-  "url_requisitos": "https://www.gob.pe/institucion/pronabec/campa%C3%B1as/1251-beca-vocacion-de-maestro",
-  "descripcion": "Beca integral para estudiar carreras de Educación en universidades e institutos pedagógicos licenciados del Perú.",
-  "requisitos": [
-   "Alto rendimiento en la educación secundaria",
-   "Postular a una carrera de Educación en institución elegible",
-   "Condición socioeconómica elegible"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "beca-peru-pronabec",
-  "nombre": "Beca Perú",
-  "organizacion": "PRONABEC",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Pregrado",
-   "Técnico"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": false,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 16,
-  "edad_max": 30,
-  "duracion_meses": 48,
-  "fecha_apertura": "2026-05-04",
-  "fecha_cierre": "2026-07-10",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.gob.pe/pronabec",
-  "url_requisitos": "https://www.gob.pe/institucion/pronabec/campa%C3%B1as/1252-beca-peru",
-  "descripcion": "Modalidad cofinanciada entre el Estado y universidades e institutos privados que ceden vacantes a estudiantes de alto rendimiento.",
-  "requisitos": [
-   "Alto rendimiento académico",
-   "Postular a institución adherida al programa",
-   "Condición socioeconómica elegible"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "beca-doble-oportunidad-pronabec",
-  "nombre": "Beca Doble Oportunidad",
-  "organizacion": "PRONABEC",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Técnico"
-  ],
-  "areas": [
-   "Tecnología",
-   "Negocios",
-   "Ingeniería"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 17,
-  "edad_max": 25,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-03-16",
-  "fecha_cierre": "2026-05-22",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.gob.pe/pronabec",
-  "url_requisitos": "https://www.gob.pe/institucion/pronabec/campa%C3%B1as/1253-beca-doble-oportunidad",
-  "descripcion": "Permite culminar la educación secundaria y obtener a la vez una certificación técnica en institutos de educación superior.",
-  "requisitos": [
-   "No haber culminado la secundaria",
-   "Tener entre 17 y 25 años",
-   "Condición socioeconómica de pobreza"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-de-doctorado-prociencia-concytec-prociencia",
-  "nombre": "Becas de Doctorado PROCIENCIA",
-  "organizacion": "CONCYTEC - PROCIENCIA",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Doctorado"
-  ],
-  "areas": [
-   "Ciencias",
-   "Ingeniería",
-   "Tecnología",
-   "Salud",
-   "Medio Ambiente"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 24,
-  "edad_max": 50,
-  "duracion_meses": 48,
-  "fecha_apertura": "2026-04-13",
-  "fecha_cierre": "2026-07-31",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://prociencia.gob.pe/",
-  "url_requisitos": "https://prociencia.gob.pe/concursos/",
-  "descripcion": "Financiamiento estatal para doctorados en ciencia y tecnología dictados en universidades peruanas con programas acreditados.",
-  "requisitos": [
-   "Registro vigente en CTI Vitae",
-   "Admisión a doctorado acreditado",
-   "Proyecto de tesis alineado a las prioridades nacionales de CTI"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "programa-de-maestria-fulbright-peru-comision-fulbright-del-peru",
-  "nombre": "Programa de Maestría Fulbright Perú",
-  "organizacion": "Comisión Fulbright del Perú",
-  "region": "Norteamérica",
-  "pais": "Estados Unidos",
-  "ciudad": "Washington",
-  "lat": 38.9072,
-  "lng": -77.0369,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": true,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 22,
-  "edad_max": 40,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-02-02",
-  "fecha_cierre": "2026-05-15",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.fulbright.pe/",
-  "url_requisitos": "https://www.fulbright.pe/becas/",
-  "descripcion": "Beca del Gobierno de Estados Unidos para que profesionales peruanos cursen una maestría en universidades estadounidenses.",
-  "requisitos": [
-   "Nacionalidad peruana",
-   "Grado de bachiller",
-   "Dominio acreditado del inglés (TOEFL)",
-   "Compromiso de retorno al Perú por dos años"
-  ],
-  "destacada": true,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-de-posgrado-pucp-pontificia-universidad-catolica-del-peru",
-  "nombre": "Becas de Posgrado PUCP",
-  "organizacion": "Pontificia Universidad Católica del Perú",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": false,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 22,
-  "edad_max": 60,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-01-12",
-  "fecha_cierre": "2026-03-13",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://posgrado.pucp.edu.pe/",
-  "url_requisitos": "https://posgrado.pucp.edu.pe/becas-y-apoyo-financiero/",
-  "descripcion": "Apoyo financiero de la Escuela de Posgrado de la PUCP: becas por mérito, media beca y descuentos para egresados y docentes.",
-  "requisitos": [
-   "Admisión a un programa de posgrado de la PUCP",
-   "Expediente académico destacado",
-   "Evaluación socioeconómica"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "fondo-de-becas-esan-universidad-esan",
-  "nombre": "Fondo de Becas ESAN",
-  "organizacion": "Universidad ESAN",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Negocios",
-   "Tecnología",
-   "Ingeniería"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": false,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 23,
-  "edad_max": 55,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-02-16",
-  "fecha_cierre": "2026-04-24",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.esan.edu.pe/",
-  "url_requisitos": "https://www.esan.edu.pe/maestrias",
-  "descripcion": "Becas parciales y descuentos corporativos para las maestrías de ESAN, asignados por mérito académico y trayectoria profesional.",
-  "requisitos": [
-   "Admisión a una maestría de ESAN",
-   "Experiencia profesional acreditada",
-   "Entrevista personal"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "beca-excelencia-centrum-pucp-centrum-pucp-business-school",
-  "nombre": "Beca Excelencia CENTRUM PUCP",
-  "organizacion": "CENTRUM PUCP Business School",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Negocios",
-   "Economía"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": false,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 24,
-  "edad_max": 55,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-03-09",
-  "fecha_cierre": "2026-05-08",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español",
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://centrum.pucp.edu.pe/",
-  "url_requisitos": "https://centrum.pucp.edu.pe/maestrias/",
-  "descripcion": "Descuentos por excelencia académica y convenios corporativos para los MBA y maestrías especializadas de CENTRUM PUCP.",
-  "requisitos": [
-   "Admisión al programa",
-   "Promedio destacado en pregrado",
-   "Mínimo de años de experiencia según el programa"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-de-posgrado-universidad-del-pacifico-universidad-del-pacifico",
-  "nombre": "Becas de Posgrado Universidad del Pacífico",
-  "organizacion": "Universidad del Pacífico",
-  "region": "Perú",
-  "pais": "Perú",
-  "ciudad": "Lima",
-  "lat": -12.0464,
-  "lng": -77.0428,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Economía",
-   "Negocios",
-   "Políticas Públicas"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": false,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 23,
-  "edad_max": 50,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-02-23",
-  "fecha_cierre": "2026-04-30",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.up.edu.pe/",
-  "url_requisitos": "https://www.up.edu.pe/posgrado",
-  "descripcion": "Becas por mérito y convenios institucionales para las maestrías de la Escuela de Posgrado de la Universidad del Pacífico.",
-  "requisitos": [
-   "Admisión a una maestría de la UP",
-   "Expediente académico sobresaliente",
-   "Sustento socioeconómico cuando aplique"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-de-posgrado-fundacion-la-caixa-fundacion-la-caixa",
-  "nombre": "Becas de Posgrado Fundación \"la Caixa\"",
-  "organizacion": "Fundación \"la Caixa\"",
-  "region": "Europa",
-  "pais": "España",
-  "ciudad": "Madrid",
-  "lat": 40.4168,
-  "lng": -3.7038,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": true,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 22,
-  "edad_max": 40,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-01-19",
-  "fecha_cierre": "2026-04-08",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español",
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://fundacionlacaixa.org/",
-  "url_requisitos": "https://fundacionlacaixa.org/es/becas-posgrado",
-  "descripcion": "Una de las becas de posgrado más completas de España: cubre matrícula, manutención y viaje para estudiar en Europa o Norteamérica.",
-  "requisitos": [
-   "Expediente académico excelente",
-   "Admisión o preadmisión al programa",
-   "Nivel acreditado del idioma de estudio",
-   "Proyecto personal y de retorno bien argumentado"
-  ],
-  "destacada": true,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-fundacion-ramon-areces-fundacion-ramon-areces",
-  "nombre": "Becas Fundación Ramón Areces",
-  "organizacion": "Fundación Ramón Areces",
-  "region": "Europa",
-  "pais": "España",
-  "ciudad": "Madrid",
-  "lat": 40.4168,
-  "lng": -3.7038,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Economía",
-   "Ciencias",
-   "Salud"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": true,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 22,
-  "edad_max": 40,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-02-02",
-  "fecha_cierre": "2026-04-17",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español",
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.fundacionareces.es/",
-  "url_requisitos": "https://www.fundacionareces.es/fundacionareces/es/becas/",
-  "descripcion": "Becas de ampliación de estudios en el extranjero en economía, ciencias de la vida y de la materia.",
-  "requisitos": [
-   "Titulación universitaria",
-   "Admisión al centro de destino",
-   "Dominio del idioma de estudio"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-iberoamerica-santander-investigacion-banco-santander",
-  "nombre": "Becas Iberoamérica Santander Investigación",
-  "organizacion": "Banco Santander",
-  "region": "Europa",
-  "pais": "España",
-  "ciudad": "Madrid",
-  "lat": 40.4168,
-  "lng": -3.7038,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": false,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": true,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 20,
-  "edad_max": 45,
-  "duracion_meses": 6,
-  "fecha_apertura": "2026-03-02",
-  "fecha_cierre": "2026-05-29",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español",
-   "Portugués"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.santanderopenacademy.com/",
-  "url_requisitos": "https://www.santanderopenacademy.com/es/programs.html",
-  "descripcion": "Movilidad académica de estudiantes y docentes entre universidades iberoamericanas de la red Santander.",
-  "requisitos": [
-   "Estar matriculado en una universidad de la red",
-   "Aval de la universidad de origen",
-   "Buen expediente académico"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-ie-foundation-ie-university",
-  "nombre": "Becas IE Foundation",
-  "organizacion": "IE University",
-  "region": "Europa",
-  "pais": "España",
-  "ciudad": "Madrid",
-  "lat": 40.4168,
-  "lng": -3.7038,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Negocios",
-   "Tecnología",
-   "Derecho",
-   "Economía"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": false,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 22,
-  "edad_max": 45,
-  "duracion_meses": 12,
-  "fecha_apertura": "2026-01-12",
-  "fecha_cierre": "2026-06-30",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés",
-   "Español"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.ie.edu/",
-  "url_requisitos": "https://www.ie.edu/es/becas/",
-  "descripcion": "Ayudas de la IE Foundation por mérito, liderazgo e impacto social para los másteres de IE University.",
-  "requisitos": [
-   "Admisión a un programa de IE University",
-   "Expediente y trayectoria destacados",
-   "Ensayo de motivación"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-unir-para-latinoamerica-universidad-internacional-de-la-rioja",
-  "nombre": "Becas UNIR para Latinoamérica",
-  "organizacion": "Universidad Internacional de La Rioja",
-  "region": "Europa",
-  "pais": "España",
-  "ciudad": "Madrid",
-  "lat": 40.4168,
-  "lng": -3.7038,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Educación",
-   "Negocios",
-   "Derecho"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": false,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 21,
-  "edad_max": 60,
-  "duracion_meses": 12,
-  "fecha_apertura": "2026-01-05",
-  "fecha_cierre": "2026-12-15",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español"
-  ],
-  "modalidad": "Online",
-  "url": "https://www.unir.net/",
-  "url_requisitos": "https://www.unir.net/becas-y-ayudas/",
-  "descripcion": "Descuentos y ayudas al estudio para alumnos latinoamericanos en los másteres oficiales online de UNIR.",
-  "requisitos": [
-   "Titulación universitaria previa",
-   "Matrícula en un máster oficial de UNIR",
-   "Documentación académica apostillada"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "clarendon-fund-scholarships-university-of-oxford",
-  "nombre": "Clarendon Fund Scholarships",
-  "organizacion": "University of Oxford",
-  "region": "Europa",
-  "pais": "Reino Unido",
-  "ciudad": "Oxford",
-  "lat": 51.752,
-  "lng": -1.2577,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 21,
-  "edad_max": 45,
-  "duracion_meses": 36,
-  "fecha_apertura": "2026-09-01",
-  "fecha_cierre": "2027-01-08",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.ox.ac.uk/clarendon",
-  "url_requisitos": "https://www.ox.ac.uk/clarendon/applying",
-  "descripcion": "Cubre matrícula completa y manutención para estudiantes de posgrado de excelencia en la Universidad de Oxford; no requiere postulación aparte.",
-  "requisitos": [
-   "Postular a un programa de posgrado elegible de Oxford",
-   "Excelencia académica demostrable",
-   "Cumplir los plazos de admisión de la universidad"
-  ],
-  "destacada": true,
-  "fuente": "semilla"
- },
- {
-  "id": "knight-hennessy-scholars-stanford-university",
-  "nombre": "Knight-Hennessy Scholars",
-  "organizacion": "Stanford University",
-  "region": "Norteamérica",
-  "pais": "Estados Unidos",
-  "ciudad": "Stanford",
-  "lat": 37.4275,
-  "lng": -122.1697,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": true,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 21,
-  "edad_max": 40,
-  "duracion_meses": 36,
-  "fecha_apertura": "2026-06-10",
-  "fecha_cierre": "2026-10-08",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://knight-hennessy.stanford.edu/",
-  "url_requisitos": "https://knight-hennessy.stanford.edu/admission",
-  "descripcion": "Financia hasta tres años de cualquier posgrado de Stanford e incorpora al becario a un programa de formación en liderazgo.",
-  "requisitos": [
-   "Grado de bachiller obtenido en los últimos años",
-   "Postulación paralela a un posgrado de Stanford",
-   "Trayectoria de liderazgo e impacto"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "schwarzman-scholars-tsinghua-university",
-  "nombre": "Schwarzman Scholars",
-  "organizacion": "Tsinghua University",
-  "region": "Asia",
-  "pais": "China",
-  "ciudad": "Global",
-  "lat": 0.0,
-  "lng": 0.0,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Políticas Públicas",
-   "Negocios",
-   "Ciencias Sociales"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": true,
-   "pasajes": true,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 20,
-  "edad_max": 29,
-  "duracion_meses": 12,
-  "fecha_apertura": "2026-04-01",
-  "fecha_cierre": "2026-09-24",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.schwarzmanscholars.org/",
-  "url_requisitos": "https://www.schwarzmanscholars.org/admissions/",
-  "descripcion": "Maestría de un año en Asuntos Globales en la Universidad de Tsinghua, con beca integral y residencia en Pekín.",
-  "requisitos": [
-   "Título universitario",
-   "Menos de 29 años al iniciar el programa",
-   "Inglés fluido",
-   "Liderazgo demostrado"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "yenching-academy-scholarship-peking-university",
-  "nombre": "Yenching Academy Scholarship",
-  "organizacion": "Peking University",
-  "region": "Asia",
-  "pais": "China",
-  "ciudad": "Global",
-  "lat": 0.0,
-  "lng": 0.0,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Ciencias Sociales",
-   "Políticas Públicas",
-   "Economía"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": true,
-   "pasajes": true,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 20,
-  "edad_max": 30,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-08-17",
-  "fecha_cierre": "2026-12-04",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://yenchingacademy.pku.edu.cn/",
-  "url_requisitos": "https://yenchingacademy.pku.edu.cn/ADMISSIONS.htm",
-  "descripcion": "Maestría interdisciplinaria en Estudios sobre China en la Universidad de Pekín, con beca completa y alojamiento en el campus.",
-  "requisitos": [
-   "Título de pregrado",
-   "Excelente expediente académico",
-   "Interés acreditado en estudios sobre China"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "commonwealth-scholarships-commonwealth-scholarship-commission",
-  "nombre": "Commonwealth Scholarships",
-  "organizacion": "Commonwealth Scholarship Commission",
-  "region": "Europa",
-  "pais": "Reino Unido",
-  "ciudad": "Londres",
-  "lat": 51.5074,
-  "lng": -0.1278,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Desarrollo",
-   "Salud",
-   "Ingeniería",
-   "Educación"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": true,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 22,
-  "edad_max": 45,
-  "duracion_meses": 12,
-  "fecha_apertura": "2026-09-15",
-  "fecha_cierre": "2026-12-17",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://cscuk.fcdo.gov.uk/",
-  "url_requisitos": "https://cscuk.fcdo.gov.uk/scholarships/",
-  "descripcion": "Becas del Reino Unido para ciudadanos de países de la Commonwealth y de países en desarrollo, orientadas al impacto en el país de origen.",
-  "requisitos": [
-   "Nacionalidad de un país elegible",
-   "Título de pregrado con buena nota",
-   "Postulación a través de la agencia nominadora del país"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "emerging-leaders-in-the-americas-program-elap-gobierno-de-canada",
-  "nombre": "Emerging Leaders in the Americas Program (ELAP)",
-  "organizacion": "Gobierno de Canadá",
-  "region": "Norteamérica",
-  "pais": "Canadá",
-  "ciudad": "Global",
-  "lat": 0.0,
-  "lng": 0.0,
-  "niveles": [
-   "Pregrado",
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": false,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": true,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 18,
-  "edad_max": 40,
-  "duracion_meses": 6,
-  "fecha_apertura": "2026-10-01",
-  "fecha_cierre": "2027-03-11",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés",
-   "Francés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.educanada.ca/",
-  "url_requisitos": "https://www.educanada.ca/scholarships-bourses/can/institutions/elap-pfla.aspx",
-  "descripcion": "Movilidad académica de corta duración en instituciones canadienses para estudiantes de América Latina y el Caribe.",
-  "requisitos": [
-   "Estar matriculado en una institución de América Latina o el Caribe",
-   "Acuerdo entre la institución de origen y la canadiense",
-   "Postulación presentada por la institución canadiense"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "aga-khan-foundation-international-scholarship-programme-aga-khan-foundation",
-  "nombre": "Aga Khan Foundation International Scholarship Programme",
-  "organizacion": "Aga Khan Foundation",
-  "region": "Global",
-  "pais": "Global",
-  "ciudad": "Global",
-  "lat": 0.0,
-  "lng": 0.0,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 22,
-  "edad_max": 45,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-01-05",
-  "fecha_cierre": "2026-03-31",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés",
-   "Francés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://the.akdn/",
-  "url_requisitos": "https://the.akdn/en/what-we-do/developing-human-capacity/education/international-scholarship-programme",
-  "descripcion": "Mitad beca y mitad préstamo para estudios de posgrado de estudiantes con excelente historial académico y sin otros medios de financiamiento.",
-  "requisitos": [
-   "Residir en un país elegible del programa",
-   "Admisión a un posgrado reconocido",
-   "Demostrar necesidad financiera"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-heinrich-boll-stiftung-heinrich-boll-stiftung",
-  "nombre": "Becas Heinrich Böll Stiftung",
-  "organizacion": "Heinrich-Böll-Stiftung",
-  "region": "Europa",
-  "pais": "Alemania",
-  "ciudad": "Berlin",
-  "lat": 52.52,
-  "lng": 13.405,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Medio Ambiente",
-   "Ciencias Sociales",
-   "Políticas Públicas"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 21,
-  "edad_max": 40,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-02-01",
-  "fecha_cierre": "2026-03-01",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Alemán",
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.boell.de/",
-  "url_requisitos": "https://www.boell.de/en/scholarships",
-  "descripcion": "Becas para estudios de posgrado en Alemania dirigidas a personas con compromiso social, ecológico y democrático.",
-  "requisitos": [
-   "Admisión en una universidad alemana",
-   "Compromiso político-social acreditado",
-   "Conocimiento del idioma según el programa"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "becas-konrad-adenauer-stiftung-konrad-adenauer-stiftung",
-  "nombre": "Becas Konrad-Adenauer-Stiftung",
-  "organizacion": "Konrad-Adenauer-Stiftung",
-  "region": "Europa",
-  "pais": "Alemania",
-  "ciudad": "Bonn",
-  "lat": 50.7374,
-  "lng": 7.0982,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Políticas Públicas",
-   "Derecho",
-   "Economía",
-   "Ciencias Sociales"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": false,
-   "pasajes": true,
-   "seguro": true,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 21,
-  "edad_max": 40,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-05-04",
-  "fecha_cierre": "2026-07-15",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Alemán",
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.kas.de/",
-  "url_requisitos": "https://www.kas.de/en/scholarships",
-  "descripcion": "Programa de becas para estudiantes internacionales de posgrado en Alemania, con formación complementaria en liderazgo y política.",
-  "requisitos": [
-   "Admisión a una universidad alemana",
-   "Buen expediente académico",
-   "Compromiso social y conocimientos de alemán"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "colfuturo-programa-credito-beca-colfuturo",
-  "nombre": "Colfuturo — Programa Crédito Beca",
-  "organizacion": "COLFUTURO",
-  "region": "Latinoamérica",
-  "pais": "Colombia",
-  "ciudad": "Bogota",
-  "lat": 4.711,
-  "lng": -74.0721,
-  "niveles": [
-   "Maestría",
-   "Doctorado"
-  ],
-  "areas": [
-   "Todas"
-  ],
-  "cobertura": "Parcial",
-  "incluye": {
-   "matricula": true,
-   "manutencion": false,
-   "hospedaje": false,
-   "pasajes": false,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 21,
-  "edad_max": 45,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-01-26",
-  "fecha_cierre": "2026-04-24",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Español",
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.colfuturo.org/",
-  "url_requisitos": "https://www.colfuturo.org/financiacion-para-posgrados",
-  "descripcion": "Crédito condonable para colombianos que cursan posgrados en el exterior; se convierte parcialmente en beca al regresar al país.",
-  "requisitos": [
-   "Nacionalidad colombiana",
-   "Admisión a un posgrado en el exterior",
-   "Codeudor y estudio de crédito aprobado"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
- },
- {
-  "id": "rotary-peace-fellowships-the-rotary-foundation",
-  "nombre": "Rotary Peace Fellowships",
-  "organizacion": "The Rotary Foundation",
-  "region": "Global",
-  "pais": "Global",
-  "ciudad": "Global",
-  "lat": 0.0,
-  "lng": 0.0,
-  "niveles": [
-   "Maestría"
-  ],
-  "areas": [
-   "Ciencias Sociales",
-   "Políticas Públicas",
-   "Desarrollo"
-  ],
-  "cobertura": "Completa",
-  "incluye": {
-   "matricula": true,
-   "manutencion": true,
-   "hospedaje": true,
-   "pasajes": true,
-   "seguro": false,
-   "curso_idioma": false,
-   "equipos": false
-  },
-  "edad_min": 24,
-  "edad_max": 50,
-  "duracion_meses": 24,
-  "fecha_apertura": "2026-02-02",
-  "fecha_cierre": "2026-05-15",
-  "costo_postulacion_usd": 0,
-  "idiomas": [
-   "Inglés"
-  ],
-  "modalidad": "Presencial",
-  "url": "https://www.rotary.org/",
-  "url_requisitos": "https://www.rotary.org/en/our-programs/peace-fellowships",
-  "descripcion": "Beca integral para una maestría en resolución de conflictos y construcción de paz en los centros Rotary Peace del mundo.",
-  "requisitos": [
-   "Experiencia profesional en desarrollo o resolución de conflictos",
-   "Dominio del inglés",
-   "Compromiso con la paz y el servicio comunitario"
-  ],
-  "destacada": false,
-  "fuente": "semilla"
+  "fuente": "semilla",
+  "enlace_verificado": "2026-08-24",
+  "enlace_ok": true
  }
 ]
