@@ -161,9 +161,8 @@
    "url": "https://fundacionlacaixa.org/es/"
   },
   "becas-de-posgrado-prociencia-concytec-prociencia": {
-   "alternativa": "https://www.google.com/search?q=site%3Aprociencia.gob.pe+Becas+de+Posgrado+PROCIENCIA",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "declarada",
    "url": "https://prociencia.gob.pe/"
   },
@@ -372,7 +371,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=LnrCL4rUnw83weWEBA5QGfEFWHhBaeMUBXCn-IP9.studyinkorea10"
+   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=mdDh3iP5g1Sif8HRiMNoSRk8Go8qsdD-hKWzPKAw.studyinkorea20"
   },
   "google-developer-scholarship-google": {
    "codigo": 200,
@@ -459,10 +458,10 @@
    "url": "https://www.rhodeshouse.ox.ac.uk/"
   },
   "rotary-peace-fellowship-fundacion-rotaria": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 429,
+   "estado": "protegido",
    "nivel": "declarada",
-   "url": "https://www.rotary.org/get-involved/our-programs/peace-fellowships"
+   "url": "https://www.rotary.org/en/our-programs/peace-fellowships"
   },
   "rotary-peace-fellowships-the-rotary-foundation": {
    "codigo": 200,
@@ -526,7 +525,7 @@
    "url": "https://yenchingacademy.pku.edu.cn/"
   }
  },
- "generado_en": "2026-08-24T06:39:14Z",
+ "generado_en": "2026-08-31T12:12:31Z",
  "instituciones": {
   "aalto": {
    "codigo": 200,
@@ -601,9 +600,8 @@
    "url": "https://centrum.pucp.edu.pe/maestrias/"
   },
   "ceu": {
-   "alternativa": "https://www.google.com/search?q=site%3Aceu.edu+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "portada",
    "url": "https://www.ceu.edu/"
   },
@@ -668,10 +666,11 @@
    "url": "https://www.ehu.eus/es/web/masterrak-eta-graduondokoak"
   },
   "elte": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.elte.hu/en/programmes"
+   "alternativa": "https://www.google.com/search?q=site%3Aelte.hu+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.elte.hu/"
   },
   "epfl": {
    "codigo": 200,
@@ -710,10 +709,11 @@
    "url": "https://portal.fgv.br/"
   },
   "flacso-ec": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.flacso.edu.ec/posgrados"
+   "alternativa": "https://www.google.com/search?q=site%3Aflacso.edu.ec+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.flacso.edu.ec/"
   },
   "fu-berlin": {
    "codigo": 200,
@@ -760,8 +760,8 @@
   "hku": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://portal.hku.hk/tpg-admissions/"
+   "nivel": "portada",
+   "url": "https://www.hku.hk/"
   },
   "hkust": {
    "codigo": 200,
@@ -794,10 +794,10 @@
    "url": "https://acad.iitb.ac.in/"
   },
   "incae": {
-   "codigo": 200,
+   "codigo": 202,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://incae.edu/nuestras-maestrias/"
+   "nivel": "declarada",
+   "url": "https://www.incae.edu/es/programas"
   },
   "intec": {
    "codigo": 200,
@@ -830,9 +830,8 @@
    "url": "https://www.jhu.edu/admissions/graduate/"
   },
   "kaist": {
-   "alternativa": "https://www.google.com/search?q=site%3Akaist.ac.kr+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "portada",
    "url": "https://www.kaist.ac.kr/"
   },
@@ -987,9 +986,8 @@
    "url": "https://www.palermo.edu/derecho/programas_posgrado/maestria/tecnologia-inteligencia-artificial/"
   },
   "pku": {
-   "alternativa": "https://www.google.com/search?q=site%3Apku.edu.cn+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "portada",
    "url": "https://www.pku.edu.cn/"
   },
@@ -1279,7 +1277,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://www.ucr.ac.cr/actividades/sep/2026/04/06/maestria-academica-en-ciencias-agricolas-y-recursos-naturales-con-enfasis-en-suelos.html"
+   "url": "https://www.ucr.ac.cr/actividades/sep/2026/06/10/ingreso-a-la-maestria-profesional-en-administracion-y-direccion-de-empresas-con-enfasis-en-finanzas.html"
   },
   "ucsm": {
    "codigo": 403,
@@ -1640,7 +1638,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://validate.perfdrive.com/?ssa=32861b1a-c1b2-4615-a486-935515c78d5a&ssb=90180209292&ssc=https%3A%2F%2Fwww.uninorte.edu.co%2Fweb%2Fposgrados&ssi=109b8401-e2vu-40fb-b705-ad4ced57763b&ssk=botmanager_support@radware.com&ssm=58057717268214502103603660240189&ssn=c9ec4ff8d9abc6bafb8a2ddcc375b2dc61477e9eb934-cf90-41e6-901c0b&sso=dcddb14e-84da39c82787c43c405f1018a7cca0873db0db3a71e0e974&ssp=84945590241787504873178753334174299&ssq=14023645345735623043353457878980303006635&ssr=MTcyLjIxMi4xNjcuODM=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwNWRkNDNkY2YtMGYzOC00NWU1LTg0NDktYTAyNTg5Y2E3MGJkMS0xNzg3NTUzNDU3NDAzMC0wMDI4NTM2MDQ4ZTE2ZTFmZmZhMTAiLCJfX3V6bWYiOiI3ZjkwMDA3ZTllYjkzNC1jZjkwLTQxZTYtOTE0ZS04NGRhMzljODI3ODcxLTE3ODc1NTM0NTc0MDMwLTAwMDE0MjJlNmYwZGNiZWU3NzkxMCIsInJkIjoidW5pbm9ydGUuZWR1LmNvIn0="
+   "url": "https://validate.perfdrive.com/?ssa=9659a739-b033-403f-967b-1063841d212b&ssb=70894248246&ssc=https%3A%2F%2Funinorte.edu.co%2Fweb%2Fposgrados&ssi=bd66ea38-e2vu-4004-9e9b-e8f2e0ef7521&ssk=botmanager_support@radware.com&ssm=99132745112795859130180632377554&ssn=971ba317e49d7a26fdc591f200087f10d2a0004e3d73-93fd-4e70-98a672&sso=80a22ab2-9f2ac2fff388292ff5ab8f43a1562b1ad338ad24fdc9fda7&ssp=55794847271788186413178817652708686&ssq=46138457823746027823578236011226814467772&ssr=NTIuMTkwLjE0MC4xMDQ=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwMjcyYTUzNzEtODVkZC00MDU2LWE4ODEtMGEwNDJlMWFmMGU4MS0xNzg4MTc4MjM3NTg1MC0wMDM1ODI0NzkyMjczZDY4ODhhMTAiLCJfX3V6bWYiOiI3ZjkwMDAwMDRlM2Q3My05M2ZkLTRlNzAtOWFiMi05ZjJhYzJmZmYzODgxLTE3ODgxNzgyMzc1ODUwLTAwMGRmYTkwOTUyOTVhNjViMzUxMyIsInJkIjoidW5pbm9ydGUuZWR1LmNvIn0="
   },
   "unir": {
    "codigo": 403,
@@ -1667,16 +1665,17 @@
    "url": "https://www.unjbg.edu.pe/"
   },
   "unjfsc": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://unjfsc.edu.pe/posgrado/"
+   "alternativa": "https://www.google.com/search?q=site%3Aunjfsc.edu.pe+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.unjfsc.edu.pe/"
   },
   "unmsm": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 0,
+   "estado": "manual",
    "nivel": "manual",
-   "url": "https://www.unmsm.edu.pe/"
+   "url": "https://unmsm.edu.pe/"
   },
   "unp": {
    "codigo": 200,
@@ -1745,10 +1744,10 @@
    "url": "https://www.unu.edu.pe/posgrado/"
   },
   "uoa": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://mpharmnkua.uoa.gr/"
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.uoa.gr/en/studies"
   },
   "uoc": {
    "codigo": 200,
@@ -1757,10 +1756,11 @@
    "url": "https://www.uoc.edu/es/estudios/masters"
   },
   "uonbi": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://www.uonbi.ac.ke/content/postgraduate-education"
+   "alternativa": "https://www.google.com/search?q=site%3Auonbi.ac.ke+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.uonbi.ac.ke/"
   },
   "up": {
    "codigo": 403,
@@ -1769,11 +1769,10 @@
    "url": "https://www.up.edu.pe/programas/posgrado"
   },
   "up-pa": {
-   "alternativa": "https://www.google.com/search?q=site%3Aup.ac.pa+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.up.ac.pa/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://vicinvestigacion.up.ac.pa/"
   },
   "up-ph": {
    "codigo": 429,
@@ -1806,10 +1805,10 @@
    "url": "https://upch.edu.pe/"
   },
   "upeu": {
-   "codigo": 200,
+   "codigo": 202,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://posgrado.upeu.edu.pe/"
+   "nivel": "declarada",
+   "url": "https://upeu.edu.pe/posgrado"
   },
   "upm": {
    "codigo": 200,
@@ -2027,13 +2026,13 @@
   "becas": {
    "manual": 1,
    "ok": 68,
-   "protegido": 8,
-   "sin_respuesta": 9
+   "protegido": 9,
+   "sin_respuesta": 8
   },
   "instituciones": {
-   "manual": 17,
-   "ok": 215,
-   "protegido": 10,
+   "manual": 18,
+   "ok": 213,
+   "protegido": 11,
    "sin_respuesta": 6
   }
  }
