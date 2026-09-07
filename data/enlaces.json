@@ -368,10 +368,11 @@
    "url": "https://www.gatescambridge.org/"
   },
   "global-korea-scholarship-gks-niied-gobierno-de-corea": {
-   "codigo": 200,
-   "estado": "ok",
+   "alternativa": "https://www.google.com/search?q=site%3Awww.studyinkorea.go.kr+Global+Korea+Scholarship+%2F+GKS",
+   "codigo": 0,
+   "estado": "sin_respuesta",
    "nivel": "declarada",
-   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=mdDh3iP5g1Sif8HRiMNoSRk8Go8qsdD-hKWzPKAw.studyinkorea20"
+   "url": "https://www.studyinkorea.go.kr/"
   },
   "google-developer-scholarship-google": {
    "codigo": 200,
@@ -525,7 +526,7 @@
    "url": "https://yenchingacademy.pku.edu.cn/"
   }
  },
- "generado_en": "2026-08-31T12:12:31Z",
+ "generado_en": "2026-09-07T11:05:50Z",
  "instituciones": {
   "aalto": {
    "codigo": 200,
@@ -666,11 +667,10 @@
    "url": "https://www.ehu.eus/es/web/masterrak-eta-graduondokoak"
   },
   "elte": {
-   "alternativa": "https://www.google.com/search?q=site%3Aelte.hu+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.elte.hu/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.elte.hu/en/programmes"
   },
   "epfl": {
    "codigo": 200,
@@ -709,11 +709,10 @@
    "url": "https://portal.fgv.br/"
   },
   "flacso-ec": {
-   "alternativa": "https://www.google.com/search?q=site%3Aflacso.edu.ec+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.flacso.edu.ec/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.flacso.edu.ec/posgrados"
   },
   "fu-berlin": {
    "codigo": 200,
@@ -724,8 +723,8 @@
   "fudan": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "portada",
-   "url": "https://www.fudan.edu.cn/"
+   "nivel": "declarada",
+   "url": "https://www.fudan.edu.cn/en/admissions/main.psp"
   },
   "georgetown": {
    "codigo": 200,
@@ -770,8 +769,9 @@
    "url": "https://hkust.edu.hk/"
   },
   "huji": {
-   "codigo": 200,
-   "estado": "ok",
+   "alternativa": "https://www.google.com/search?q=site%3Ahuji.ac.il+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
    "nivel": "portada",
    "url": "https://www.huji.ac.il/"
   },
@@ -830,8 +830,9 @@
    "url": "https://www.jhu.edu/admissions/graduate/"
   },
   "kaist": {
-   "codigo": 200,
-   "estado": "ok",
+   "alternativa": "https://www.google.com/search?q=site%3Akaist.ac.kr+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
    "nivel": "portada",
    "url": "https://www.kaist.ac.kr/"
   },
@@ -1054,8 +1055,8 @@
   "snu": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://admission.snu.ac.kr/undergraduate/notice"
+   "nivel": "portada",
+   "url": "https://www.snu.ac.kr/"
   },
   "sorbonne": {
    "codigo": 200,
@@ -1070,10 +1071,10 @@
    "url": "https://www.stanford.edu/academics"
   },
   "stellenbosch": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 403,
+   "estado": "protegido",
    "nivel": "declarada",
-   "url": "https://www.su.ac.za/en"
+   "url": "https://www.sun.ac.za/english/faculty/postgraduate"
   },
   "sydney": {
    "codigo": 200,
@@ -1540,8 +1541,8 @@
   "unc": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.unc.edu.pe/2022/04/18/posgrado-matricula-2022-i/"
+   "nivel": "portada",
+   "url": "https://sites.google.com/unc.edu.pe/admision262d0result/resultados-examen/"
   },
   "unc-ar": {
    "codigo": 200,
@@ -1638,7 +1639,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://validate.perfdrive.com/?ssa=9659a739-b033-403f-967b-1063841d212b&ssb=70894248246&ssc=https%3A%2F%2Funinorte.edu.co%2Fweb%2Fposgrados&ssi=bd66ea38-e2vu-4004-9e9b-e8f2e0ef7521&ssk=botmanager_support@radware.com&ssm=99132745112795859130180632377554&ssn=971ba317e49d7a26fdc591f200087f10d2a0004e3d73-93fd-4e70-98a672&sso=80a22ab2-9f2ac2fff388292ff5ab8f43a1562b1ad338ad24fdc9fda7&ssp=55794847271788186413178817652708686&ssq=46138457823746027823578236011226814467772&ssr=NTIuMTkwLjE0MC4xMDQ=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwMjcyYTUzNzEtODVkZC00MDU2LWE4ODEtMGEwNDJlMWFmMGU4MS0xNzg4MTc4MjM3NTg1MC0wMDM1ODI0NzkyMjczZDY4ODhhMTAiLCJfX3V6bWYiOiI3ZjkwMDAwMDRlM2Q3My05M2ZkLTRlNzAtOWFiMi05ZjJhYzJmZmYzODgxLTE3ODgxNzgyMzc1ODUwLTAwMGRmYTkwOTUyOTVhNjViMzUxMyIsInJkIjoidW5pbm9ydGUuZWR1LmNvIn0="
+   "url": "https://validate.perfdrive.com/?ssa=82d5257a-9c8e-4306-bec6-fd7cdf36fcef&ssb=74121287535&ssc=https%3A%2F%2Funinorte.edu.co%2Fweb%2Fposgrados&ssi=292e7994-e2vu-4ddf-9630-b22afa9758f2&ssk=botmanager_support@radware.com&ssm=64088496018691346139511236830902&ssn=42bd726e1b816ebdba9fe61af5b351dca669d6f30a7b-91a9-4510-9dce1d&sso=cb587e2c-3925c5c775fb9a86978a0d0644e54e9af41d6974ff45260f&ssp=82657012511788732663178870028511382&ssq=55481917902693799181079026291411948853436&ssr=NTIuMTU5LjI0Ny4xODE=&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJfX3V6bWYiOiI3ZjkwMDBkNmYzMGE3Yi05MWE5LTQ1MTAtOWUyYy0zOTI1YzVjNzc1ZmIxLTE3ODg3NzkwMjY5NTgwLTAwMDcyYjRlNGVlZmRmODkzYzMxMyIsInV6bXgiOiI3ZmMwMDBjZWJkNGQ5YS0wYzQxLTRjYzctOWU3Ni0yYzEzOTg5MWU2ZTcxLTE3ODg3NzkwMjY5NTgwLTAwNDkxYTkwODI4ZmNhZGNhMzExMCIsInJkIjoidW5pbm9ydGUuZWR1LmNvIn0="
   },
   "unir": {
    "codigo": 403,
@@ -1808,7 +1809,7 @@
    "codigo": 202,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://upeu.edu.pe/posgrado"
+   "url": "https://www.upeu.edu.pe/posgrado"
   },
   "upm": {
    "codigo": 200,
@@ -1863,7 +1864,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://research.uq.edu.au/graduate-research"
+   "url": "https://study.uq.edu.au/master-business-administration-mba/mba-info-event"
   },
   "url-gt": {
    "codigo": 200,
@@ -2025,14 +2026,14 @@
  "resumen": {
   "becas": {
    "manual": 1,
-   "ok": 68,
+   "ok": 67,
    "protegido": 9,
-   "sin_respuesta": 8
+   "sin_respuesta": 9
   },
   "instituciones": {
    "manual": 18,
-   "ok": 213,
-   "protegido": 11,
+   "ok": 212,
+   "protegido": 12,
    "sin_respuesta": 6
   }
  }
