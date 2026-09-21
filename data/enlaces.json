@@ -149,10 +149,10 @@
    "url": "https://www.gov.br/capes/pt-br"
   },
   "becas-de-posgrado-conahcyt-conahcyt-mexico": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 503,
+   "estado": "protegido",
    "nivel": "declarada",
-   "url": "https://secihti.mx/"
+   "url": "https://conahcyt.mx/"
   },
   "becas-de-posgrado-fundacion-la-caixa-fundacion-la-caixa": {
    "codigo": 200,
@@ -368,11 +368,10 @@
    "url": "https://www.gatescambridge.org/"
   },
   "global-korea-scholarship-gks-niied-gobierno-de-corea": {
-   "alternativa": "https://www.google.com/search?q=site%3Awww.studyinkorea.go.kr+Global+Korea+Scholarship+%2F+GKS",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.studyinkorea.go.kr/"
+   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=tgkt_soJY9AhofdA4ymBW8JsOIYtAQZqvP9QTvta.studyinkorea20"
   },
   "google-developer-scholarship-google": {
    "codigo": 200,
@@ -526,7 +525,7 @@
    "url": "https://yenchingacademy.pku.edu.cn/"
   }
  },
- "generado_en": "2026-09-14T11:18:08Z",
+ "generado_en": "2026-09-21T11:29:29Z",
  "instituciones": {
   "aalto": {
    "codigo": 200,
@@ -621,7 +620,7 @@
   "comillas": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "portada",
+   "nivel": "declarada",
    "url": "https://www.comillas.edu/"
   },
   "continental": {
@@ -667,11 +666,10 @@
    "url": "https://www.ehu.eus/es/web/masterrak-eta-graduondokoak"
   },
   "elte": {
-   "alternativa": "https://www.google.com/search?q=site%3Aelte.hu+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.elte.hu/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.elte.hu/en/programmes"
   },
   "epfl": {
    "codigo": 200,
@@ -716,11 +714,10 @@
    "url": "https://www.flacso.edu.ec/posgrados"
   },
   "fu-berlin": {
-   "alternativa": "https://www.google.com/search?q=site%3Afu-berlin.de+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.fu-berlin.de/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.fu-berlin.de/en/studium/studienangebot"
   },
   "fudan": {
    "codigo": 200,
@@ -771,9 +768,8 @@
    "url": "https://hkust.edu.hk/"
   },
   "huji": {
-   "alternativa": "https://www.google.com/search?q=site%3Ahuji.ac.il+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "portada",
    "url": "https://www.huji.ac.il/"
   },
@@ -1092,8 +1088,8 @@
   "tec": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "portada",
-   "url": "https://tec.mx/es"
+   "nivel": "descubierta",
+   "url": "https://maestriasydiplomados.tec.mx/programas/posgrados"
   },
   "tec-cr": {
    "codigo": 200,
@@ -1290,14 +1286,14 @@
   "ucsp": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.ucsp.edu.pe/posgrado/"
+   "nivel": "descubierta",
+   "url": "https://postgrado.ucsp.edu.pe/programa-cat/maestrias/"
   },
   "ucss": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.ucss.edu.pe/posgrado"
+   "nivel": "descubierta",
+   "url": "https://postgrado.ucss.edu.pe/maestrias?ban=ucss"
   },
   "ucsur": {
    "codigo": 200,
@@ -1314,8 +1310,8 @@
   "ucv": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://www.ucv.edu.pe/moyobamba"
+   "nivel": "portada",
+   "url": "https://www.ucv.edu.pe/"
   },
   "ucv-ve": {
    "codigo": 0,
@@ -1396,18 +1392,16 @@
    "url": "https://www.ugr.es/estudiantes/master-doctorados"
   },
   "uh-cu": {
-   "alternativa": "https://www.google.com/search?q=site%3Auh.cu+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.uh.cu/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uh.cu/estudios/postgrado/"
   },
   "ui-id": {
-   "alternativa": "https://www.google.com/search?q=site%3Aui.ac.id+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.ui.ac.id/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.ui.ac.id/en/education-and-health-services-for-construction-workers-and-students-in-the-ikn-area/"
   },
   "uio": {
    "codigo": 200,
@@ -1578,18 +1572,16 @@
    "url": "https://www.unfv.edu.pe/eupg/"
   },
   "unh": {
-   "alternativa": "https://www.google.com/search?q=site%3Aunh.edu.pe+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.unh.edu.pe/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://www.unh.edu.pe/posgrado-de-fen/"
   },
   "unheval": {
-   "alternativa": "https://www.google.com/search?q=site%3Aunheval.edu.pe+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.unheval.edu.pe/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://posgrado.unheval.edu.pe/"
   },
   "uni": {
    "codigo": 200,
@@ -1612,14 +1604,14 @@
   "unibuc": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "portada",
-   "url": "https://www.unibuc.ro/"
+   "nivel": "descubierta",
+   "url": "https://unibuc.ro/record-de-candidati-la-cele-20-de-facultati-ale-ub-in-sesiunea-iulie-2026-o-medie-de-61-candidaturi-pe-loc-la-buget-la-licenta-si-3-candidaturi-pe-loc-la-masterat-slider/"
   },
   "unica": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.unica.edu.pe/posgrado"
+   "url": "https://www.unica.edu.pe/posgrado/"
   },
   "unicamp": {
    "codigo": 200,
@@ -1643,7 +1635,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://validate.perfdrive.com/?ssa=0812d051-cc85-4258-840f-1006d3ab26fb&ssb=92890262393&ssc=https%3A%2F%2Funinorte.edu.co%2Fweb%2Fposgrados&ssi=8fa4606d-e2vu-4ba3-8910-bbbd632a0320&ssk=botmanager_support@radware.com&ssm=12125926667538992130954594311842&ssn=02cbadb439c1b120b8e00e0d078bfc1f03b44cd3bb7a-a7ea-40f0-bc0c12&sso=d07951a4-48b156806092be8774fe41fc46bbf8788bc8b3b4edce1f49&ssp=62163225731789336062178932836255627&ssq=90885968456405819218984563190533706501228&ssr=MjAuMTA2LjIxLjcw&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJ1em14IjoiN2ZjMDAwMDZjNzNkODktNjQyZS00MjQ5LWIyNWUtOGI0YzQ4NWVkOGYwMS0xNzg5Mzg0NTY0NzUyMC0wMDViMDlhNTNlZGM2M2ZlMDBhMTAiLCJfX3V6bWYiOiI3ZjkwMDA0Y2QzYmI3YS1hN2VhLTQwZjAtYjFhNC00OGIxNTY4MDYwOTIxLTE3ODkzODQ1NjQ3NTMwLTAwMDU5NDM4ZjY5OTQwYTBkODUxMyIsInJkIjoidW5pbm9ydGUuZWR1LmNvIn0="
+   "url": "https://validate.perfdrive.com/75a2c17a956a2acf3b7f9bf74eec7477/?ssa=f061689d-2403-45b2-8d30-5e0328c9d04e&ssb=02015282564&ssc=https%3A%2F%2Funinorte.edu.co%2Fweb%2Fposgrados&ssi=0df2e0f2-e2vu-40f4-ad1b-d4559f18c9d8&ssk=botmanager_support@radware.com&ssm=34436262125851387136533990526137&ssn=e18edad91f46bbf8f61050bfbb7ddcbbbba024ab4c54-a937-487a-971992&sso=bc33c00b-7a03f4dcdaa2b2523f6601da44f5c650cccd82fc1d8f1c67&ssp=07121888041789986025178990929250203&ssq=58437939007653372315390075095590911729766&ssr=NTIuMTkwLjE0MS4zOA==&sst=Mozilla/5.0%20(Windows%20NT%2010.0;%20Win64;%20x64)%20AppleWebKit/537.36%20(KHTML,%20like%20Gecko)%20Chrome/126.0.0.0%20Safari/537.36&ssu=&ssv=&ssw=&ssx=eyJyZCI6InVuaW5vcnRlLmVkdS5jbyIsIl9fdXptZiI6IjdmOTEwMDI0YWI0YzU0LWE5MzctNDg3YS05MDBiLTdhMDNmNGRjZGFhMjEtMTc4OTk5MDA3NjQ1NzAtMDAwMTJkNDZmNmY2Nzg2ODZmYjEzIiwidXpteCI6IjdmYzAwMDE1NTU2MzBhLWE4ZDctNDFkNS05Zjg3LTM0NzhkNjdmMjNhMDEtMTc4OTk5MDA3NTUwMjk1My0wMDY2OTVlMmE3NTM1NzU0OWRiMTMifQ=="
   },
   "unir": {
    "codigo": 403,
@@ -1670,16 +1662,17 @@
    "url": "https://www.unjbg.edu.pe/"
   },
   "unjfsc": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://unjfsc.edu.pe/posgrado/"
+   "alternativa": "https://www.google.com/search?q=site%3Aunjfsc.edu.pe+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.unjfsc.edu.pe/"
   },
   "unmsm": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 0,
+   "estado": "manual",
    "nivel": "manual",
-   "url": "https://www.unmsm.edu.pe/"
+   "url": "https://unmsm.edu.pe/"
   },
   "unp": {
    "codigo": 200,
@@ -1726,8 +1719,8 @@
   "unt": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://epgunitru.edu.pe/maestrias-epg/"
+   "nivel": "portada",
+   "url": "https://www.unitru.edu.pe/"
   },
   "untrm": {
    "codigo": 200,
@@ -1748,10 +1741,10 @@
    "url": "https://www.unu.edu.pe/posgrado/"
   },
   "uoa": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://mpharmnkua.uoa.gr/"
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.uoa.gr/en/studies"
   },
   "uoc": {
    "codigo": 200,
@@ -1785,11 +1778,10 @@
    "url": "https://up.edu.ph/index.php/academics/"
   },
   "upao": {
-   "alternativa": "https://www.google.com/search?q=site%3Aupao.edu.pe+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.upao.edu.pe/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://posgrado.upao.edu.pe"
   },
   "upb-bo": {
    "codigo": 200,
@@ -1852,11 +1844,10 @@
    "url": "https://www.upsjb.edu.pe/posgrado/"
   },
   "upt": {
-   "alternativa": "https://www.google.com/search?q=site%3Aupt.edu.pe+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.upt.edu.pe/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://postgrado.upt.edu.pe/web/"
   },
   "upv": {
    "codigo": 200,
@@ -1895,10 +1886,10 @@
    "url": "https://www.us.es/estudiar/que-estudiar/oferta-de-masteres"
   },
   "usac": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://cgsep.usac.edu.gt/"
+   "codigo": 503,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://usac.edu.gt/posgrado"
   },
   "usach": {
    "codigo": 200,
@@ -1987,8 +1978,8 @@
   "uvg": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.uvg.edu.gt/posgrados"
+   "nivel": "descubierta",
+   "url": "https://www.uvg.edu.gt/uvgmaster/posgrado-en-docencia-superior-e-innovacion/"
   },
   "uw-pl": {
    "codigo": 200,
@@ -2031,14 +2022,14 @@
   "becas": {
    "manual": 1,
    "ok": 67,
-   "protegido": 9,
-   "sin_respuesta": 9
+   "protegido": 10,
+   "sin_respuesta": 8
   },
   "instituciones": {
-   "manual": 18,
-   "ok": 208,
-   "protegido": 12,
-   "sin_respuesta": 10
+   "manual": 19,
+   "ok": 213,
+   "protegido": 14,
+   "sin_respuesta": 2
   }
  }
 }
