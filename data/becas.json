@@ -51,7 +51,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -100,7 +100,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -156,7 +156,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -208,7 +208,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -256,7 +256,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -308,7 +308,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -359,7 +359,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -409,7 +409,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -464,7 +464,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -514,7 +514,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -560,14 +560,15 @@
   "url_requisitos": "Https://conahcyt.mx/becas_posgrados/becas-nacionales/",
   "descripcion": "Becas nacionales y al extranjero del sistema mexicano de ciencia para programas del Sistema Nacional de Posgrados.",
   "requisitos": [
-   "Admisión a un programa del Sistema Nacional de Posgrados",
-   "Dedicación exclusiva al programa",
-   "Promedio mínimo de 8.0"
+   "En el Reglamento de Becas y las Convocatorias correspondientes se define la organización y funcionamiento, los rubros y montos que cubre la beca y apoyo complementario, así como los criterios de elegibilidad.",
+   "Convocatoria Apoyos para Academias y Sociedades Científicas y promoción de Olimpiadas Nacionales del Conocimiento 2025",
+   "Términos de Referencia Academias, Sociedades y promoción de Olimpiadas 2025"
   ],
   "destacada": false,
-  "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
-  "enlace_ok": false
+  "fuente": "web-oficial",
+  "enlace_verificado": "2026-09-28",
+  "enlace_ok": true,
+  "requisitos_actualizados": "2026-09-28"
  },
  {
   "id": "becas-anid-chile-agencia-nacional-de-investigacion-y-desarrollo",
@@ -618,7 +619,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -669,7 +670,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -722,9 +723,9 @@
   ],
   "destacada": true,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-09-21"
+  "requisitos_actualizados": "2026-09-28"
  },
  {
   "id": "erasmus-mundus-joint-masters-comision-europea",
@@ -776,9 +777,9 @@
   ],
   "destacada": true,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-09-21"
+  "requisitos_actualizados": "2026-09-28"
  },
  {
   "id": "becas-daad-para-posgrado-servicio-aleman-de-intercambio-academico",
@@ -829,8 +830,8 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
-  "enlace_ok": false
+  "enlace_verificado": "2026-09-28",
+  "enlace_ok": true
  },
  {
   "id": "beca-eiffel-ministerio-de-europa-y-asuntos-exteriores-de-francia",
@@ -884,7 +885,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -936,9 +937,9 @@
   ],
   "destacada": false,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-09-21"
+  "requisitos_actualizados": "2026-09-28"
  },
  {
   "id": "stipendium-hungaricum-gobierno-de-hungria",
@@ -988,7 +989,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1041,7 +1042,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -1095,9 +1096,9 @@
   ],
   "destacada": true,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-09-21"
+  "requisitos_actualizados": "2026-09-28"
  },
  {
   "id": "rhodes-scholarship-rhodes-trust-universidad-de-oxford",
@@ -1146,9 +1147,9 @@
   ],
   "destacada": false,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-09-21"
+  "requisitos_actualizados": "2026-09-28"
  },
  {
   "id": "holland-scholarship-gobierno-de-los-paises-bajos",
@@ -1196,7 +1197,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1250,7 +1251,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1304,7 +1305,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -1355,7 +1356,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1408,7 +1409,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1460,7 +1461,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -1511,7 +1512,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -1562,7 +1563,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -1613,7 +1614,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -1669,9 +1670,9 @@
   ],
   "destacada": false,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-09-21"
+  "requisitos_actualizados": "2026-09-28"
  },
  {
   "id": "mext-becas-del-gobierno-de-japon-ministerio-de-educacion-de-japon",
@@ -1723,7 +1724,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1775,7 +1776,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -1831,7 +1832,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1882,7 +1883,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1935,7 +1936,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -1989,7 +1990,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2041,7 +2042,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2092,7 +2093,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2146,9 +2147,9 @@
   ],
   "destacada": true,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-09-21"
+  "requisitos_actualizados": "2026-09-28"
  },
  {
   "id": "vanier-canada-graduate-scholarships-gobierno-de-canada",
@@ -2199,7 +2200,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2249,7 +2250,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2303,7 +2304,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2353,7 +2354,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2405,7 +2406,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2457,7 +2458,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2509,7 +2510,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2563,7 +2564,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2617,7 +2618,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2670,7 +2671,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2721,7 +2722,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2773,7 +2774,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -2826,7 +2827,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2876,7 +2877,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2929,7 +2930,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -2977,7 +2978,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": false
  },
  {
@@ -3031,7 +3032,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  },
  {
@@ -3080,7 +3081,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-09-21",
+  "enlace_verificado": "2026-09-28",
   "enlace_ok": true
  }
 ]
