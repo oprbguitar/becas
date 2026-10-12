@@ -371,7 +371,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=eStA1-wC7JRjOfcBGRgolcyPoZ6xIvQvGAigrGin.studyinkorea20"
+   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=xQyBoWVoWGqisL6cmslPWnGrSeiz4TWKAk6_9j5R.studyinkorea10"
   },
   "google-developer-scholarship-google": {
    "codigo": 200,
@@ -512,9 +512,8 @@
    "url": "https://www.unesco.org/en/fellowships"
   },
   "vanier-canada-graduate-scholarships-gobierno-de-canada": {
-   "alternativa": "https://www.google.com/search?q=site%3Avanier.gc.ca+Vanier+Canada+Graduate+Scholarships",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "declarada",
    "url": "https://vanier.gc.ca/"
   },
@@ -525,7 +524,7 @@
    "url": "https://yenchingacademy.pku.edu.cn/"
   }
  },
- "generado_en": "2026-10-05T13:04:19Z",
+ "generado_en": "2026-10-12T13:56:41Z",
  "instituciones": {
   "aalto": {
    "codigo": 200,
@@ -792,8 +791,8 @@
    "url": "https://acad.iitb.ac.in/admissions/bachelors"
   },
   "incae": {
-   "codigo": 202,
-   "estado": "ok",
+   "codigo": 403,
+   "estado": "protegido",
    "nivel": "declarada",
    "url": "https://www.incae.edu/es/programas"
   },
@@ -903,7 +902,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://mcgill.ca/gradapplicants/programs"
+   "url": "https://www.mcgill.ca/gradapplicants/programs"
   },
   "melbourne": {
    "codigo": 403,
@@ -1068,10 +1067,11 @@
    "url": "https://www.stanford.edu/academics"
   },
   "stellenbosch": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.su.ac.za/en"
+   "alternativa": "https://www.google.com/search?q=site%3Asun.ac.za+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.sun.ac.za/"
   },
   "sydney": {
    "codigo": 200,
@@ -1275,7 +1275,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://www.ucr.ac.cr/actividades/sep/2026/09/10/ingreso-a-la-maestria-profesional-en-administracion-y-direccion-de-empresas-con-enfasis-en-finanzas.html"
+   "url": "https://www.ucr.ac.cr/actividades/sep/2026/11/09/ingreso-a-la-maestria-academica-en-biologia-con-enfasis-en-genetica-y-biologia-molecular.html"
   },
   "ucsm": {
    "codigo": 403,
@@ -1406,8 +1406,8 @@
   "uio": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://www.uio.no/om/aktuelt/aktuelle-saker/2026/hylles-med-berekraftpris.html"
+   "nivel": "portada",
+   "url": "https://www.uio.no/"
   },
   "uladech": {
    "codigo": 200,
@@ -1430,12 +1430,13 @@
   "um-my": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "portada",
-   "url": "https://www.um.edu.my/"
+   "nivel": "descubierta",
+   "url": "https://aasd.um.edu.my/financial-aid-for-postgraduate"
   },
   "um5": {
-   "codigo": 200,
-   "estado": "ok",
+   "alternativa": "https://www.google.com/search?q=site%3Aum5.ac.ma+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
    "nivel": "portada",
    "url": "https://www.um5.ac.ma/"
   },
@@ -1670,10 +1671,10 @@
    "url": "https://unjfsc.edu.pe/posgrado/"
   },
   "unmsm": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 0,
+   "estado": "manual",
    "nivel": "manual",
-   "url": "https://www.unmsm.edu.pe/"
+   "url": "https://unmsm.edu.pe/"
   },
   "unp": {
    "codigo": 200,
@@ -1803,16 +1804,16 @@
    "url": "https://upch.edu.pe/"
   },
   "upeu": {
-   "codigo": 202,
-   "estado": "ok",
+   "codigo": 403,
+   "estado": "protegido",
    "nivel": "declarada",
-   "url": "https://upeu.edu.pe/posgrado"
+   "url": "https://www.upeu.edu.pe/posgrado"
   },
   "upm": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://www.upm.es/?id=CON30121&prefmt=articulo&fmt=detail"
+   "nivel": "portada",
+   "url": "https://www.upm.es/"
   },
   "upn": {
    "codigo": 200,
@@ -1860,7 +1861,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://study.uq.edu.au/master-business-administration-mba"
+   "url": "https://study.uq.edu.au/postgraduate"
   },
   "url-gt": {
    "codigo": 200,
@@ -1983,10 +1984,10 @@
    "url": "https://www.uvg.edu.gt/uvgmaster/posgrado-en-docencia-superior-e-innovacion/"
   },
   "uw-pl": {
-   "codigo": 503,
-   "estado": "protegido",
-   "nivel": "declarada",
-   "url": "https://uw.edu.pl/en/studies"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "portada",
+   "url": "https://www.uw.edu.pl/"
   },
   "uwaterloo": {
    "codigo": 200,
@@ -2022,15 +2023,15 @@
  "resumen": {
   "becas": {
    "manual": 1,
-   "ok": 67,
+   "ok": 68,
    "protegido": 10,
-   "sin_respuesta": 8
+   "sin_respuesta": 7
   },
   "instituciones": {
-   "manual": 17,
-   "ok": 218,
-   "protegido": 10,
-   "sin_respuesta": 3
+   "manual": 18,
+   "ok": 214,
+   "protegido": 11,
+   "sin_respuesta": 5
   }
  }
 }
