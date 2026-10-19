@@ -70,10 +70,11 @@
    "url": "https://www.gob.pe/pronabec"
   },
   "beca-maec-aecid-agencia-espanola-de-cooperacion-internacional": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "portada",
-   "url": "https://www.aecid.gob.es/"
+   "alternativa": "https://www.google.com/search?q=site%3Awww.aecid.gob.es+Beca+MAEC-AECID",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "declarada",
+   "url": "https://www.aecid.gob.es/es/becas-y-lectorados"
   },
   "beca-permanencia-pronabec": {
    "codigo": 200,
@@ -371,7 +372,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=xQyBoWVoWGqisL6cmslPWnGrSeiz4TWKAk6_9j5R.studyinkorea10"
+   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=3UaqLLXGqt1X2IqM_3OkC0lqYWncGYbpuPrMU1rX.studyinkorea10"
   },
   "google-developer-scholarship-google": {
    "codigo": 200,
@@ -476,8 +477,9 @@
    "url": "https://www.schwarzmanscholars.org/"
   },
   "shanghai-government-scholarship-municipalidad-de-shanghai": {
-   "codigo": 200,
-   "estado": "ok",
+   "alternativa": "https://www.google.com/search?q=site%3Awww.shanghai.gov.cn+Shanghai+Government+Scholarship",
+   "codigo": 0,
+   "estado": "sin_respuesta",
    "nivel": "declarada",
    "url": "https://www.shanghai.gov.cn/"
   },
@@ -524,7 +526,7 @@
    "url": "https://yenchingacademy.pku.edu.cn/"
   }
  },
- "generado_en": "2026-10-12T13:56:41Z",
+ "generado_en": "2026-10-19T11:37:34Z",
  "instituciones": {
   "aalto": {
    "codigo": 200,
@@ -791,10 +793,11 @@
    "url": "https://acad.iitb.ac.in/admissions/bachelors"
   },
   "incae": {
-   "codigo": 403,
-   "estado": "protegido",
-   "nivel": "declarada",
-   "url": "https://www.incae.edu/es/programas"
+   "alternativa": "https://www.google.com/search?q=site%3Aincae.edu+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.incae.edu/"
   },
   "intec": {
    "codigo": 200,
@@ -1155,7 +1158,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://www.uach.cl/postgrado/principal"
+   "url": "https://diario.uach.cl/implementan-posgrado-unico-en-chile-que-integra-la-innovacion-basada-en-ciencias/"
   },
   "uah": {
    "codigo": 200,
@@ -1275,7 +1278,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://www.ucr.ac.cr/actividades/sep/2026/11/09/ingreso-a-la-maestria-academica-en-biologia-con-enfasis-en-genetica-y-biologia-molecular.html"
+   "url": "https://www.ucr.ac.cr/actividades/sep/2026/11/09/ingreso-a-la-maestria-profesional-en-ensenanza-del-ingles-como-lengua-extranjera.html"
   },
   "ucsm": {
    "codigo": 403,
@@ -1585,11 +1588,10 @@
    "url": "https://posgrado.unheval.edu.pe/"
   },
   "uni": {
-   "alternativa": "https://www.google.com/search?q=site%3Auni.edu.pe+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.uni.edu.pe/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://portal.uni.edu.pe/index.php/posgrado-uni/maestrias"
   },
   "unia": {
    "alternativa": "https://www.google.com/search?q=site%3Aunia.edu.pe+posgrado+maestr%C3%ADa+doctorado",
@@ -1608,7 +1610,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://unibuc.ro/record-de-candidati-la-cele-20-de-facultati-ale-ub-in-sesiunea-iulie-2026-o-medie-de-61-candidaturi-pe-loc-la-buget-la-licenta-si-3-candidaturi-pe-loc-la-masterat-slider/"
+   "url": "https://unibuc.ro/apel-la-inscrieri-pentru-masteranzii-si-doctoranzii-universitatii-din-bucuresti-bip-civis-transmount-transitions-in-mountain-environments/"
   },
   "unica": {
    "codigo": 200,
@@ -1629,10 +1631,11 @@
    "url": "https://unife.edu.pe/posgrado/"
   },
   "unilag": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://unilag.edu.ng/postgraduate-education-key-to-nigerias-transformation-says-former-head-of-service-at-unilag-annual-lecture/"
+   "alternativa": "https://www.google.com/search?q=site%3Aunilag.edu.ng+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.unilag.edu.ng/"
   },
   "uninorte": {
    "codigo": 200,
@@ -1692,7 +1695,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://posgrado.unsa.edu.pe/"
+   "url": "https://www.unsa.edu.pe/vice_acade/cronograma-de-actividades-academicas-de-la-escuela-de-posgrado/"
   },
   "unsaac": {
    "codigo": 200,
@@ -1804,10 +1807,11 @@
    "url": "https://upch.edu.pe/"
   },
   "upeu": {
-   "codigo": 403,
-   "estado": "protegido",
-   "nivel": "declarada",
-   "url": "https://www.upeu.edu.pe/posgrado"
+   "alternativa": "https://www.google.com/search?q=site%3Aupeu.edu.pe+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.upeu.edu.pe/"
   },
   "upm": {
    "codigo": 200,
@@ -2023,15 +2027,15 @@
  "resumen": {
   "becas": {
    "manual": 1,
-   "ok": 68,
+   "ok": 66,
    "protegido": 10,
-   "sin_respuesta": 7
+   "sin_respuesta": 9
   },
   "instituciones": {
    "manual": 18,
    "ok": 214,
-   "protegido": 11,
-   "sin_respuesta": 5
+   "protegido": 9,
+   "sin_respuesta": 7
   }
  }
 }
