@@ -139,8 +139,8 @@
   "becas-de-la-universidad-de-buenos-aires-movilidad-universidad-de-buenos-aires": {
    "codigo": 403,
    "estado": "protegido",
-   "nivel": "declarada",
-   "url": "https://www.uba.ar/internacionales/"
+   "nivel": "portada",
+   "url": "https://www.uba.ar/"
   },
   "becas-de-la-universidad-de-sao-paulo-pec-pg-gobierno-de-brasil-capes-cnpq": {
    "codigo": 200,
@@ -161,9 +161,8 @@
    "url": "https://fundacionlacaixa.org/es/"
   },
   "becas-de-posgrado-prociencia-concytec-prociencia": {
-   "alternativa": "https://www.google.com/search?q=site%3Aprociencia.gob.pe+Becas+de+Posgrado+PROCIENCIA",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "declarada",
    "url": "https://prociencia.gob.pe/"
   },
@@ -372,7 +371,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=U-pwb6RU19XhQKKzooHEow7uEilwTErL61pj7JqS.studyinkorea20"
+   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=v19eBzGSAHq_COhw-M76dK9M1A_qy7YpPpuaIia2.studyinkorea20"
   },
   "google-developer-scholarship-google": {
    "codigo": 200,
@@ -525,7 +524,7 @@
    "url": "https://yenchingacademy.pku.edu.cn/"
   }
  },
- "generado_en": "2026-10-26T11:55:18Z",
+ "generado_en": "2026-11-02T14:15:23Z",
  "instituciones": {
   "aalto": {
    "codigo": 200,
@@ -582,8 +581,8 @@
    "url": "https://www.unibocconi.it/en/programs"
   },
   "cairo": {
-   "codigo": 0,
-   "estado": "manual",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "manual",
    "url": "https://cu.edu.eg/Home"
   },
@@ -639,7 +638,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.dtu.dk/english/education/graduate"
+   "url": "https://dtu.dk/english/education/graduate"
   },
   "du-in": {
    "codigo": 200,
@@ -768,9 +767,8 @@
    "url": "https://hkust.edu.hk/"
   },
   "huji": {
-   "alternativa": "https://www.google.com/search?q=site%3Ahuji.ac.il+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "portada",
    "url": "https://www.huji.ac.il/"
   },
@@ -790,13 +788,14 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://www.iitb.ac.in/faculty-forum-iit-bombay"
+   "url": "https://acad.iitb.ac.in/admissions/bachelors"
   },
   "incae": {
-   "codigo": 202,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.incae.edu/es/programas"
+   "alternativa": "https://www.google.com/search?q=site%3Aincae.edu+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.incae.edu/"
   },
   "intec": {
    "codigo": 200,
@@ -952,7 +951,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.nus.edu.sg/education/graduate-programmes"
+   "url": "https://nus.edu.sg/education/graduate-programmes"
   },
   "nyu": {
    "codigo": 405,
@@ -1021,8 +1020,8 @@
    "url": "https://pucmm.edu.do/"
   },
   "pucp": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 0,
+   "estado": "manual",
    "nivel": "manual",
    "url": "https://posgrado.pucp.edu.pe/"
   },
@@ -1114,7 +1113,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://www.utoronto.ca/academics/undergraduate-programs"
+   "url": "https://future.utoronto.ca/"
   },
   "tsinghua": {
    "codigo": 200,
@@ -1123,8 +1122,8 @@
    "url": "https://www.tsinghua.edu.cn/en/Admissions.htm"
   },
   "tudelft": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 403,
+   "estado": "protegido",
    "nivel": "declarada",
    "url": "https://www.tudelft.nl/en/education/programmes/masters"
   },
@@ -1207,10 +1206,10 @@
    "url": "https://www.ub.edu/portal/web/economia-empresa/masteres-universitarios"
   },
   "uba": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://www.uba.ar/ubaposgrado"
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.uba.ar/posgrados"
   },
   "ubc": {
    "codigo": 200,
@@ -1249,10 +1248,11 @@
    "url": "https://www.ucd.ie/graduatestudies/"
   },
   "uchile": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://uchile.cl/postgrados"
+   "alternativa": "https://www.google.com/search?q=site%3Auchile.cl+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.uchile.cl/"
   },
   "ucl": {
    "codigo": 403,
@@ -1336,7 +1336,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://udelar.edu.uy/convocatoria/convocatoria-beca-de-doctorado-en-ciencias-agrarias"
+   "url": "https://udelar.edu.uy/convocatoria/se-extendio-el-plazo-de-la-convocatoria-beca-de-doctorado-en-ciencias-agrarias"
   },
   "udep": {
    "codigo": 200,
@@ -1393,17 +1393,17 @@
    "url": "https://www.ugr.es/estudiantes/master-doctorados"
   },
   "uh-cu": {
-   "alternativa": "https://www.google.com/search?q=site%3Auh.cu+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uh.cu/estudios/postgrado/"
+  },
+  "ui-id": {
+   "alternativa": "https://www.google.com/search?q=site%3Aui.ac.id+posgrado+maestr%C3%ADa+doctorado",
    "codigo": 0,
    "estado": "sin_respuesta",
    "nivel": "portada",
-   "url": "https://www.uh.cu/"
-  },
-  "ui-id": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.ui.ac.id/en/education-and-health-services-for-construction-workers-and-students-in-the-ikn-area/"
+   "url": "https://www.ui.ac.id/"
   },
   "uio": {
    "codigo": 200,
@@ -1432,8 +1432,8 @@
   "um-my": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "portada",
-   "url": "https://www.um.edu.my/"
+   "nivel": "descubierta",
+   "url": "https://aasd.um.edu.my/financial-aid-for-postgraduate"
   },
   "um5": {
    "alternativa": "https://www.google.com/search?q=site%3Aum5.ac.ma+posgrado+maestr%C3%ADa+doctorado",
@@ -1479,15 +1479,14 @@
    "url": "https://www.unah.edu.hn"
   },
   "unal": {
-   "codigo": 0,
-   "estado": "manual",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "manual",
    "url": "https://unal.edu.co/"
   },
   "unalm": {
-   "alternativa": "https://www.google.com/search?q=site%3Aunalm.edu.pe+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "portada",
    "url": "https://www.unalm.edu.pe/"
   },
@@ -1610,7 +1609,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://unibuc.ro/idei-care-schimba-comunitati-unihub-lanseaza-un-hackathon-de-antreprenoriat-social-inscrieri-deschise-pana-pe-28-octombrie-2026/"
+   "url": "https://unibuc.ro/masteranzii-si-doctoranzii-ub-invitati-sa-se-inscrie-la-programul-civis-swisssims-winter-school-al-universitatii-din-lausanne/"
   },
   "unica": {
    "codigo": 200,
@@ -1729,8 +1728,8 @@
   "untrm": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://untrm.edu.pe/escuela-de-posgrado/"
+   "nivel": "declarada",
+   "url": "https://untrm.edu.pe/posgrado/"
   },
   "untumbes": {
    "codigo": 200,
@@ -1806,10 +1805,11 @@
    "url": "https://upch.edu.pe/"
   },
   "upeu": {
-   "codigo": 202,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.upeu.edu.pe/posgrado"
+   "alternativa": "https://www.google.com/search?q=site%3Aupeu.edu.pe+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.upeu.edu.pe/"
   },
   "upm": {
    "codigo": 200,
@@ -1900,7 +1900,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.usach.cl/postgrado/es"
+   "url": "https://postgrado.usach.cl/es"
   },
   "usal": {
    "codigo": 200,
@@ -2026,15 +2026,15 @@
  "resumen": {
   "becas": {
    "manual": 1,
-   "ok": 68,
-   "protegido": 9,
-   "sin_respuesta": 8
-  },
-  "instituciones": {
-   "manual": 18,
-   "ok": 214,
+   "ok": 69,
    "protegido": 9,
    "sin_respuesta": 7
+  },
+  "instituciones": {
+   "manual": 17,
+   "ok": 212,
+   "protegido": 11,
+   "sin_respuesta": 8
   }
  }
 }
