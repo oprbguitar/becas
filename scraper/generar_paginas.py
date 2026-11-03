@@ -144,7 +144,7 @@ CABECERA = """<!DOCTYPE html>
 <link rel="manifest" href="{raiz}manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="{raiz}assets/css/estilos.css">
 <script type="application/ld+json">{jsonld}</script>
 </head>
@@ -152,15 +152,13 @@ CABECERA = """<!DOCTYPE html>
 <header class="cabecera">
   <div class="contenedor cabecera-fila">
     <a class="marca" href="{raiz}" aria-label="Ruta Amauta — inicio">
-      <img src="{raiz}assets/img/marca.png" alt="Ruta Amauta" width="220" height="46">
+      <img src="{raiz}assets/img/marca.png" alt="Ruta Amauta" width="143" height="30">
     </a>
     <nav class="nav">
+      <a href="{raiz}#/convocatorias">Convocatorias</a>
       <a href="{raiz}#/becas">Becas</a>
-      <a href="{raiz}#/maestrias">Maestrías</a>
-      <a href="{raiz}#/doctorados">Doctorados</a>
-      <a href="{raiz}#/diplomados">Diplomados</a>
-      <a href="{raiz}#/comparador">Comparador</a>
-      <a href="{raiz}explorar/">Explorar</a>
+      <a href="{raiz}#/maestrias">Posgrados</a>
+      <a href="{raiz}#/sunedu">SUNEDU</a>
     </nav>
   </div>
 </header>

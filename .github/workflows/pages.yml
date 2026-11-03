@@ -37,6 +37,22 @@ jobs:
           for nombre in ["meta", "meta_catalogo"]:
               json.load(open(f"data/{nombre}.json", encoding="utf-8"))
 
+          # Capas verificadas: contraste SUNEDU, convocatorias y fichas con evidencia.
+          sunedu = json.load(open("data/sunedu.json", encoding="utf-8"))
+          assert len(sunedu["licenciadas"]) >= 80, "lista SUNEDU incompleta"
+          assert all(r["resolucion_url"] for r in sunedu["licenciadas"]), "licenciada sin resolución"
+          conv = json.load(open("data/convocatorias.json", encoding="utf-8"))
+          for c in conv["convocatorias"]:
+              assert c["url"].startswith("http") and c["consultado"], c["id"]
+              assert c["estado"] in ("abierta", "proxima", "cerrada"), c["id"]
+          ver = json.load(open("data/programas_verificados.json", encoding="utf-8"))
+          claves = {"institucion", "programa", "ruta_sunedu", "admision", "oferta"}
+          for prog in ver["programas"]:
+              assert set(prog["verificaciones"]) == claves, prog["id"]
+              assert prog["fuentes"], prog["id"]
+          print("sunedu:", len(sunedu["licenciadas"]), "licenciadas ·",
+                "convocatorias:", len(conv["convocatorias"]), "· fichas:", len(ver["programas"]))
+
           enlaces = json.load(open("data/enlaces.json", encoding="utf-8"))
           print("enlaces:", json.dumps(enlaces["resumen"], ensure_ascii=False))
           for grupo in ("instituciones", "becas"):

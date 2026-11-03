@@ -12,6 +12,44 @@ GitHub Pages. No hay servidor, base de datos ni build: los datos viven en
 
 ---
 
+## Novedades · noviembre 2026
+
+- **Convocatorias vigentes** (`#/convocatorias`): 11 convocatorias para
+  peruanos (PRONABEC Bicentenario extraordinaria, Gates Cambridge, Eiffel,
+  Erasmus Mundus, OEA, Fundación Carolina, Türkiye Bursları, Chevening,
+  Fulbright) con fechas leídas el 02/11/2026 en la **fuente oficial**,
+  cronograma, requisitos, documentos y estado recalculado con la fecha del
+  día. Datos en `data/convocatorias.json`.
+- **Contraste SUNEDU** (`#/sunedu`):
+  1. verificador de universidades peruanas contra las listas oficiales de
+     licenciadas (107) y denegadas (41), con número y PDF de la resolución;
+  2. evaluador de la ruta de reconocimiento de un grado extranjero (tratado,
+     criterio de calidad, título oficial/propio, modalidad), que nunca afirma
+     un reconocimiento;
+  3. fichas con evidencia y cinco verificaciones separadas (institución,
+     programa, ruta SUNEDU, admisión, oferta y costo);
+  4. consulta previa a SUNEDU: la plantilla de la guía se completa con los
+     datos del programa y se copia o abre en el correo;
+  5. la guía de verificación íntegra (`data/guia-sunedu.html`).
+- **Cruce oficial en todo el catálogo**: `scraper/sunedu_listas.py` descarga
+  las listas de SUNEDU y contrasta las 60 universidades peruanas del
+  catálogo. Corrigió dos casos que la semilla tenía «en trámite» y que SUNEDU
+  lista como licenciadas (San Juan Bautista y San Luis Gonzaga). La ficha de
+  cada programa muestra la resolución; las extranjeras indican si el país
+  tiene tratado.
+- **Interfaz más sobria**: barra superior de cuatro enlaces (Convocatorias,
+  Becas, Posgrados, SUNEDU), titulares grandes, listas antes que tarjetas,
+  control segmentado para maestrías/doctorados/diplomados. Se mantienen la
+  paleta y el logotipo. Ver `DESIGN.md`.
+- **Honestidad del catálogo**: las maestrías, doctorados y diplomados
+  generados por área se rotulan como *fichas exploratorias*.
+
+> Apify: el MCP `https://mcp.apify.com` está configurado en `.mcp.json`, pero
+> en esta actualización no expuso herramientas (falta autorizarlo o definir
+> `APIFY_API_TOKEN`). Ningún dato de esta versión proviene de un Actor; todo se
+> leyó directamente en las fuentes oficiales. Cuando se use un Actor, cada
+> registro debe guardar su nombre en el campo `actor`.
+
 ## Qué hace
 
 | Sección | Qué resuelve |
@@ -93,13 +131,30 @@ python scraper/validar_enlaces.py --solo-becas
 python scraper/validar_enlaces.py --solo-instituciones
 ```
 
+### Contraste SUNEDU
+
+```bash
+python scraper/sunedu_listas.py              # descarga las listas y cruza el catálogo
+python scraper/sunedu_listas.py --local DIR  # usa lic.html y den.html ya descargados
+```
+
+Corre cada lunes en GitHub Actions. Si SUNEDU no responde, conserva el último
+`data/sunedu.json` marcado como `desactualizado`.
+
+### Actualizar convocatorias
+
+`data/convocatorias.json` se edita a mano tras leer la fuente oficial. Reglas:
+`estado` es `abierta` solo si la fuente muestra fechas vigentes; cada registro
+lleva `url`, `consultado` y `fuente_tipo` (`oficial`, `oficial + prensa`…). La
+interfaz pasa a «Cerrada» cualquier convocatoria cuyo cierre ya venció.
+
 ---
 
 ## Estructura
 
 ```
 index.html                  cáscara de la SPA
-assets/css/estilos.css      sistema de diseño (terracota / oliva / arena)
+assets/css/estilos.css      sistema de diseño v3 (tokens en :root, ver DESIGN.md)
 assets/js/ruta.js           router, filtros, comparador, favoritos, fichas
 data/becas.json                 86 convocatorias rastreadas
 data/maestrias.json           2 077 programas
@@ -107,6 +162,11 @@ data/doctorados.json          1 313 programas
 data/diplomados.json            907 programas
 data/instituciones.json         248 instituciones
 data/enlaces.json               informe de verificación de enlaces
+data/sunedu.json                listas oficiales SUNEDU + cruce con el catálogo
+data/convocatorias.json         convocatorias verificadas en fuente oficial
+data/programas_verificados.json fichas con cinco verificaciones y fuentes
+data/guia-sunedu.html           guía de verificación SUNEDU (texto íntegro)
+scraper/sunedu_listas.py        descarga y cruce de las listas de SUNEDU
 data/meta*.json                 facetas y fecha de actualización
 scraper/instituciones*.py       tabla semilla curada de instituciones
 scraper/seed.py                 semillero de becas
@@ -213,3 +273,23 @@ Ruta Amauta es un directorio independiente. No gestiona admisiones, no cobra por
 postular y no está afiliado a las instituciones listadas. Los logotipos se
 resuelven desde el dominio oficial de cada institución y pertenecen a sus
 titulares.
+
+## Apify desde Python
+
+El proyecto incluye el cliente oficial `apify-client` en las dependencias del scraper y una instalación local aislada en `.venv` (Python 3.11+). Claude Code y Codex tienen instrucciones específicas en `CLAUDE.md`, `AGENTS.md` y las skills del proyecto.
+
+En PowerShell, configura el token solo para la sesión actual y ejecuta un Actor:
+
+```powershell
+$env:APIFY_API_TOKEN = "<tu-token-de-Apify>"
+.\.venv\Scripts\python scraper\apify_run_actor.py apify/hello-world --output resultados.json
+```
+
+Para pasar parámetros, guarda un objeto JSON con la entrada que espera ese Actor y añade `--input entrada.json`. El ejecutor guarda el dataset predeterminado como JSON. Obtén el token desde [Integraciones de Apify](https://console.apify.com/settings/integrations); no lo guardes en el repositorio. Ejecutar un Actor puede consumir créditos.
+
+Para reinstalar las dependencias en otro equipo:
+
+```powershell
+py -m venv .venv
+.\.venv\Scripts\python -m pip install -r scraper\requirements.txt
+```

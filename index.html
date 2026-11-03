@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Ruta Amauta — Buscador de becas, maestrías, doctorados y diplomados</title>
-<meta name="description" content="Buscador avanzado y comparador de becas, maestrías, doctorados y diplomados en Perú, Latinoamérica y el mundo. Filtra por país, área, modalidad, costo y licenciamiento SUNEDU.">
+<meta name="description" content="Convocatorias vigentes verificadas, becas y posgrados para peruanos en el Perú y el extranjero, con contraste oficial SUNEDU: licenciamiento, resoluciones y ruta de reconocimiento de grados extranjeros.">
 <meta name="theme-color" content="#C4552E">
 <link rel="canonical" href="https://ruta.amauta.online/">
 <meta property="og:title" content="Ruta Amauta — Tu ruta al conocimiento">
@@ -31,7 +31,7 @@
 <link rel="manifest" href="manifest.webmanifest">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="assets/css/estilos.css">
 
 <script type="application/ld+json">
@@ -72,31 +72,27 @@
       <img src="assets/img/marca.png" alt="Ruta Amauta">
     </a>
 
-    <nav class="nav" id="nav">
-      <a href="#/inicio" data-ruta="inicio">Inicio</a>
+    <nav class="nav" id="nav" aria-label="Principal">
+      <a href="#/convocatorias" data-ruta="convocatorias">Convocatorias</a>
       <a href="#/becas" data-ruta="becas">Becas</a>
-      <a href="#/maestrias" data-ruta="maestrias">Maestrías</a>
-      <a href="#/doctorados" data-ruta="doctorados">Doctorados</a>
-      <a href="#/diplomados" data-ruta="diplomados">Diplomados</a>
-      <a href="#/favoritos" data-ruta="favoritos">Favoritos</a>
-      <a href="#/comparador" data-ruta="comparador">Comparador</a>
-      <a href="explorar/">Explorar</a>
+      <a href="#/maestrias" data-ruta="posgrados">Posgrados</a>
+      <a href="#/sunedu" data-ruta="sunedu">SUNEDU</a>
     </nav>
 
     <div class="acciones-cabecera">
       <button class="icono-btn" id="btn-buscar-arriba" title="Buscar" aria-label="Buscar">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
       </button>
       <a class="icono-btn" href="#/favoritos" title="Favoritos" aria-label="Favoritos">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4.5L6 21z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M6 3h12v18l-6-4.5L6 21z"/></svg>
         <span class="globo oculto" id="globo-favoritos">0</span>
       </a>
       <a class="icono-btn" href="#/comparador" title="Comparador" aria-label="Comparador">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M3 7h18M6 7l-3 7h6zM18 7l-3 7h6z"/></svg>
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 3v18M3 7h18M6 7l-3 7h6zM18 7l-3 7h6z"/></svg>
         <span class="globo oculto" id="globo-comparador">0</span>
       </a>
-      <button class="icono-btn menu-movil" id="btn-menu" aria-label="Menú">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      <button class="icono-btn menu-movil" id="btn-menu" aria-label="Menú" aria-expanded="false" aria-controls="nav">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
       </button>
     </div>
   </div>
@@ -123,12 +119,13 @@
     <div class="pie-rejilla">
       <div>
         <div class="pie-marca"><img src="assets/img/marca.png" alt="Ruta Amauta"></div>
-        <p style="margin-top:14px">Buscador y comparador independiente de becas, maestrías, doctorados y diplomados en Perú, Latinoamérica y el mundo.</p>
-        <p style="font-size:12.5px">Ruta Amauta no gestiona admisiones ni cobra por postular. Toda la información enlaza a la fuente oficial.</p>
+        <p style="margin-top:12px">Directorio independiente de convocatorias, becas y posgrados para peruanos, con contraste oficial SUNEDU.</p>
+        <p>No gestiona admisiones ni cobra por postular. Cada dato enlaza a su fuente oficial con la fecha de consulta.</p>
       </div>
       <div>
         <h4>Explorar</h4>
         <ul>
+          <li><a href="#/convocatorias">Convocatorias vigentes</a></li>
           <li><a href="#/becas">Becas</a></li>
           <li><a href="#/maestrias">Maestrías</a></li>
           <li><a href="#/doctorados">Doctorados</a></li>
@@ -138,6 +135,7 @@
       <div>
         <h4>Herramientas</h4>
         <ul>
+          <li><a href="#/sunedu">Contraste SUNEDU</a></li>
           <li><a href="#/comparador">Comparador</a></li>
           <li><a href="#/favoritos">Favoritos</a></li>
           <li><a href="#/instituciones">Instituciones</a></li>
@@ -145,11 +143,11 @@
         </ul>
       </div>
       <div>
-        <h4>Verifica</h4>
+        <h4>Fuentes oficiales</h4>
         <ul>
-          <li><a href="https://enlinea.sunedu.gob.pe/" target="_blank" rel="noopener">Registro SUNEDU</a></li>
+          <li><a href="https://www.sunedu.gob.pe/lista-de-universidades-licenciadas/" target="_blank" rel="noopener">SUNEDU · licenciadas</a></li>
+          <li><a href="https://www.sunedu.gob.pe/procedimiento-de-reconocimiento-de-grados-y-titulos-extranjeros/" target="_blank" rel="noopener">SUNEDU · grados extranjeros</a></li>
           <li><a href="https://www.gob.pe/pronabec" target="_blank" rel="noopener">PRONABEC</a></li>
-          <li><a href="https://www.gob.pe/concytec" target="_blank" rel="noopener">CONCYTEC</a></li>
           <li><a href="https://github.com/oprbguitar/becas" target="_blank" rel="noopener">Código abierto</a></li>
         </ul>
       </div>

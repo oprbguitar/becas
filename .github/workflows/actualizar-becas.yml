@@ -44,6 +44,13 @@ jobs:
       - name: Regenerar catálogo de posgrados
         run: python scraper/generar_catalogo.py
 
+      # Listas oficiales de SUNEDU (licenciadas y denegadas) y cruce con el
+      # catálogo. Si SUNEDU no responde, conserva el último dato marcado
+      # como desactualizado.
+      - name: Contrastar con SUNEDU
+        run: python scraper/sunedu_listas.py
+        continue-on-error: true
+
       # Comprueba que cada enlace publicado abra de verdad y, cuando la ruta
       # declarada falla, descubre la sección real de posgrado leyendo la
       # portada. Los runners de GitHub alcanzan sitios que bloquean otras redes.

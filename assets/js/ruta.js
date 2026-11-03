@@ -93,6 +93,8 @@ const I = {
   estrella: '<path d="m12 3 2.6 5.6 6 .8-4.4 4.2 1.1 6-5.3-3-5.3 3 1.1-6L3.4 9.4l6-.8z"/>',
   usuarios: '<circle cx="9" cy="8" r="3.5"/><path d="M3 20c0-3.3 2.7-6 6-6s6 2.7 6 6"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 20c0-2.4-1-4.5-2.5-5.6"/>',
   hoja: '<path d="M5 19c8 2 14-3 14-11V5h-3C8 5 3 11 5 19z"/><path d="M5 19c1-5 4-8 9-10"/>',
+  copiar: '<rect x="8" y="8" width="12" height="12" rx="2"/><path d="M16 8V5a1 1 0 0 0-1-1H5a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h3"/>',
+  correo: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>',
 };
 
 const ico = (nombre, tam = 16, extra = '') =>
@@ -123,14 +125,37 @@ const ALMACEN = {
   },
 };
 
-const DATOS = { items: [], porId: new Map(), meta: null, instituciones: [], listo: false };
+const DATOS = { items: [], porId: new Map(), meta: null, instituciones: [], listo: false,
+                sunedu: null, convocatorias: null, verificados: null, guia: null };
+
+// Contrapartes con tratado que publica SUNEDU en su página del procedimiento
+// de reconocimiento de grados extranjeros (consultada el 02/11/2026).
+const TRATADO = new Set(['Alemania', 'Argentina', 'Austria', 'Bélgica', 'Brasil', 'Bolivia',
+  'Bulgaria', 'Canadá', 'Croacia', 'Chile', 'China', 'Chipre', 'Colombia', 'Corea del Sur',
+  'Costa Rica', 'Cuba', 'Dinamarca', 'Ecuador', 'El Salvador', 'Eslovaquia', 'Eslovenia',
+  'España', 'Estonia', 'Estados Unidos', 'Finlandia', 'Francia', 'Grecia', 'Honduras', 'Hungría',
+  'India', 'Irlanda', 'Islandia', 'Italia', 'Japón', 'Letonia', 'Liechtenstein', 'Lituania',
+  'Luxemburgo', 'Malta', 'Marruecos', 'México', 'Nicaragua', 'Noruega', 'Países Bajos', 'Panamá',
+  'Paraguay', 'Polonia', 'Portugal', 'Reino Unido', 'República Checa', 'Rumania', 'Rusia',
+  'Santa Sede', 'Singapur', 'Serbia', 'Suecia', 'Suiza', 'Ucrania', 'Uruguay', 'Venezuela']);
+
+const URL_SUNEDU = {
+  licenciadas: 'https://www.sunedu.gob.pe/lista-de-universidades-licenciadas/',
+  denegadas: 'https://www.sunedu.gob.pe/lista-de-universidades-denegadas/',
+  extranjeros: 'https://www.sunedu.gob.pe/procedimiento-de-reconocimiento-de-grados-y-titulos-extranjeros/',
+  lista2025: 'https://www.gob.pe/institucion/sunedu/normas-legales/7682493-00004-2026-sunedu-ds-dirgratu',
+  ruct: 'https://www.educacion.gob.es/ruct/consultauniversidades?actual=universidades',
+  presencialPeru: 'https://www.sunedu.gob.pe/sobre-grados-titulos-emitidos-universidades-extranjeras-estudios-realizados-territorio-peruano-12-02-2020/',
+  correo: 'consultasreconocimiento@sunedu.gob.pe',
+};
 
 /* ================================================= carga y normalización */
 
 const ETIQUETA_SUNEDU = {
   licenciada: { texto: 'Licenciada por SUNEDU', clase: 'ok' },
   proceso: { texto: 'Licenciamiento en trámite', clase: 'proceso' },
-  extranjera: { texto: 'Extranjera · reconocimiento SUNEDU', clase: 'ext' },
+  extranjera: { texto: 'Extranjera · ruta SUNEDU por verificar', clase: 'ext' },
+  tratado: { texto: 'Extranjera · país con tratado', clase: 'ext' },
 };
 
 function normalizarBeca(b) {
@@ -166,7 +191,8 @@ async function cargar() {
     } catch { return respaldo; }
   };
 
-  const [becas, maestrias, doctorados, diplomados, instituciones, meta, enlaces] =
+  const [becas, maestrias, doctorados, diplomados, instituciones, meta, enlaces,
+         sunedu, convocatorias, verificados] =
     await Promise.all([
       pedir('data/becas.json', []),
       pedir('data/maestrias.json', []),
@@ -175,7 +201,14 @@ async function cargar() {
       pedir('data/instituciones.json', []),
       pedir('data/meta_catalogo.json', null),
       pedir('data/enlaces.json', null),
+      pedir('data/sunedu.json', null),
+      pedir('data/convocatorias.json', null),
+      pedir('data/programas_verificados.json', null),
     ]);
+  DATOS.sunedu = sunedu;
+  DATOS.convocatorias = convocatorias;
+  DATOS.verificados = verificados;
+  const cruce = (sunedu && sunedu.cruce_catalogo) || {};
 
   DATOS.items = [
     ...becas.map(normalizarBeca),
@@ -197,8 +230,21 @@ async function cargar() {
     if (info.alternativa) it.url_alternativa = info.alternativa;
   };
 
+  // El estado SUNEDU que se muestra es el de la lista oficial, no el de la
+  // semilla: scraper/sunedu_listas.py deja el cruce en data/sunedu.json.
+  const oficial = (it, idInst) => {
+    const c = cruce[idInst];
+    if (c) {
+      it.sunedu_cruce = c;
+      it.sunedu = c.oficial === 'licenciada' ? 'licenciada' : 'proceso';
+    } else if (it.pais && it.pais !== 'Perú' && it.sunedu === 'extranjera' && TRATADO.has(it.pais)) {
+      it.sunedu = 'tratado';
+    }
+  };
+
   DATOS.items.forEach(it => {
     aplicar(it, it.tipo === 'beca' ? porBeca[it.id] : porInst[it.institucion_id]);
+    if (it.tipo !== 'beca') oficial(it, it.institucion_id);
     it.url_busqueda = it.url_alternativa || busquedaEn(it.dominio, it.nombre);
     it.buscable = normalizar([it.nombre, it.institucion, it.sigla, it.pais,
                               it.ciudad, it.area, (it.areas || []).join(' ')].join(' '));
@@ -208,6 +254,7 @@ async function cargar() {
   instituciones.forEach(u => {
     const info = porInst[u.id];
     if (info && info.url) { u.url_posgrado = info.url; u.enlace_estado = info.estado; }
+    oficial(u, u.id);
   });
   DATOS.instituciones = instituciones;
   DATOS.meta = meta;
@@ -352,7 +399,7 @@ function aplicarFiltros(items, f) {
     if (f.area && it.area !== f.area && !(it.areas || []).includes(f.area)) return false;
     if (f.modalidad && it.modalidad !== f.modalidad) return false;
     if (f.idioma && !(it.idioma || '').includes(f.idioma)) return false;
-    if (f.sunedu && it.sunedu !== f.sunedu) return false;
+    if (f.sunedu && it.sunedu !== f.sunedu && !(f.sunedu === 'extranjera' && it.sunedu === 'tratado')) return false;
     if (f.institucion && it.institucion !== f.institucion) return false;
     if (f.tipoInst && it.tipo_institucion !== f.tipoInst) return false;
     if (f.cobertura && it.cobertura !== f.cobertura) return false;
@@ -391,24 +438,16 @@ function opciones(lista, valor, etiquetaTodos) {
 
 /* ============================================================== vistas */
 
-function portada({ titulo, resalte, bajada, lema }) {
+function portada({ titulo, resalte, bajada, lema, antetitulo, clase = '' }) {
   return `
-  <section class="portada">
-    <img class="portada-arte" src="assets/img/logo.png" alt="" aria-hidden="true">
+  <section class="portada ${clase}">
     <div class="contenedor portada-texto">
+      ${antetitulo ? `<p class="antetitulo">${antetitulo}</p>` : ''}
       <h1 class="titulo">${titulo.replace('{r}', `<em>${escapar(resalte)}</em>`)}</h1>
       <p class="bajada">${escapar(bajada)}</p>
       ${lema ? `<p class="lema">${escapar(lema)}</p>` : ''}
     </div>
   </section>`;
-}
-
-function metricas(lista) {
-  return `<div class="contenedor"><div class="metricas">` + lista.map((m, i) => `
-    <div class="metrica ${i % 2 ? 'oliva' : ''}">
-      <div class="metrica-icono">${ico(m.icono, 22)}</div>
-      <div><b>${m.valor}</b><span>${escapar(m.texto)}</span></div>
-    </div>`).join('') + `</div></div>`;
 }
 
 /* ---------------------------------------------------------- inicio */
@@ -417,96 +456,108 @@ function vistaInicio() {
   const total = DATOS.items.length;
   const paises = new Set(DATOS.items.map(i => i.pais)).size;
   const insts = DATOS.instituciones.length;
-  // Mezcla equilibrada: dos oportunidades destacadas de cada tipo.
-  const destacados = ['beca', 'maestria', 'doctorado', 'diplomado']
-    .flatMap(t => DATOS.items.filter(i => i.destacado && i.tipo === t).slice(0, 2));
+  // Las becas ya tienen su propia sección con fechas verificadas; aquí solo
+  // posgrados, uno peruano y otro extranjero por tipo cuando existan.
+  const destacados = ['maestria', 'doctorado']
+    .flatMap(t => [DATOS.items.find(i => i.destacado && i.tipo === t && i.pais === 'Perú'),
+                   DATOS.items.find(i => i.destacado && i.tipo === t && i.pais !== 'Perú')])
+    .filter(Boolean).slice(0, 4);
+  const abiertas = convocatoriasOrdenadas().filter(c => estadoConv(c) === 'abierta').slice(0, 4);
+  const sun = DATOS.sunedu;
 
-  const rutas = [
-    { ruta: 'becas', icono: 'birrete', titulo: 'Becas', texto: 'Financiamiento completo y parcial para estudiar.', n: porTipo('beca').length },
-    { ruta: 'maestrias', icono: 'libro', titulo: 'Maestrías', texto: 'Programas en Perú, Latinoamérica y el mundo.', n: porTipo('maestria').length },
-    { ruta: 'doctorados', icono: 'diploma', titulo: 'Doctorados', texto: 'Investigación de alto nivel y financiamiento.', n: porTipo('doctorado').length },
-    { ruta: 'diplomados', icono: 'maletin', titulo: 'Diplomados', texto: 'Formación corta para actualizar competencias.', n: porTipo('diplomado').length },
+  const explorar = [
+    { ruta: 'becas', titulo: 'Becas', texto: 'Financiamiento completo y parcial', n: porTipo('beca').length },
+    { ruta: 'maestrias', titulo: 'Maestrías', texto: 'Perú, Latinoamérica y el mundo', n: porTipo('maestria').length },
+    { ruta: 'doctorados', titulo: 'Doctorados', texto: 'Investigación y financiamiento', n: porTipo('doctorado').length },
+    { ruta: 'diplomados', titulo: 'Diplomados', texto: 'Formación corta y vigente', n: porTipo('diplomado').length },
   ];
 
   return portada({
     titulo: 'Tu {r} al conocimiento.', resalte: 'ruta',
-    bajada: 'Becas, posgrados y oportunidades para avanzar.',
-    lema: 'No te desactualices. Avanza hoy.',
+    bajada: 'Convocatorias verificadas, becas y posgrados para peruanos, con el contraste SUNEDU a la vista antes de postular o pagar.',
   }) + `
-  <div class="contenedor" style="position:relative">
-    <form class="buscador-portada" id="form-inicio">
+  <div class="contenedor centro">
+    <form class="buscador-portada" id="form-inicio" role="search">
       <div class="campo-busqueda">
         ${ico('lupa', 19)}
-        <input type="text" id="q-inicio" placeholder="Busca por programa, país, universidad o área…"
-               autocomplete="off" aria-label="Buscar">
+        <input type="search" id="q-inicio" placeholder="Programa, país, universidad o área"
+               autocomplete="off" aria-label="Buscar en el catálogo">
       </div>
-      <button class="btn btn-primario btn-alto" type="submit">Explorar</button>
+      <button class="btn btn-primario btn-alto" type="submit">Buscar</button>
     </form>
-
-    <div class="rutas">
-      ${rutas.map(r => `
-        <a class="ruta" href="#/${r.ruta}">
-          <div class="ruta-icono">${ico(r.icono, 24)}</div>
-          <div style="min-width:0">
-            <h3>${r.titulo}</h3>
-            <p>${r.texto}</p>
-          </div>
-          <span class="ruta-flecha">${ico('flecha', 20)}</span>
-        </a>`).join('')}
-    </div>
-  </div>` +
-  metricas([
-    { icono: 'maletin', valor: numero(total), texto: 'Oportunidades disponibles' },
-    { icono: 'globo', valor: numero(paises), texto: 'Países' },
-    { icono: 'banco', valor: numero(insts), texto: 'Instituciones' },
-    { icono: 'marcador', valor: numero(ALMACEN.favoritos.size), texto: 'Guardados por ti' },
-  ]) + `
-  <div class="contenedor seccion">
-    <div class="seccion-cabecera">
-      <h2>Oportunidades destacadas</h2>
-      <a class="btn-texto" href="#/maestrias">Ver todas ${ico('flecha', 14)}</a>
-    </div>
-    <div class="rejilla cuatro">${destacados.map(tarjeta).join('')}</div>
+    <p class="cifras-portada"><b>${numero(total)}</b> oportunidades · <b>${numero(paises)}</b> países · <b>${numero(insts)}</b> instituciones</p>
   </div>
 
-  <div class="contenedor seccion">
-    <div class="panel-filtros">
-      <div class="fila-filtros" style="margin:0;padding:0;border:0">
-        <span class="etiqueta-fila">${ico('pin', 13)} Rutas destacadas</span>
-        <a class="pastilla" href="#/maestrias?sunedu=licenciada">${ico('escudo', 14)} Licenciadas SUNEDU</a>
-        <a class="pastilla" href="#/maestrias?pais=Perú">${ico('pin', 14)} Perú</a>
-        <a class="pastilla" href="#/maestrias?region=Latinoamérica">${ico('globo', 14)} Latinoamérica</a>
-        <a class="pastilla" href="#/diplomados?modalidad=Online">${ico('wifi', 14)} Online</a>
-        <a class="pastilla" href="#/becas?cobertura=Completa">${ico('estrella', 14)} Becas completas</a>
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion-cabecera">
+        <div>
+          <h2>Convocatorias abiertas ahora</h2>
+          <p class="subtitulo-bloque">Fechas leídas en la fuente oficial${DATOS.convocatorias ? ' el ' + fecha(DATOS.convocatorias.consultado) : ''}.</p>
+        </div>
+        <a class="btn-texto" href="#/convocatorias">Ver todas ${ico('flecha', 14)}</a>
+      </div>
+      ${abiertas.length ? `<div class="lista-filas">${abiertas.map(filaConvocatoria).join('')}</div>`
+        : vacio('Sin convocatorias abiertas', 'Revisa las próximas en la sección Convocatorias.')}
+    </div>
+  </section>
+
+  <section class="seccion banda-oscura">
+    <div class="contenedor herramienta">
+      <div>
+        <h2 class="titulo-bloque">¿Tu universidad está licenciada?</h2>
+        <p class="subtitulo-bloque">Consulta directa contra la lista oficial de SUNEDU, con el número y el enlace de la resolución.</p>
+        ${sun ? `<div class="cifras-sunedu">
+          <div><b>${sun.declaradas_licenciadas || sun.licenciadas.length}</b><span>licenciadas</span></div>
+          <div><b>${sun.denegadas.length}</b><span>con licencia denegada</span></div>
+          <div><b>${fecha(sun.corte_licenciadas)}</b><span>corte de la lista</span></div>
+        </div>` : ''}
+      </div>
+      <div>
+        ${buscadorSunedu('inicio')}
+        <p style="margin:12px 0 0"><a class="btn-texto" style="color:var(--arena)" href="#/sunedu">Ruta para grados extranjeros ${ico('flecha', 14)}</a></p>
       </div>
     </div>
-  </div>
+  </section>
 
-  <div class="aviso-legal">${ico('info', 15)} Los programas se actualizan constantemente. Revisa siempre la información oficial de cada institución.</div>`;
+  <section class="seccion">
+    <div class="contenedor">
+      <div class="seccion-cabecera"><h2>Explora el catálogo</h2></div>
+      <nav class="explorar" aria-label="Tipos de programa">
+        ${explorar.map(r => `
+          <a href="#/${r.ruta}"><span class="cifra">${numero(r.n)}</span><b>${r.titulo}</b><span>${r.texto}</span></a>`).join('')}
+      </nav>
+      <p class="aviso-legal" style="justify-content:flex-start;padding:12px 0 0">${ico('info', 14)} Maestrías, doctorados y diplomados del catálogo son fichas exploratorias por área: confirma en la fuente oficial que el programa exista y su precio.</p>
+    </div>
+  </section>
+
+  <section class="seccion" style="padding-top:0">
+    <div class="contenedor">
+      <div class="seccion-cabecera"><h2>Destacados</h2>
+        <a class="btn-texto" href="#/maestrias">Ver posgrados ${ico('flecha', 14)}</a></div>
+      <div class="rejilla cuatro">${destacados.map(tarjeta).join('')}</div>
+    </div>
+  </section>`;
 }
 
 /* ---------------------------------------------------------- listados */
 
 const CONFIG_VISTA = {
   becas: {
-    tipo: 'beca', titulo: '{r} para avanzar.', resalte: 'Becas',
+    tipo: 'beca', titulo: '{r}.', resalte: 'Becas',
     bajada: 'Encuentra financiamiento para estudiar en Perú y el mundo.',
-    lema: 'Impulsa tu futuro.',
   },
   maestrias: {
-    tipo: 'maestria', titulo: '{r} con propósito.', resalte: 'Maestrías',
+    tipo: 'maestria', titulo: '{r}.', resalte: 'Maestrías',
     bajada: 'Programas para especializarte y crecer profesionalmente.',
-    lema: 'Especialízate con claridad.',
   },
   doctorados: {
-    tipo: 'doctorado', titulo: '{r} para liderar investigación.', resalte: 'Doctorados',
+    tipo: 'doctorado', titulo: '{r}.', resalte: 'Doctorados',
     bajada: 'Programas de alto nivel, financiamiento y líneas de investigación.',
-    lema: 'Investiga. Lidera. Transforma.',
   },
   diplomados: {
-    tipo: 'diplomado', titulo: '{r} para mantenerte vigente.', resalte: 'Diplomados',
+    tipo: 'diplomado', titulo: '{r}.', resalte: 'Diplomados',
     bajada: 'Formación práctica y rápida para actualizar tus competencias.',
-    lema: 'Actualízate sin detenerte.',
   },
 };
 
@@ -522,18 +573,6 @@ function vistaListado(vista) {
   const pagina = resultados.slice((f.pagina - 1) * porPagina, f.pagina * porPagina);
 
   const esBeca = cfg.tipo === 'beca';
-  const online = base.filter(i => i.modalidad === 'Online').length;
-  const abiertas = base.filter(i => { const d = diasPara(i.fecha_cierre); return d != null && d >= 0; }).length;
-
-  const met = esBeca
-    ? [{ icono: 'birrete', valor: numero(base.length), texto: 'Becas en catálogo' },
-       { icono: 'calendario', valor: numero(abiertas), texto: 'Con convocatoria vigente' },
-       { icono: 'globo', valor: numero(new Set(base.map(i => i.pais)).size), texto: 'Países' },
-       { icono: 'estrella', valor: numero(base.filter(i => i.cobertura === 'Completa').length), texto: 'Cobertura completa' }]
-    : [{ icono: 'libro', valor: numero(base.length), texto: 'Programas disponibles' },
-       { icono: 'banco', valor: numero(new Set(base.map(i => i.institucion)).size), texto: 'Instituciones' },
-       { icono: 'globo', valor: numero(new Set(base.map(i => i.pais)).size), texto: 'Países' },
-       { icono: 'wifi', valor: Math.round(online / Math.max(1, base.length) * 100) + '%', texto: 'Programas online' }];
 
   const listaPaises = unicos(base, 'pais');
   const listaAreas = unicos(base, 'area');
@@ -553,7 +592,8 @@ function vistaListado(vista) {
         <option value="">Todos</option>
         <option value="licenciada" ${f.sunedu === 'licenciada' ? 'selected' : ''}>Licenciada por SUNEDU</option>
         <option value="proceso" ${f.sunedu === 'proceso' ? 'selected' : ''}>En trámite / por verificar</option>
-        <option value="extranjera" ${f.sunedu === 'extranjera' ? 'selected' : ''}>Extranjera (reconocimiento)</option>
+        <option value="tratado" ${f.sunedu === 'tratado' ? 'selected' : ''}>Extranjera · país con tratado</option>
+        <option value="extranjera" ${f.sunedu === 'extranjera' ? 'selected' : ''}>Extranjera (todas)</option>
       </select></div>
     <div class="campo"><label>Costo máximo (US$)</label>
       <select data-f="costoMax">
@@ -562,9 +602,24 @@ function vistaListado(vista) {
           `<option value="${v}" ${String(f.costoMax) === String(v) ? 'selected' : ''}>Hasta US$ ${numero(v)}</option>`).join('')}
       </select></div>`;
 
-  return portada({ titulo: cfg.titulo, resalte: cfg.resalte, bajada: cfg.bajada, lema: cfg.lema })
-    + metricas(met) + `
-  <div class="contenedor seccion" id="resultados">
+  const segmento = esBeca ? '' : `
+    <div class="contenedor centro" style="margin-bottom:24px">
+      <nav class="segmentado" aria-label="Tipo de posgrado">
+        ${['maestrias', 'doctorados', 'diplomados'].map(v => `
+          <a href="#/${v}" ${v === vista ? 'aria-current="page"' : ''}>${CONFIG_VISTA[v].resalte}<span class="n">${numero(porTipo(CONFIG_VISTA[v].tipo).length)}</span></a>`).join('')}
+      </nav>
+    </div>`;
+
+  return portada({ titulo: cfg.titulo, resalte: cfg.resalte, bajada: cfg.bajada, clase: 'compacta' })
+    + segmento + `
+  <div class="contenedor" id="resultados" style="padding-bottom:48px">
+    ${esBeca ? `<div class="aviso neutro" style="margin:0 0 20px">${ico('calendario', 15)}
+      <span>Este catálogo se rastrea cada semana. Para fechas leídas hoy en la fuente oficial, revisa
+      <a class="btn-texto" href="#/convocatorias">Convocatorias vigentes</a>.</span></div>`
+    : `<div class="aviso neutro" style="margin:0 0 20px">${ico('info', 15)}
+      <span>Fichas exploratorias: se generan por área a partir de instituciones verificadas; el costo es un rango
+      referencial y el enlace lleva a la escuela de posgrado. El estado SUNEDU sí es oficial. Las fichas con
+      evidencia completa están en <a class="btn-texto" href="#/sunedu">Contraste SUNEDU</a>.</span></div>`}
     <form class="panel-filtros" id="form-filtros" data-vista="${vista}">
       <div class="rejilla-filtros">
         <div class="campo ancho-2"><label>Palabra clave</label>
@@ -593,7 +648,8 @@ function vistaListado(vista) {
         ${esBeca
           ? `<button type="button" class="pastilla ${f.cobertura === 'Completa' ? 'activa' : ''}" data-rapido="cobertura" data-valor="Completa">${ico('estrella', 14)} Completas</button>
              <button type="button" class="pastilla ${f.soloAbiertas ? 'activa' : ''}" data-rapido="soloAbiertas" data-valor="1">${ico('calendario', 14)} Vigentes</button>`
-          : `<button type="button" class="pastilla ${f.sunedu === 'licenciada' ? 'activa' : ''}" data-rapido="sunedu" data-valor="licenciada">${ico('escudo', 14)} Licenciadas SUNEDU</button>`}
+          : `<button type="button" class="pastilla ${f.sunedu === 'licenciada' ? 'activa' : ''}" data-rapido="sunedu" data-valor="licenciada">${ico('escudo', 14)} Licenciadas SUNEDU</button>
+             <button type="button" class="pastilla ${f.sunedu === 'tratado' ? 'activa' : ''}" data-rapido="sunedu" data-valor="tratado">${ico('globo', 14)} País con tratado</button>`}
         <button type="button" class="btn-texto" data-limpiar>Limpiar filtros</button>
         <div class="derecha">
           <label for="orden">Ordenar por</label>
@@ -617,9 +673,7 @@ function vistaListado(vista) {
     ${resultados.length
       ? `<div class="rejilla">${pagina.map(tarjeta).join('')}</div>` + paginacion(f.pagina, totalPaginas)
       : vacio('Sin resultados', 'Prueba con menos filtros o una palabra clave más general.')}
-  </div>
-
-  <div class="aviso-legal">${ico('info', 15)} Costos y fechas son referenciales. Verifica siempre en la web oficial de la institución.</div>`;
+  </div>`;
 }
 
 /* ---------------------------------------------------------- favoritos */
@@ -634,7 +688,7 @@ function vistaFavoritos() {
   return portada({
     titulo: 'Tus {r}, en un solo lugar.', resalte: 'favoritos',
     bajada: 'Guarda, organiza y revisa oportunidades antes de decidir.',
-    lema: 'Guarda hoy. Decide mejor.',
+    clase: 'compacta',
   }) + `
   <div class="contenedor seccion">
     <div class="fila-filtros" style="margin:0 0 18px;padding:0;border:0">
@@ -645,25 +699,12 @@ function vistaFavoritos() {
       </div>
     </div>
     ${guardados.length
-      ? metricasSimples([
-          { icono: 'marcador', valor: numero(guardados.length), texto: 'Guardados totales' },
-          { icono: 'balanza', valor: numero(ALMACEN.comparador.length), texto: 'En el comparador' },
-          { icono: 'globo', valor: numero(new Set(guardados.map(i => i.pais)).size), texto: 'Países' },
-          { icono: 'banco', valor: numero(new Set(guardados.map(i => i.institucion)).size), texto: 'Instituciones' },
-        ]) : ''}
+      ? `<p class="conteo"><b>${numero(guardados.length)}</b> guardados · <b>${numero(ALMACEN.comparador.length)}</b> en el comparador · <b>${numero(new Set(guardados.map(i => i.pais)).size)}</b> países</p>` : ''}
     ${filtrados.length
       ? `<div class="rejilla" style="margin-top:18px">${filtrados.map(tarjeta).join('')}</div>`
       : vacio('Todavía no guardas nada',
               'Usa el marcador de cada tarjeta para guardar programas y compararlos después.')}
   </div>`;
-}
-
-function metricasSimples(lista) {
-  return `<div class="metricas">` + lista.map((m, i) => `
-    <div class="metrica ${i % 2 ? 'oliva' : ''}">
-      <div class="metrica-icono">${ico(m.icono, 22)}</div>
-      <div><b>${m.valor}</b><span>${escapar(m.texto)}</span></div>
-    </div>`).join('') + `</div>`;
 }
 
 /* ---------------------------------------------------------- comparador */
@@ -722,7 +763,7 @@ function vistaComparador() {
     return portada({
       titulo: 'Compara y {r} mejor.', resalte: 'elige',
       bajada: 'Visualiza diferencias clave antes de tomar una decisión.',
-      lema: 'Compara mejor. Elige seguro.',
+      clase: 'compacta',
     }) + `<div class="contenedor seccion">${bandeja}
       ${vacio('Aún no hay programas para comparar',
               'Pulsa “Comparar” en cualquier tarjeta para añadirla aquí.')}</div>`;
@@ -804,7 +845,7 @@ function vistaComparador() {
   return portada({
     titulo: 'Compara y {r} mejor.', resalte: 'elige',
     bajada: 'Visualiza diferencias clave antes de tomar una decisión.',
-    lema: 'Compara mejor. Elige seguro.',
+    clase: 'compacta',
   }) + `
   <div class="contenedor seccion">
     ${bandeja}
@@ -833,12 +874,12 @@ function vistaInstituciones() {
   const lista = DATOS.instituciones.filter(u =>
     (!q || normalizar(u.nombre + ' ' + u.sigla + ' ' + u.pais).includes(q)) &&
     (!f.pais || u.pais === f.pais) &&
-    (!f.sunedu || u.sunedu === f.sunedu));
+    (!f.sunedu || u.sunedu === f.sunedu || (f.sunedu === 'extranjera' && u.sunedu === 'tratado')));
 
   return portada({
     titulo: '{r} verificadas.', resalte: 'Instituciones',
     bajada: 'Universidades y escuelas con su estado de licenciamiento y enlace oficial.',
-    lema: 'Confirma antes de postular.',
+    clase: 'compacta',
   }) + `
   <div class="contenedor seccion">
     <form class="panel-filtros" id="form-filtros" data-vista="instituciones">
@@ -878,6 +919,458 @@ function vistaInstituciones() {
     ${lista.length ? '' : vacio('Sin coincidencias', 'Ajusta la búsqueda o el filtro de país.')}
   </div>
   <div class="aviso-legal">${ico('escudo', 15)} Verifica el estado oficial de licenciamiento en el registro de SUNEDU.</div>`;
+}
+
+/* ---------------------------------------------------------- convocatorias */
+
+const ETIQUETA_ESTADO = { abierta: 'Abierta', proxima: 'Próxima', cerrada: 'Cerrada' };
+
+// El estado guardado se recalcula con la fecha de hoy: una convocatoria
+// "abierta" cuyo cierre ya pasó se muestra cerrada sin esperar al rastreo.
+function estadoConv(c) {
+  if (c.estado === 'abierta' && c.cierre && diasPara(c.cierre) < 0) return 'cerrada';
+  return c.estado;
+}
+
+function convocatoriasOrdenadas() {
+  const lista = (DATOS.convocatorias && DATOS.convocatorias.convocatorias) || [];
+  const peso = { abierta: 0, proxima: 1, cerrada: 2 };
+  return [...lista].sort((a, b) => {
+    const ea = estadoConv(a), eb = estadoConv(b);
+    if (ea !== eb) return peso[ea] - peso[eb];
+    if (ea === 'cerrada') return (b.cierre || '').localeCompare(a.cierre || '');
+    return (a.cierre || '9').localeCompare(b.cierre || '9');
+  });
+}
+
+function filaConvocatoria(c) {
+  const est = estadoConv(c);
+  const dias = c.cierre ? diasPara(c.cierre) : null;
+  const quedan = est === 'abierta' && dias != null
+    ? `<span class="quedan">${dias === 0 ? 'Cierra hoy' : dias === 1 ? 'Queda 1 día' : `Quedan ${dias} días`}</span>` : '';
+  return `
+  <details class="fila-conv">
+    <summary>
+      <span class="estado ${est}">${ETIQUETA_ESTADO[est] || est}</span>
+      <div style="min-width:0">
+        <h3>${escapar(c.nombre)}</h3>
+        <p class="org">${escapar(c.organizacion)} · ${escapar(c.pais)} · ${escapar(c.niveles.join(', '))}</p>
+      </div>
+      <div class="cierre">${c.cierre ? `<b>${fecha(c.cierre)}</b>` : '<b>Por confirmar</b>'}${quedan || (c.cierre ? 'cierre' : '')}</div>
+      <span class="chev">${ico('flecha', 18)}</span>
+    </summary>
+    <div class="detalle-conv">
+      <div>
+        ${c.cronograma.length ? `<h4>Cronograma</h4><ul class="cronograma">${c.cronograma.map(([k, v]) =>
+          `<li><span>${escapar(k)}</span><span>${escapar(v)}</span></li>`).join('')}</ul>` : ''}
+        ${c.cierre_hora ? `<p class="procedencia">${ico('reloj', 13)} ${escapar(c.cierre_hora)}</p>` : ''}
+        <h4>Requisitos principales</h4>
+        <ul>${c.requisitos.map(r => `<li>${escapar(r)}</li>`).join('')}</ul>
+      </div>
+      <div>
+        <h4>Cupos</h4><p>${escapar(c.cupos)}</p>
+        ${c.observaciones ? `<h4>Observaciones</h4><p>${escapar(c.observaciones)}</p>` : ''}
+        <div class="modal-acciones" style="margin-bottom:12px">
+          <a class="btn btn-primario" href="${escapar(c.url)}" target="_blank" rel="noopener">${ico('enlace', 15)} Fuente oficial</a>
+        </div>
+        ${c.documentos.length ? `<div class="fuentes-ev" style="margin-bottom:12px">${c.documentos.map(([t, u]) =>
+          `<a href="${escapar(u)}" target="_blank" rel="noopener">${escapar(t)} ${ico('enlace', 12)}</a>`).join('')}</div>` : ''}
+        <p class="procedencia">Fuente: ${escapar(c.fuente_tipo)} · consultada el ${fecha(c.consultado)}</p>
+      </div>
+    </div>
+  </details>`;
+}
+
+function vistaConvocatorias() {
+  const datos = DATOS.convocatorias;
+  if (!datos) return `<div class="contenedor seccion">${vacio('Sin datos de convocatorias', 'No se pudo leer data/convocatorias.json.')}</div>`;
+  const f = filtrosDe('convocatorias');
+  const todas = convocatoriasOrdenadas();
+  const n = (e) => todas.filter(c => estadoConv(c) === e).length;
+  const filtro = f.estado || 'abierta';
+  const lista = filtro === 'todas' ? todas : todas.filter(c => estadoConv(c) === filtro);
+  const opcionesEstado = [['abierta', 'Abiertas', n('abierta')], ['proxima', 'Próximas', n('proxima')],
+                          ['cerrada', 'Cerradas', n('cerrada')], ['todas', 'Todas', todas.length]];
+
+  return portada({
+    titulo: 'Convocatorias {r}.', resalte: 'vigentes', clase: 'compacta',
+    bajada: 'Maestrías, doctorados, becas y cursos para peruanos, en el Perú y en el extranjero. Cada fecha se leyó en la fuente oficial.',
+  }) + `
+  <div class="contenedor centro" style="margin-bottom:24px">
+    <div class="segmentado" role="group" aria-label="Estado de la convocatoria">
+      ${opcionesEstado.map(([v, t, k]) =>
+        `<button type="button" data-conv-estado="${v}" aria-pressed="${filtro === v}">${t}<span class="n">${k}</span></button>`).join('')}
+    </div>
+  </div>
+  <div class="contenedor" style="padding-bottom:24px">
+    ${lista.length ? `<div class="lista-filas">${lista.map(filaConvocatoria).join('')}</div>`
+      : vacio('Nada en este estado', 'Prueba con otra pestaña.')}
+    <div class="aviso neutro">${ico('info', 15)}
+      <span><b>Cómo se verificó (${fecha(datos.consultado)}).</b> ${escapar(datos.metodo)} ${escapar(datos.nota)}</span>
+    </div>
+  </div>`;
+}
+
+/* ---------------------------------------------------------- SUNEDU */
+
+function buscarSunedu(texto) {
+  const sun = DATOS.sunedu;
+  const q = normalizar(texto).trim();
+  if (!sun || q.length < 3) return [];
+  const palabras = q.split(/\s+/);
+  return [...sun.licenciadas, ...sun.denegadas]
+    .filter(r => { const n = normalizar(r.nombre); return palabras.every(p => n.includes(p)); })
+    .slice(0, 6);
+}
+
+function resultadoSunedu(texto) {
+  const sun = DATOS.sunedu;
+  if (!sun) return `<p class="vacio-res">No se pudo cargar la lista oficial.</p>`;
+  if (normalizar(texto).trim().length < 3) {
+    return `<p class="vacio-res">Escribe al menos tres letras del nombre: «Continental», «San Marcos», «Callao»…</p>`;
+  }
+  const hallados = buscarSunedu(texto);
+  if (!hallados.length) {
+    return `<span class="estado no_figura">No figura</span>
+      <h3>Sin coincidencias en las listas de SUNEDU</h3>
+      <p style="color:var(--suave);margin:0">Puede tratarse de un instituto, una filial o un nombre distinto.
+      Revisa la <a class="btn-texto" href="${URL_SUNEDU.licenciadas}" target="_blank" rel="noopener">lista oficial</a>.</p>`;
+  }
+  const r = hallados[0];
+  const otros = hallados.slice(1);
+  const lic = r.estado === 'licenciada';
+  return `
+    <span class="estado ${r.estado}">${lic ? 'Licenciada' : 'Licencia denegada'}</span>
+    <h3>${escapar(r.nombre)}</h3>
+    <dl class="pares">
+      <dt>${lic ? 'Licenciada el' : 'Resolución publicada'}</dt><dd class="mono">${fecha(r.fecha)}</dd>
+      ${r.resolucion ? `<dt>Resolución</dt><dd class="mono">${escapar(r.resolucion)}</dd>` : ''}
+      ${r.departamento ? `<dt>Ubicación</dt><dd>${escapar(r.provincia)}, ${escapar(r.departamento)}</dd>` : ''}
+      <dt>Gestión</dt><dd>${escapar(r.gestion)}${r.tipo === 'escuela_posgrado' ? ' · escuela de posgrado' : ''}</dd>
+    </dl>
+    ${r.observacion ? `<div class="aviso alerta" style="margin:0 0 12px">${ico('info', 15)}<span>${escapar(r.observacion)}</span></div>` : ''}
+    ${!lic ? `<div class="aviso" style="margin:0 0 12px">${ico('info', 15)}<span>Una denegatoria histórica no equivale necesariamente a su estado de hoy: revisa actos posteriores.</span></div>` : ''}
+    <div class="fuentes-ev">
+      ${r.resolucion_url ? `<a href="${escapar(r.resolucion_url)}" target="_blank" rel="noopener">Ver resolución ${ico('enlace', 12)}</a>` : ''}
+      <a href="${lic ? URL_SUNEDU.licenciadas : URL_SUNEDU.denegadas}" target="_blank" rel="noopener">Lista oficial ${ico('enlace', 12)}</a>
+    </div>
+    <p class="procedencia" style="margin:12px 0 0">Lista con corte al ${fecha(sun.corte_licenciadas)} · consultada el ${fecha(sun.consultado)}${sun.estado_fuente === 'desactualizado' ? ' · <b>desactualizada</b>' : ''}</p>
+    ${otros.length ? `<p class="procedencia" style="margin:8px 0 0">También coincide: ${otros.map(o =>
+      `<button type="button" class="btn-texto" data-sunedu-elige="${escapar(o.nombre)}">${escapar(o.nombre)}</button>`).join(' · ')}</p>` : ''}`;
+}
+
+function buscadorSunedu(lugar) {
+  const sun = DATOS.sunedu;
+  const nombres = sun ? [...sun.licenciadas, ...sun.denegadas].map(r => r.nombre) : [];
+  return `
+    <div class="campo-busqueda" style="box-shadow:none">
+      ${ico('escudo', 18)}
+      <input type="search" data-sunedu-q="${lugar}" list="lista-sunedu-${lugar}" autocomplete="off"
+             placeholder="Nombre de la universidad" aria-label="Buscar universidad en la lista de SUNEDU">
+      <datalist id="lista-sunedu-${lugar}">${nombres.map(n => `<option value="${escapar(n)}">`).join('')}</datalist>
+    </div>
+    <div class="resultado-sunedu" data-sunedu-res="${lugar}" aria-live="polite" style="margin-top:12px;color:var(--texto)">
+      ${resultadoSunedu('')}
+    </div>`;
+}
+
+// Evaluación de la ruta de reconocimiento de un grado extranjero. Solo
+// combina reglas publicadas por SUNEDU; nunca afirma un reconocimiento.
+function evaluarRuta({ pais, titulo, modalidad }) {
+  const items = [];
+  const conTratado = TRATADO.has(pais);
+
+  if (titulo === 'certificado') {
+    items.push(['no_compatible', 'Tipo de documento', 'Un certificado de curso o diplomado no equivale por sí mismo a un grado universitario de maestría o doctorado.']);
+  } else if (titulo === 'propio') {
+    items.push(pais === 'España'
+      ? ['no_compatible', 'Tipo de documento', 'Los títulos propios otorgados en España no serán reconocidos por la SUNEDU. Solo los títulos oficiales, expedidos a nombre del Rey.']
+      : ['condicionado', 'Tipo de documento', 'Confirma con la autoridad educativa del país que el diploma sea un grado oficial y no un título propio o de educación continua.']);
+  } else if (titulo === 'oficial') {
+    items.push(['condicionado', 'Tipo de documento', pais === 'España'
+      ? 'Comprueba el programa en el RUCT de España: debe figurar como título oficial.'
+      : 'Declarado oficial: comprueba el registro de la autoridad educativa del país de origen.']);
+  } else {
+    items.push(['pendiente', 'Tipo de documento', 'Pide a la institución el nombre exacto del grado y si es oficial, propio o de educación continua.']);
+  }
+
+  if (!pais) {
+    items.push(['pendiente', 'Vía por tratado', 'Elige el país donde se emite el diploma.']);
+  } else if (conTratado) {
+    items.push(['condicionado', 'Vía por tratado', `${pais} figura en la lista de contrapartes con tratado que publica SUNEDU. Revisa el alcance concreto del tratado: no todos los diplomas quedan cubiertos.`
+      + (pais === 'Paraguay' ? ' El acuerdo con Paraguay no habilita por sí mismo el ejercicio profesional.' : '')]);
+  } else {
+    items.push(['pendiente', 'Vía por tratado', `${pais} no figura en la lista de tratados. Eso no excluye el grado: corresponde evaluar la vía del criterio de calidad.`]);
+  }
+
+  items.push([conTratado ? 'pendiente' : 'condicionado', 'Criterio de calidad',
+    'Busca la universidad en el Anexo I de la RD 00004-2026-SUNEDU-DS-DIRGRATU (lista referida a 2025, entre las 500 primeras de QS, ARWU, THE o SIR). La tabla de la página de SUNEDU es para 2023: es histórica. Se aplica la lista vigente a la fecha de matrícula o de emisión del diploma.']);
+
+  if (modalidad === 'presencial_pe') {
+    items.push(['no_compatible', 'Lugar de estudios', 'SUNEDU publicó una advertencia sobre estudios presenciales en territorio peruano por universidades extranjeras. Pide confirmación escrita antes de pagar.']);
+  } else if (modalidad === 'virtual') {
+    items.push(['condicionado', 'Lugar de estudios', 'Programa virtual: formula la consulta a SUNEDU con el detalle exacto de la modalidad y de dónde se imparten los estudios.']);
+  } else if (modalidad === 'presencial_ext') {
+    items.push(['verificado', 'Lugar de estudios', 'Estudios presenciales en el país de origen: sin advertencia específica de SUNEDU.']);
+  } else {
+    items.push(['pendiente', 'Lugar de estudios', 'Indica la modalidad y el país donde se cursan los estudios.']);
+  }
+
+  const bloqueo = items.some(i => i[0] === 'no_compatible');
+  const veredicto = bloqueo
+    ? ['no_compatible', 'No compatible con evidencia']
+    : conTratado && titulo === 'oficial'
+      ? ['condicionado', 'Ruta de reconocimiento identificada']
+      : ['pendiente', 'Pendiente de evidencia'];
+  return { items, veredicto };
+}
+
+const ETIQUETA_EVIDENCIA = { verificado: 'Verificado', condicionado: 'Con condiciones', pendiente: 'Pendiente', no_compatible: 'No compatible' };
+
+function htmlRuta(entrada) {
+  const { items, veredicto } = evaluarRuta(entrada);
+  return `
+    <span class="estado ${veredicto[0]}">${ETIQUETA_EVIDENCIA[veredicto[0]]}</span>
+    <h3>${veredicto[1]}</h3>
+    <ul class="lista-chequeo">${items.map(([e, t, x]) => `
+      <li><div><b>${t}</b><span class="estado ${e}">${ETIQUETA_EVIDENCIA[e]}</span></div><span>${escapar(x)}</span></li>`).join('')}</ul>
+    <div class="aviso neutro">${ico('escudo', 15)}<span>La aprobación final corresponde a SUNEDU, que evalúa cada diploma
+      individualmente; no otorga avales generales a programas extranjeros. Plazo máximo de evaluación: 30 días hábiles.</span></div>
+    <div class="fuentes-ev" style="margin-top:12px">
+      <a href="${URL_SUNEDU.extranjeros}" target="_blank" rel="noopener">Procedimiento SUNEDU ${ico('enlace', 12)}</a>
+      <a href="${URL_SUNEDU.lista2025}" target="_blank" rel="noopener">RD 00004-2026 (lista 2025) ${ico('enlace', 12)}</a>
+      ${entrada.pais === 'España' ? `<a href="${URL_SUNEDU.ruct}" target="_blank" rel="noopener">RUCT España ${ico('enlace', 12)}</a>` : ''}
+      ${entrada.modalidad === 'presencial_pe' ? `<a href="${URL_SUNEDU.presencialPeru}" target="_blank" rel="noopener">Advertencia SUNEDU ${ico('enlace', 12)}</a>` : ''}
+    </div>`;
+}
+
+const CARTA = { institucion: '', pais: '', programa: '', grado: '', caracter: '', modalidad: '', matricula: '', enlace: '', nombre: '' };
+
+// Plantilla tomada literalmente de la guía de referencia; cada campo vacío
+// conserva su marcador entre corchetes.
+function textoCarta() {
+  const v = (k, marcador) => (CARTA[k] || '').trim() || marcador;
+  return `Asunto: Consulta previa sobre reconocimiento de grado extranjero
+
+Señores de SUNEDU:
+
+Solicito orientación sobre la posibilidad de solicitar el reconocimiento en el Perú del grado que obtendría en el siguiente programa:
+
+- Institución que otorgará el grado: ${v('institucion', '[nombre completo]')}.
+- País de origen: ${v('pais', '[país]')}.
+- Programa: ${v('programa', '[nombre completo]')}.
+- Grado o título exacto que se otorgará: ${v('grado', '[denominación]')}.
+- Carácter del título: ${v('caracter', '[oficial / propio / por confirmar]')}.
+- Modalidad y lugar de estudios: ${v('modalidad', '[virtual, presencial o semipresencial; indicar país]')}.
+- Fecha prevista de matrícula: ${v('matricula', '[fecha]')}.
+- Enlace oficial del programa: ${v('enlace', '[enlace]')}.
+
+Agradeceré indicar qué criterio de reconocimiento resultaría aplicable, qué lista y resolución corresponde consultar según la fecha de matrícula y qué documentos adicionales debería verificar antes de iniciar los estudios.
+
+Atentamente,
+${v('nombre', '[Nombre completo]')}`;
+}
+
+function enlaceCorreo() {
+  const [asunto, ...cuerpo] = textoCarta().split('\n');
+  return `mailto:${URL_SUNEDU.correo}?subject=${encodeURIComponent(asunto.replace('Asunto: ', ''))}&body=${encodeURIComponent(cuerpo.join('\n').trim())}`;
+}
+
+function fichaEvidencia(p) {
+  const nombres = { institucion: 'Institución', programa: 'Programa y diploma', ruta_sunedu: 'Ruta SUNEDU',
+                    admision: 'Admisión (Ing. Industrial)', oferta: 'Oferta y costo' };
+  const pr = p.precio;
+  const precio = pr.total
+    ? `<b>${SIMBOLO[pr.moneda] || pr.moneda} ${numero(pr.total)}</b><span>${pr.tipo === 'publicado' ? 'total publicado' : 'total calculado'}</span>`
+    : `<b>Precio no publicado</b><span>no se trata como cero</span>`;
+  return `
+  <article class="evidencia">
+    <div class="evidencia-cab">
+      <div>
+        <h3>${escapar(p.nombre)}</h3>
+        <p class="institucion">${escapar(p.universidad)} · ${escapar(p.pais)}</p>
+      </div>
+      <div class="precio-ev">${precio}</div>
+    </div>
+    <div class="verificaciones">
+      ${Object.entries(nombres).map(([k, t]) => {
+        const v = p.verificaciones[k];
+        return `<div><h4>${t}</h4><span class="estado ${v.estado}">${ETIQUETA_EVIDENCIA[v.estado]}</span><br>${escapar(v.texto)}</div>`;
+      }).join('')}
+    </div>
+    <p class="detalle-costo"><b>Grado:</b> ${escapar(p.grado)} · <b>Modalidad:</b> ${escapar(p.modalidad)} · <b>Inicio:</b> ${escapar(p.inicio)}</p>
+    ${pr.componentes.length ? `<p class="detalle-costo"><b>Costo:</b> ${pr.componentes.map(([k, x]) => `${escapar(k)}: ${escapar(x)}`).join(' · ')}</p>` : ''}
+    ${pr.nota ? `<p class="detalle-costo">${escapar(pr.nota)}</p>` : ''}
+    ${p.relacionados ? `<p class="detalle-costo">${escapar(p.relacionados)}</p>` : ''}
+    <div class="fuentes-ev">${p.fuentes.map(([t, u]) => `<a href="${escapar(u)}" target="_blank" rel="noopener">${escapar(t)} ${ico('enlace', 12)}</a>`).join('')}
+      <span class="procedencia">Revisado el ${fecha(p.consultado)}</span></div>
+  </article>`;
+}
+
+async function cargarGuia() {
+  if (DATOS.guia != null) return DATOS.guia;
+  try {
+    const r = await fetch('data/guia-sunedu.html', { cache: 'no-cache' });
+    DATOS.guia = r.ok ? await r.text() : '';
+  } catch { DATOS.guia = ''; }
+  return DATOS.guia;
+}
+
+function htmlGuia(texto) {
+  if (!texto) return `<p class="cargando">No se pudo cargar la guía.</p>`;
+  const plantilla = document.createElement('template');
+  plantilla.innerHTML = texto;
+  return [...plantilla.content.querySelectorAll('.guia-bloque')].map((b, i) => `
+    <details ${i === 0 ? 'open' : ''}>
+      <summary>${escapar(b.querySelector('h2')?.textContent || 'Sección')} ${ico('flecha', 18)}</summary>
+      ${b.outerHTML}
+    </details>`).join('');
+}
+
+function vistaSunedu() {
+  const sun = DATOS.sunedu;
+  const ver = (DATOS.verificados && DATOS.verificados.programas) || [];
+  const cruce = sun ? Object.values(sun.cruce_catalogo) : [];
+  const coinciden = cruce.filter(c => c.oficial === 'licenciada' && !c.discrepancia).length;
+  const corregidas = cruce.filter(c => c.discrepancia);
+  const paises = [...new Set([...TRATADO, ...DATOS.instituciones.map(u => u.pais)])]
+    .filter(p => p && p !== 'Perú').sort((a, b) => a.localeCompare(b, 'es'));
+  const f = filtrosDe('sunedu');
+  const entrada = { pais: f.pais || '', titulo: f.titulo || '', modalidad: f.modalidad || '' };
+  const secciones = [['s-peru', 'Universidad peruana'], ['s-ext', 'Grado extranjero'],
+                     ['s-fichas', 'Fichas con evidencia'], ['carta-sunedu', 'Consulta previa'], ['s-guia', 'Guía']];
+
+  setTimeout(async () => {
+    const destino = $('#guia-texto');
+    if (destino) destino.innerHTML = htmlGuia(await cargarGuia());
+  });
+
+  return portada({
+    titulo: 'Contraste {r}.', resalte: 'SUNEDU', clase: 'compacta',
+    bajada: 'La licencia de una universidad, la validez de un programa y el reconocimiento de un futuro diploma son tres cosas distintas. Aquí se verifican por separado.',
+  }) + `
+  <div class="contenedor centro" style="margin-bottom:8px">
+    <nav class="segmentado" aria-label="Secciones">
+      ${secciones.map(([id, t]) => `<button type="button" data-ir="${id}">${t}</button>`).join('')}
+    </nav>
+  </div>
+
+  <section class="seccion" id="s-peru">
+    <div class="contenedor herramienta">
+      <div>
+        <h2 class="titulo-bloque">1. Universidad peruana</h2>
+        <p class="subtitulo-bloque">SUNEDU otorga una licencia institucional y publica la resolución. La licencia, por sí sola, no responde por la filial, la modalidad ni el programa.</p>
+        ${sun ? `<div class="cifras-sunedu">
+          <div><b>${sun.licenciadas.filter(r => r.tipo === 'universidad').length}</b><span>universidades licenciadas</span></div>
+          <div><b>${sun.licenciadas.filter(r => r.tipo === 'escuela_posgrado').length}</b><span>escuelas de posgrado</span></div>
+          <div><b>${sun.denegadas.length}</b><span>con licencia denegada</span></div>
+        </div>
+        <p class="procedencia" style="margin-top:16px">Corte de SUNEDU: ${fecha(sun.corte_licenciadas)} · consultado el ${fecha(sun.consultado)} con <span class="mono">scraper/sunedu_listas.py</span></p>
+        <div class="aviso neutro">${ico('balanza', 15)}<span><b>Cruce con el catálogo:</b> ${coinciden} de ${cruce.length} universidades peruanas coinciden con la lista oficial.
+          ${corregidas.length ? `${corregidas.length} figuraban «en trámite» y SUNEDU las lista como licenciadas: ${corregidas.map(c => escapar(c.nombre_oficial)).join(' y ')}. El portal ya muestra el dato oficial.` : ''}</span></div>` : ''}
+      </div>
+      <div>${buscadorSunedu('sunedu')}</div>
+    </div>
+  </section>
+
+  <section class="seccion banda" id="s-ext">
+    <div class="contenedor herramienta">
+      <div>
+        <h2 class="titulo-bloque">2. Grado extranjero</h2>
+        <p class="subtitulo-bloque">SUNEDU no certifica a las universidades del mundo: evalúa cada diploma. Hay dos vías, criterio de calidad o tratado, más la oficialidad del grado en su país.</p>
+        <form class="rejilla-filtros" style="grid-template-columns:1fr;margin-top:24px" data-vista="sunedu" id="form-ruta">
+          <div class="campo"><label for="ruta-pais">País que emite el diploma</label>
+            <select id="ruta-pais" data-f="pais">${opciones(paises, entrada.pais, 'Elige un país')}</select></div>
+          <div class="campo"><label for="ruta-titulo">Tipo de documento que recibirás</label>
+            <select id="ruta-titulo" data-f="titulo">
+              ${[['', 'No lo sé todavía'], ['oficial', 'Grado oficial (maestro, magíster, máster oficial, doctor)'],
+                 ['propio', 'Título propio de la universidad'], ['certificado', 'Certificado, diploma o curso de educación continua']]
+                .map(([v, t]) => `<option value="${v}" ${entrada.titulo === v ? 'selected' : ''}>${t}</option>`).join('')}
+            </select></div>
+          <div class="campo"><label for="ruta-modalidad">Modalidad y lugar de estudios</label>
+            <select id="ruta-modalidad" data-f="modalidad">
+              ${[['', 'No lo sé todavía'], ['presencial_ext', 'Presencial en el país de origen'],
+                 ['virtual', 'Virtual'], ['presencial_pe', 'Presencial en el Perú']]
+                .map(([v, t]) => `<option value="${v}" ${entrada.modalidad === v ? 'selected' : ''}>${t}</option>`).join('')}
+            </select></div>
+        </form>
+      </div>
+      <div class="resultado-sunedu" aria-live="polite">${htmlRuta(entrada)}</div>
+    </div>
+  </section>
+
+  <section class="seccion" id="s-fichas">
+    <div class="contenedor">
+      <div class="seccion-cabecera"><div>
+        <h2>3. Fichas con evidencia</h2>
+        <p class="subtitulo-bloque">Programas reales revisados el ${DATOS.verificados ? fecha(DATOS.verificados.consultado) : '—'}, con cinco verificaciones separadas. Perfil: ${escapar((DATOS.verificados && DATOS.verificados.perfil) || '')}</p>
+      </div></div>
+      ${ver.map(fichaEvidencia).join('')}
+    </div>
+  </section>
+
+  <section class="seccion banda" id="carta-sunedu">
+    <div class="contenedor herramienta">
+      <div>
+        <h2 class="titulo-bloque">4. Consulta previa a SUNEDU</h2>
+        <p class="subtitulo-bloque">Solicita respuesta escrita antes de pagar. Completa los datos y envía el texto a <span class="mono">${URL_SUNEDU.correo}</span>, o llama a la central (01) 500-3930.</p>
+        <form class="form-carta" id="form-carta" style="margin-top:24px">
+          ${[['institucion', 'Institución que otorgará el grado', 'ancho-2'], ['pais', 'País de origen', ''],
+             ['matricula', 'Fecha prevista de matrícula', ''], ['programa', 'Programa', 'ancho-2'],
+             ['grado', 'Grado o título exacto', 'ancho-2'], ['caracter', 'Carácter del título', ''],
+             ['modalidad', 'Modalidad y lugar de estudios', ''], ['enlace', 'Enlace oficial del programa', 'ancho-2'],
+             ['nombre', 'Tu nombre completo', 'ancho-2']]
+            .map(([k, t, c]) => `<div class="campo ${c}"><label for="carta-${k}">${t}</label>
+              <input type="text" id="carta-${k}" data-carta="${k}" value="${escapar(CARTA[k])}" autocomplete="off"></div>`).join('')}
+        </form>
+      </div>
+      <div>
+        <pre class="carta" id="texto-carta">${escapar(textoCarta())}</pre>
+        <div class="acciones-carta">
+          <button type="button" class="btn btn-primario" data-copiar-carta>${ico('copiar', 15)} Copiar texto</button>
+          <a class="btn btn-linea" id="correo-carta" href="${escapar(enlaceCorreo())}">${ico('correo', 15)} Abrir en mi correo</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="s-guia">
+    <div class="contenedor">
+      <div class="seccion-cabecera"><div>
+        <h2>5. Guía de verificación</h2>
+        <p class="subtitulo-bloque">Texto de referencia íntegro, con sus fuentes oficiales.</p>
+      </div></div>
+      <div class="guia" id="guia-texto"><p class="cargando">Cargando la guía…</p></div>
+    </div>
+  </section>`;
+}
+
+/* ---------------------------------------------------------- contraste en la ficha */
+
+function contrasteFicha(it) {
+  if (it.tipo === 'beca') return '';
+  const c = it.sunedu_cruce;
+  if (c) {
+    const lic = c.oficial === 'licenciada';
+    return `<div class="contraste ${lic ? 'ok' : 'alerta'}">
+      <h4>Contraste SUNEDU · institución</h4>
+      <p><span class="estado ${c.oficial}">${lic ? 'Licenciada' : c.oficial === 'denegada' ? 'Licencia denegada' : 'No figura en la lista'}</span></p>
+      ${c.nombre_oficial ? `<p>${escapar(c.nombre_oficial)}${c.fecha ? ` · desde el <span class="mono">${fecha(c.fecha)}</span>` : ''}${c.resolucion ? ` · Res. <span class="mono">${escapar(c.resolucion)}</span>` : ''}</p>` : ''}
+      ${c.resolucion_url ? `<p class="fuentes-ev"><a href="${escapar(c.resolucion_url)}" target="_blank" rel="noopener">Ver resolución ${ico('enlace', 12)}</a></p>` : ''}
+      <p class="procedencia">La licencia es institucional: no acredita por sí sola este programa, su sede ni su modalidad.</p>
+    </div>`;
+  }
+  if (it.pais && it.pais !== 'Perú') {
+    const t = TRATADO.has(it.pais);
+    return `<div class="contraste condicionado">
+      <h4>Contraste SUNEDU · grado extranjero</h4>
+      <p><span class="estado ${t ? 'condicionado' : 'pendiente'}">${t ? 'País con tratado' : 'Sin tratado: evaluar criterio de calidad'}</span></p>
+      <p>${t ? `${escapar(it.pais)} figura en la lista de contrapartes con tratado de SUNEDU. Ruta identificada, no garantizada.`
+             : 'Busca la universidad en el Anexo I de la RD 00004-2026 (lista 2025).'}${it.pais === 'España' ? ' Verifica que sea título oficial en el RUCT: los títulos propios no se reconocen.' : ''}</p>
+      <p class="fuentes-ev"><a href="#/sunedu">Evaluar la ruta completa ${ico('flecha', 12)}</a></p>
+    </div>`;
+  }
+  return '';
 }
 
 /* ---------------------------------------------------------- ficha (modal) */
@@ -921,7 +1414,7 @@ function abrirFicha(id) {
       <div class="modal-cabecera">
         <div class="sup">${marcaLogo(it, 60)}
           <div style="min-width:0">
-            <span class="insignia ${it.tipo}">${nombreTipo}</span>
+            <span class="insignia ${it.tipo}">${nombreTipo}${esBeca ? '' : ' · ficha exploratoria'}</span>
             <h2>${escapar(it.nombre)}</h2>
             <p style="margin:0;color:var(--suave);font-size:14px">${escapar(it.institucion)}</p>
             <div style="margin-top:9px;display:flex;gap:8px;flex-wrap:wrap">
@@ -932,12 +1425,13 @@ function abrirFicha(id) {
       </div>
       <div class="modal-cuerpo">
         ${it.descripcion ? `<p style="margin:0 0 18px;color:var(--oliva-2);line-height:1.6">${escapar(it.descripcion)}</p>` : ''}
+        ${contrasteFicha(it)}
         <div class="datos">
           ${datos.map(([k, v]) => `<div class="dato"><span>${escapar(k)}</span><b>${escapar(v || '—')}</b></div>`).join('')}
         </div>
-        ${incluye ? `<h4 style="font-family:var(--display);margin:0 0 10px">La beca incluye</h4>
+        ${incluye ? `<h4 style="margin:0 0 10px">La beca incluye</h4>
           <div style="display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px">${incluye}</div>` : ''}
-        ${(it.requisitos || []).length ? `<h4 style="font-family:var(--display);margin:0 0 10px">Requisitos principales</h4>
+        ${(it.requisitos || []).length ? `<h4 style="margin:0 0 10px">Requisitos principales</h4>
           <ul style="margin:0 0 18px;padding-left:20px;color:var(--oliva-2);line-height:1.7;font-size:14px">
             ${it.requisitos.map(r => `<li>${escapar(r)}</li>`).join('')}</ul>` : ''}
         <div class="modal-acciones">
@@ -986,7 +1480,11 @@ const VISTAS = {
   maestrias: () => vistaListado('maestrias'), doctorados: () => vistaListado('doctorados'),
   diplomados: () => vistaListado('diplomados'), favoritos: vistaFavoritos,
   comparador: vistaComparador, instituciones: vistaInstituciones,
+  convocatorias: vistaConvocatorias, sunedu: vistaSunedu,
 };
+
+// Vistas que comparten un mismo enlace de la barra superior.
+const GRUPO_NAV = { maestrias: 'posgrados', doctorados: 'posgrados', diplomados: 'posgrados' };
 
 function leerRuta() {
   const bruto = location.hash.replace(/^#\/?/, '') || 'inicio';
@@ -1011,6 +1509,10 @@ const META_VISTA = {
     'Revisa y organiza las oportunidades académicas que guardaste antes de decidir.'],
   comparador: ['Comparador de programas de posgrado | Ruta Amauta',
     'Compara hasta cuatro programas lado a lado: costo, duración, modalidad, financiamiento y licenciamiento.'],
+  convocatorias: ['Convocatorias vigentes verificadas para peruanos | Ruta Amauta',
+    'Becas, maestrías, doctorados y cursos con convocatoria abierta o próxima, con fechas leídas en la fuente oficial: PRONABEC, Erasmus Mundus, Eiffel, Gates Cambridge, OEA y más.'],
+  sunedu: ['Contraste SUNEDU: licenciamiento y grados extranjeros | Ruta Amauta',
+    'Consulta si una universidad peruana está licenciada con su resolución, evalúa la ruta de reconocimiento de un grado extranjero y redacta tu consulta previa a SUNEDU.'],
   instituciones: ['Universidades e instituciones verificadas | Ruta Amauta',
     'Universidades de Perú y el mundo con su estado de licenciamiento SUNEDU y enlace comprobado a su escuela de posgrado.'],
 };
@@ -1056,8 +1558,14 @@ function pintar() {
   $('#vista').innerHTML = render();
   $('#vista').dataset.pintado = '1';
   actualizarMetadatos(nombreVista);
-  $$('.nav a').forEach(a => a.classList.toggle('activo', a.dataset.ruta === nombreVista));
+  const grupo = GRUPO_NAV[nombreVista] || nombreVista;
+  $$('.nav a').forEach(a => {
+    const activo = a.dataset.ruta === grupo;
+    a.classList.toggle('activo', activo);
+    if (activo) a.setAttribute('aria-current', 'page'); else a.removeAttribute('aria-current');
+  });
   $('#nav').classList.remove('abierto');
+  $('#btn-menu')?.setAttribute('aria-expanded', 'false');
   pintarGlobos();
   window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
 }
@@ -1077,7 +1585,33 @@ function pintarGlobos() {
 
 document.addEventListener('click', (e) => {
   const btnMenu = e.target.closest('#btn-menu');
-  if (btnMenu) { $('#nav').classList.toggle('abierto'); return; }
+  if (btnMenu) {
+    const abierto = $('#nav').classList.toggle('abierto');
+    btnMenu.setAttribute('aria-expanded', String(abierto));
+    return;
+  }
+
+  const estadoConvBtn = e.target.closest('[data-conv-estado]');
+  if (estadoConvBtn) { filtrosDe('convocatorias').estado = estadoConvBtn.dataset.convEstado; pintar(); return; }
+
+  const ir = e.target.closest('[data-ir]');
+  if (ir) { document.getElementById(ir.dataset.ir)?.scrollIntoView({ behavior: 'smooth', block: 'start' }); return; }
+
+  const elige = e.target.closest('[data-sunedu-elige]');
+  if (elige) {
+    const caja = elige.closest('[data-sunedu-res]');
+    const campo = $(`[data-sunedu-q="${caja.dataset.suneduRes}"]`);
+    campo.value = elige.dataset.suneduElige;
+    caja.innerHTML = resultadoSunedu(campo.value);
+    return;
+  }
+
+  if (e.target.closest('[data-copiar-carta]')) {
+    const btn = e.target.closest('[data-copiar-carta]');
+    const listo = () => { btn.innerHTML = ico('escudo', 15) + ' Copiado'; setTimeout(() => { btn.innerHTML = ico('copiar', 15) + ' Copiar texto'; }, 1800); };
+    if (navigator.clipboard) navigator.clipboard.writeText(textoCarta()).then(listo, () => {});
+    return;
+  }
 
   const arriba = e.target.closest('#btn-buscar-arriba');
   if (arriba) {
@@ -1170,11 +1704,32 @@ document.addEventListener('change', (e) => {
   const f = filtrosDe(cont.dataset.vista);
   f[campo.dataset.f] = campo.value;
   f.pagina = 1;
+  if (cont.dataset.vista === 'sunedu') {
+    if (campo.dataset.f === 'pais' && !CARTA.pais) CARTA.pais = campo.value;
+    const panel = cont.closest('.herramienta').querySelector('.resultado-sunedu');
+    panel.innerHTML = htmlRuta({ pais: f.pais || '', titulo: f.titulo || '', modalidad: f.modalidad || '' });
+    return;
+  }
   pintar();
 });
 
 let temporizador;
 document.addEventListener('input', (e) => {
+  // Verificador SUNEDU y carta: se actualiza solo su panel, sin repintar.
+  const qSunedu = e.target.closest('[data-sunedu-q]');
+  if (qSunedu) {
+    const caja = $(`[data-sunedu-res="${qSunedu.dataset.suneduQ}"]`);
+    if (caja) caja.innerHTML = resultadoSunedu(qSunedu.value);
+    return;
+  }
+  const campoCarta = e.target.closest('[data-carta]');
+  if (campoCarta) {
+    CARTA[campoCarta.dataset.carta] = campoCarta.value;
+    $('#texto-carta').textContent = textoCarta();
+    $('#correo-carta').setAttribute('href', enlaceCorreo());
+    return;
+  }
+
   const campo = e.target.closest('input[data-f="q"]');
   if (!campo) return;
   const cont = campo.closest('[data-vista]');
@@ -1198,7 +1753,7 @@ document.addEventListener('submit', (e) => {
     filtrosDe('becas').q = q;
     location.hash = '#/maestrias';
   }
-  if (e.target.id === 'form-filtros') e.preventDefault();
+  if (['form-filtros', 'form-ruta', 'form-carta'].includes(e.target.id)) e.preventDefault();
 });
 
 document.addEventListener('keydown', (e) => {
