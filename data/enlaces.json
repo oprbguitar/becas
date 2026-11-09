@@ -139,8 +139,8 @@
   "becas-de-la-universidad-de-buenos-aires-movilidad-universidad-de-buenos-aires": {
    "codigo": 403,
    "estado": "protegido",
-   "nivel": "portada",
-   "url": "https://www.uba.ar/"
+   "nivel": "declarada",
+   "url": "https://www.uba.ar/internacionales/"
   },
   "becas-de-la-universidad-de-sao-paulo-pec-pg-gobierno-de-brasil-capes-cnpq": {
    "codigo": 200,
@@ -371,7 +371,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=v19eBzGSAHq_COhw-M76dK9M1A_qy7YpPpuaIia2.studyinkorea20"
+   "url": "https://www.studyinkorea.go.kr/ko/main.do;jsessionid=TTe4DXq_a31pDQRNIWXpGrt7IRDG0i3aTheiaa59.studyinkorea20"
   },
   "google-developer-scholarship-google": {
    "codigo": 200,
@@ -488,8 +488,9 @@
    "url": "https://www.a-star.edu.sg/singa"
   },
   "stipendium-hungaricum-gobierno-de-hungria": {
-   "codigo": 200,
-   "estado": "ok",
+   "alternativa": "https://www.google.com/search?q=site%3Astipendiumhungaricum.hu+Stipendium+Hungaricum",
+   "codigo": 0,
+   "estado": "sin_respuesta",
    "nivel": "declarada",
    "url": "https://stipendiumhungaricum.hu/"
   },
@@ -524,7 +525,7 @@
    "url": "https://yenchingacademy.pku.edu.cn/"
   }
  },
- "generado_en": "2026-11-02T14:15:23Z",
+ "generado_en": "2026-11-09T14:44:32Z",
  "instituciones": {
   "aalto": {
    "codigo": 200,
@@ -638,7 +639,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://dtu.dk/english/education/graduate"
+   "url": "https://www.dtu.dk/english/education/graduate"
   },
   "du-in": {
    "codigo": 200,
@@ -810,16 +811,17 @@
    "url": "https://www.ipn.mx/oferta-educativa/posgrado.html"
   },
   "itam": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://www.itam.mx/posgrados"
+   "alternativa": "https://www.google.com/search?q=site%3Aitam.mx+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.itam.mx/"
   },
   "javeriana": {
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://www.javeriana.edu.co:443/inicio"
+   "url": "https://www.javeriana.edu.co/inicio"
   },
   "jhu": {
    "codigo": 403,
@@ -951,7 +953,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "declarada",
-   "url": "https://nus.edu.sg/education/graduate-programmes"
+   "url": "https://www.nus.edu.sg/education/graduate-programmes"
   },
   "nyu": {
    "codigo": 405,
@@ -1004,8 +1006,8 @@
   "puc-chile": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://admision.uc.cl/postgrado/"
+   "nivel": "descubierta",
+   "url": "https://medicina.uc.cl/postgrado/especialidades-medicas/"
   },
   "puc-rio": {
    "codigo": 200,
@@ -1088,8 +1090,8 @@
   "tec": {
    "codigo": 200,
    "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://maestriasydiplomados.tec.mx/programas/posgrados"
+   "nivel": "portada",
+   "url": "https://tec.mx/es"
   },
   "tec-cr": {
    "codigo": 200,
@@ -1122,8 +1124,8 @@
    "url": "https://www.tsinghua.edu.cn/en/Admissions.htm"
   },
   "tudelft": {
-   "codigo": 403,
-   "estado": "protegido",
+   "codigo": 200,
+   "estado": "ok",
    "nivel": "declarada",
    "url": "https://www.tudelft.nl/en/education/programmes/masters"
   },
@@ -1206,10 +1208,10 @@
    "url": "https://www.ub.edu/portal/web/economia-empresa/masteres-universitarios"
   },
   "uba": {
-   "codigo": 403,
-   "estado": "protegido",
-   "nivel": "declarada",
-   "url": "https://www.uba.ar/posgrados"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "descubierta",
+   "url": "https://www.uba.ar/ubaposgrado"
   },
   "ubc": {
    "codigo": 200,
@@ -1248,11 +1250,10 @@
    "url": "https://www.ucd.ie/graduatestudies/"
   },
   "uchile": {
-   "alternativa": "https://www.google.com/search?q=site%3Auchile.cl+posgrado+maestr%C3%ADa+doctorado",
-   "codigo": 0,
-   "estado": "sin_respuesta",
-   "nivel": "portada",
-   "url": "https://www.uchile.cl/"
+   "codigo": 200,
+   "estado": "ok",
+   "nivel": "declarada",
+   "url": "https://uchile.cl/postgrados"
   },
   "ucl": {
    "codigo": 403,
@@ -1276,7 +1277,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://www.ucr.ac.cr/actividades/sep/2026/11/09/ingreso-a-la-maestria-profesional-en-ensenanza-del-ingles-como-lengua-extranjera.html"
+   "url": "https://www.ucr.ac.cr/actividades/sep/2026/11/09/ingreso-a-la-maestria-academica-en-ciencias-morfologicas.html"
   },
   "ucsm": {
    "codigo": 403,
@@ -1530,7 +1531,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://postgrado.unasam.edu.pe/"
+   "url": "https://admision.unasam.edu.pe/reglamento-postgrado"
   },
   "unav": {
    "codigo": 200,
@@ -1609,7 +1610,7 @@
    "codigo": 200,
    "estado": "ok",
    "nivel": "descubierta",
-   "url": "https://unibuc.ro/masteranzii-si-doctoranzii-ub-invitati-sa-se-inscrie-la-programul-civis-swisssims-winter-school-al-universitatii-din-lausanne/"
+   "url": "https://unibuc.ro/international/cursurile-de-vara-de-limba-romana-cultura-si-civilizatie-romaneasca/"
   },
   "unica": {
    "codigo": 200,
@@ -1630,10 +1631,11 @@
    "url": "https://unife.edu.pe/posgrado/"
   },
   "unilag": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://unilag.edu.ng/postgraduate-education-key-to-nigerias-transformation-says-former-head-of-service-at-unilag-annual-lecture/"
+   "alternativa": "https://www.google.com/search?q=site%3Aunilag.edu.ng+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.unilag.edu.ng/"
   },
   "uninorte": {
    "codigo": 200,
@@ -1666,16 +1668,17 @@
    "url": "https://www.unjbg.edu.pe/"
   },
   "unjfsc": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "declarada",
-   "url": "https://unjfsc.edu.pe/posgrado/"
+   "alternativa": "https://www.google.com/search?q=site%3Aunjfsc.edu.pe+posgrado+maestr%C3%ADa+doctorado",
+   "codigo": 0,
+   "estado": "sin_respuesta",
+   "nivel": "portada",
+   "url": "https://www.unjfsc.edu.pe/"
   },
   "unmsm": {
-   "codigo": 200,
-   "estado": "ok",
+   "codigo": 0,
+   "estado": "manual",
    "nivel": "manual",
-   "url": "https://www.unmsm.edu.pe/"
+   "url": "https://unmsm.edu.pe/"
   },
   "unp": {
    "codigo": 200,
@@ -1684,10 +1687,10 @@
    "url": "https://www.gob.pe/unp"
   },
   "unprg": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "portada",
-   "url": "https://www.unprg.edu.pe/univ/portal/"
+   "codigo": 503,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.unprg.edu.pe/posgrado"
   },
   "unsa": {
    "codigo": 200,
@@ -1744,10 +1747,10 @@
    "url": "https://www.unu.edu.pe/posgrado/"
   },
   "uoa": {
-   "codigo": 200,
-   "estado": "ok",
-   "nivel": "descubierta",
-   "url": "https://mpharmnkua.uoa.gr/"
+   "codigo": 403,
+   "estado": "protegido",
+   "nivel": "declarada",
+   "url": "https://www.uoa.gr/en/studies"
   },
   "uoc": {
    "codigo": 200,
@@ -2026,15 +2029,15 @@
  "resumen": {
   "becas": {
    "manual": 1,
-   "ok": 69,
+   "ok": 68,
    "protegido": 9,
-   "sin_respuesta": 7
+   "sin_respuesta": 8
   },
   "instituciones": {
-   "manual": 17,
-   "ok": 212,
+   "manual": 18,
+   "ok": 209,
    "protegido": 11,
-   "sin_respuesta": 8
+   "sin_respuesta": 10
   }
  }
 }

@@ -51,7 +51,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -100,7 +100,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -156,7 +156,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -208,7 +208,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -256,7 +256,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -308,7 +308,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -359,7 +359,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -409,7 +409,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -464,7 +464,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -514,7 +514,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -566,9 +566,9 @@
   ],
   "destacada": false,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-11-02"
+  "requisitos_actualizados": "2026-11-09"
  },
  {
   "id": "becas-anid-chile-agencia-nacional-de-investigacion-y-desarrollo",
@@ -619,7 +619,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -670,7 +670,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -723,9 +723,9 @@
   ],
   "destacada": true,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-11-02"
+  "requisitos_actualizados": "2026-11-09"
  },
  {
   "id": "erasmus-mundus-joint-masters-comision-europea",
@@ -777,9 +777,9 @@
   ],
   "destacada": true,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-11-02"
+  "requisitos_actualizados": "2026-11-09"
  },
  {
   "id": "becas-daad-para-posgrado-servicio-aleman-de-intercambio-academico",
@@ -830,7 +830,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -885,7 +885,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -937,9 +937,9 @@
   ],
   "destacada": false,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-11-02"
+  "requisitos_actualizados": "2026-11-09"
  },
  {
   "id": "stipendium-hungaricum-gobierno-de-hungria",
@@ -989,8 +989,8 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
-  "enlace_ok": true
+  "enlace_verificado": "2026-11-09",
+  "enlace_ok": false
  },
  {
   "id": "beca-maec-aecid-agencia-espanola-de-cooperacion-internacional",
@@ -1042,7 +1042,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -1096,9 +1096,9 @@
   ],
   "destacada": true,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-11-02"
+  "requisitos_actualizados": "2026-11-09"
  },
  {
   "id": "rhodes-scholarship-rhodes-trust-universidad-de-oxford",
@@ -1146,7 +1146,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1195,7 +1195,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1249,7 +1249,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1303,7 +1303,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -1354,7 +1354,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1407,7 +1407,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1459,7 +1459,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -1510,7 +1510,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -1561,7 +1561,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -1612,7 +1612,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -1668,9 +1668,9 @@
   ],
   "destacada": false,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-11-02"
+  "requisitos_actualizados": "2026-11-09"
  },
  {
   "id": "mext-becas-del-gobierno-de-japon-ministerio-de-educacion-de-japon",
@@ -1722,7 +1722,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1774,7 +1774,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -1830,7 +1830,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1881,7 +1881,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1934,7 +1934,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -1988,7 +1988,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2040,7 +2040,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -2091,7 +2091,7 @@
   ],
   "destacada": true,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2145,9 +2145,9 @@
   ],
   "destacada": true,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-11-02"
+  "requisitos_actualizados": "2026-11-09"
  },
  {
   "id": "vanier-canada-graduate-scholarships-gobierno-de-canada",
@@ -2203,9 +2203,9 @@
   ],
   "destacada": false,
   "fuente": "web-oficial",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true,
-  "requisitos_actualizados": "2026-11-02"
+  "requisitos_actualizados": "2026-11-09"
  },
  {
   "id": "australia-awards-scholarships-gobierno-de-australia",
@@ -2254,7 +2254,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -2308,7 +2308,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2358,7 +2358,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2410,7 +2410,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -2462,7 +2462,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2514,7 +2514,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -2568,7 +2568,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2622,7 +2622,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -2675,7 +2675,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2726,7 +2726,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2778,7 +2778,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -2831,7 +2831,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -2881,7 +2881,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -2934,7 +2934,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -2982,7 +2982,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": false
  },
  {
@@ -3036,7 +3036,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  },
  {
@@ -3085,7 +3085,7 @@
   ],
   "destacada": false,
   "fuente": "semilla",
-  "enlace_verificado": "2026-11-02",
+  "enlace_verificado": "2026-11-09",
   "enlace_ok": true
  }
 ]
